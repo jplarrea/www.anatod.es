@@ -157,7 +157,7 @@
   async function load(doc, location) {
     const script = doc.querySelector('script[src$="site-config.js"], script[src*="site-config.js?"]');
     const scriptURL = script ? script.src : new URL('assets/js/site-config.js', doc.baseURI).href;
-    const configURL = new URL('../config/site.json', scriptURL);
+    const configURL = new URL('../config/site.min.json', scriptURL);
     const response = await fetch(configURL, { cache: 'no-store', credentials: 'same-origin' });
     if (!response.ok) throw new Error('No se pudo cargar site.json (' + response.status + ').');
     const config = resolveConfig(await response.json(), location);

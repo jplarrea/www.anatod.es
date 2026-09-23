@@ -31,7 +31,6 @@
   --bs-primary-rgb: 23, 85, 237;
   --bs-body-font-family: Manrope, system-ui, -apple-system, sans-serif;
   --bs-border-color: var(--line);
-  --logo-filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(3366%) hue-rotate(220deg) brightness(94%) contrast(96%);
 }
 [data-bs-theme="dark"] {
   --brand: #97b6ff;
@@ -42,7 +41,8 @@
   --soft: #151f30;
   --pale: #1a2945;
   --line: #2a374d;
-  --logo-filter: none;
+  --logo-filter: brightness(0) invert(1);
+
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 106px; }
