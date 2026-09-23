@@ -1,0 +1,16 @@
+nbproject/
+vendor/
+pdf/
+temp/
+_cfk/
+composer.json
+composer.lock
+composer.phar
+!.gitignore
+.vscode/*
+*.code-workspace
+.push.settings.jsonc
+.push.settings.min.jsonc
+composer
+afip/tmp/*
+*/.DS_Store
