@@ -1,0 +1,7 @@
+Options +FollowSymLinks -MultiViews
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^about-us$ /about-us.php [L]
+RewriteRule ^software$ /software.php [L]

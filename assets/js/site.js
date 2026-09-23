@@ -109,7 +109,7 @@
       if (configRetry) configRetry.disabled = true;
       document.documentElement.dataset.configStatus = 'loading';
       try {
-        const config = await window.AnatodSiteConfig.load(document, window.location);
+        const config = await window.anatodSiteConfig.load(document, window.location);
         initialiseRegionalContent(config);
         siteConfig = config;
         applyTheme(root.dataset.bsTheme);
@@ -127,7 +127,7 @@
           configRetry.hidden = false;
           configRetry.disabled = false;
         }
-        console.warn('No se pudo cargar la configuración de Anatod.', error);
+        console.warn('No se pudo cargar la configuración de anatod.', error);
       } finally {
         configuring = false;
       }

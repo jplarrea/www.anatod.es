@@ -2,7 +2,7 @@
   'use strict';
   const api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;
-  else root.AnatodSiteConfig = api;
+  else root.anatodSiteConfig = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 

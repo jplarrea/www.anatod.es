@@ -3,19 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1755ed">
-  <title data-copy="home.meta.title">Anatod · Software de gestión para ISP</title>
-  <meta name="description" content="Gestiona Internet, TV, telefonía y suscripciones con Anatod. Clientes, facturación, red y soporte en un solo lugar, con un equipo propio a tu lado." data-copy-content="home.meta.description">
-  <meta name="robots" content="noindex, nofollow">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_ES" data-copy-content="common.locale">
-  <meta property="og:title" content="Anatod · Software de gestión para ISP" data-copy-content="home.meta.title">
-  <meta property="og:description" content="Gestiona Internet, TV, telefonía y suscripciones con Anatod. Clientes, facturación, red y soporte en un solo lugar, con un equipo propio a tu lado." data-copy-content="home.meta.description">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png" data-image="favicon">
-  <link rel="stylesheet" href="assets/lib/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/site.min.css?v=20260923-2">
-  <script src="assets/js/site-config.js?v=20260923-2" defer></script>
-  <script src="assets/js/site.js?v=20260923-2" defer></script>
+  <title data-copy="home.meta.title">anatod · Software de gestión para ISP</title>
+  <meta name="description" content="Gestiona Internet, TV, telefonía y suscripciones con anatod. Clientes, facturación, red y soporte en un solo lugar, con un equipo propio a tu lado." data-copy-content="home.meta.description">
+  <meta property="og:title" content="anatod · Software de gestión para ISP" data-copy-content="home.meta.title">
+  <meta property="og:description" content="Gestiona Internet, TV, telefonía y suscripciones con anatod. Clientes, facturación, red y soporte en un solo lugar, con un equipo propio a tu lado." data-copy-content="home.meta.description">
+   <?php require 'views/head.min.html'; ?>
 </head>
 <body class="home-page" data-page="home">
   <a class="skip-link" href="#contenido" data-link="skip" data-copy="common.skip">Saltar al contenido</a>
@@ -40,30 +32,14 @@
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
     <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9 10 10 0 0 1-4-1l-6 3 2-6a9 9 0 1 1 17-5Z"/><path d="M8 10h8m-8 4h5"/></symbol>
   </svg>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Anatod, inicio" data-link="home" data-copy-aria-label="nav.brandLabel"><img src="assets/img/logo_anatod.png" alt="Anatod" width="112" height="51" data-image="brand" data-copy-alt="common.brand"></a>
-      <nav id="main-nav" class="main-nav" aria-label="Navegación principal" data-copy-aria-label="nav.label">
-        <a href="index.html" aria-current="page" data-link="home" data-copy="nav.home">Inicio</a>
-        <a href="software.html" data-link="software" data-copy="nav.software">Software</a>
-        <a href="software.html#precios" data-link="pricing" data-copy="nav.pricing">Precios</a>
-        <a href="about.html" data-link="company" data-copy="nav.company">Somos Anatod</a>
-        <a class="mobile-contact" href="software.html#contacto" data-link="contact" data-copy="nav.requestPresentation">Solicitar una presentación</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></button>
-        <a class="btn btn-primary header-cta" href="software.html#contacto" data-link="contact"><span class="copy-fragment" data-copy="nav.contact">Hablemos</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
-      </div>
-    </div>
-  </header>
+  <?php require 'views/header.min.html'; ?>
   <main id="contenido">
     <div class="container"><p id="site-config-status" role="status" hidden></p><button class="btn btn-outline-primary" id="site-config-retry" type="button" hidden data-copy="form.retry">Volver a intentar</button></div>
     <section class="home-hero" id="inicio" aria-labelledby="hero-title">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6 hero-copy">
-            <div class="eyebrow"><span class="little-line"></span> <span class="copy-fragment" data-copy="home.hero.eyebrow">ANATOD · TECNOLOGÍA PROPIA</span></div>
+            <div class="eyebrow"><span class="little-line"></span> <span class="copy-fragment" data-copy="home.hero.eyebrow">anatod · TECNOLOGÍA PROPIA</span></div>
             <h1 id="hero-title"><span class="copy-fragment" data-copy="home.hero.titleLead">Software de</span><br><span class="copy-fragment" data-copy="home.hero.titleMiddle">gestión</span> <span data-copy="home.hero.titleAccent">para ISP.</span></h1>
             <div class="service-tags" aria-label="Servicios que puedes gestionar" data-copy-aria-label="home.hero.serviciosQuePuedesGestionar"><span><svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg><span class="copy-fragment" data-copy="services.internet">Internet</span></span><span><svg class="icon" aria-hidden="true"><use href="#i-tv"/></svg><span class="copy-fragment" data-copy="services.tvShort">TV</span></span><span><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="copy-fragment" data-copy="services.phone">Telefonía</span></span><span><svg class="icon" aria-hidden="true"><use href="#i-repeat"/></svg><span class="copy-fragment" data-copy="services.subscriptions">Suscripciones</span></span></div>
             <p class="hero-description" data-copy="home.hero.description">Clientes, facturación, red y soporte, en un solo lugar. Con un equipo propio que desarrolla Software y te acompaña en cada paso.</p>
@@ -72,8 +48,8 @@
           </div>
           <div class="col-lg-6">
             <figure class="team-portrait">
-              <div class="team-photo"><img src="assets/img/equipo-anatod.jpg" width="1024" height="668" alt="El equipo de Anatod en su oficina" fetchpriority="high" data-image="team" data-copy-alt="images.teamAlt"></div>
-              <figcaption><span class="portrait-mark"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><div><strong data-copy="home.hero.photoTitle">Tu software tiene un equipo detrás.</strong><span data-copy="home.hero.photoCaption">Somos Anatod. Desarrollamos y te acompañamos desde 2015.</span></div></figcaption>
+              <div class="team-photo"><img src="assets/img/equipo-anatod.jpg" width="1024" height="668" alt="El equipo de anatod en su oficina" fetchpriority="high" data-image="team" data-copy-alt="images.teamAlt"></div>
+              <figcaption><span class="portrait-mark"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><div><strong data-copy="home.hero.photoTitle">Tu software tiene un equipo detrás.</strong><span data-copy="home.hero.photoCaption">Somos anatod. Desarrollamos y te acompañamos desde 2015.</span></div></figcaption>
             </figure>
           </div>
         </div>
@@ -111,12 +87,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="row gy-4 footer-main">
-        <div class="col-lg-5"><a class="footer-brand" href="index.html" aria-label="Anatod, inicio" data-link="home" data-copy-aria-label="nav.brandLabel"><img src="assets/img/logo_anatod.png" alt="Anatod" width="124" height="56" data-image="brand" data-copy-alt="common.brand"></a><p><span class="copy-fragment" data-copy="footer.description">Software de gestión para ISP.</span><br><span class="copy-fragment" data-copy="footer.tagline">Todos tus servicios. Un equipo a tu lado.</span></p><span class="footer-since" data-copy="footer.since">Desarrollamos tecnología propia desde 2015.</span></div>
-        <div class="col-6 col-md-4 col-lg-2"><h2 data-copy="footer.software">Software</h2><a href="software.html#funciones" data-link="features" data-copy="nav.features">Funcionalidades</a><a href="software.html#integraciones" data-link="integrations" data-copy="nav.integrations">Integraciones</a><a href="software.html#tecnologia" data-link="technology" data-copy="footer.technology">Tecnología y API</a><a href="software.html#precios" data-link="pricing" data-copy="nav.pricing">Precios</a></div>
-        <div class="col-6 col-md-4 col-lg-2"><h2 data-copy="common.brand">Anatod</h2><a href="about.html" data-link="company" data-copy="footer.company">Nosotros</a><a href="https://www.anatod.com/events/" target="_blank" rel="noopener noreferrer" data-link="events"><span class="copy-fragment" data-copy="footer.events">Eventos</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://www.anatod.com/blog/" target="_blank" rel="noopener noreferrer" data-link="blog"><span class="copy-fragment" data-copy="footer.news">Novedades</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="software.html#contacto" data-link="contact" data-copy="footer.contact">Contacto</a></div>
+        <div class="col-lg-5"><a class="footer-brand" href="/" aria-label="anatod, inicio" data-link="home" data-copy-aria-label="nav.brandLabel"><img src="assets/img/logo_anatod.png" alt="anatod" width="124" height="56" data-image="brand" data-copy-alt="common.brand"></a><p><span class="copy-fragment" data-copy="footer.description">Software de gestión para ISP.</span><br><span class="copy-fragment" data-copy="footer.tagline">Todos tus servicios. Un equipo a tu lado.</span></p><span class="footer-since" data-copy="footer.since">Desarrollamos tecnología propia desde 2015.</span></div>
+        <div class="col-6 col-md-4 col-lg-2"><h2 data-copy="footer.software">Software</h2><a href="software.html#funciones" data-link="features" data-copy="nav.features">Funcionalidades</a><a href="software.html#integraciones" data-link="integrations" data-copy="nav.integrations">Integraciones</a><a href="software.html#tecnologia" data-link="technology" data-copy="footer.technology">Tecnología y API</a><a href="software.html#precios" data-link="pricing" >Precios</a></div>
+        <div class="col-6 col-md-4 col-lg-2"><h2 data-copy="common.brand">anatod</h2><a href="about.html" data-link="company" data-copy="footer.company">Nosotros</a><a href="https://www.anatod.com/events/" target="_blank" rel="noopener noreferrer" data-link="events"><span class="copy-fragment" data-copy="footer.events">Eventos</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://www.anatod.com/blog/" target="_blank" rel="noopener noreferrer" data-link="blog"><span class="copy-fragment" data-copy="footer.news">Novedades</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="software.html#contacto" data-link="contact" data-copy="footer.contact">Contacto</a></div>
         <div class="col-12 col-md-4 col-lg-3"><h2 data-copy="footer.customer">Ya soy cliente</h2><a href="https://wiki.anatod.com/" target="_blank" rel="noopener noreferrer" data-link="help"><span class="copy-fragment" data-copy="footer.help">Centro de ayuda</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://status.anatod.com/" target="_blank" rel="noopener noreferrer" data-link="status"><span class="copy-fragment" data-copy="footer.status">Estado de los servicios</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://wiki.anatod.com/api/" target="_blank" rel="noopener noreferrer" data-link="api"><span class="copy-fragment" data-copy="common.apiDocs">Documentación de la API</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div>
       </div>
-      <div class="footer-bottom"><span>© <span id="current-year">2026</span> <span class="copy-fragment" data-copy="footer.copyright">Anatod. Todos los derechos reservados.</span></span><div><a href="https://www.anatod.com/privacy-policy/" target="_blank" rel="noopener noreferrer" data-link="privacy" data-copy="footer.privacy">Privacidad</a><a href="https://www.anatod.com/terms-conditions/" target="_blank" rel="noopener noreferrer" data-link="terms" data-copy="footer.terms">Términos y condiciones</a><a href="#inicio" data-link="backToTop" data-copy="footer.backToTop">Volver arriba ↑</a></div></div>
+      <div class="footer-bottom"><span>© <span id="current-year">2026</span> <span class="copy-fragment" data-copy="footer.copyright">anatod. Todos los derechos reservados.</span></span><div><a href="https://www.anatod.com/privacy-policy/" target="_blank" rel="noopener noreferrer" data-link="privacy" data-copy="footer.privacy">Privacidad</a><a href="https://www.anatod.com/terms-conditions/" target="_blank" rel="noopener noreferrer" data-link="terms" data-copy="footer.terms">Términos y condiciones</a><a href="#inicio" data-link="backToTop" data-copy="footer.backToTop">Volver arriba ↑</a></div></div>
     </div>
   </footer>
 </body>
