@@ -296,7 +296,7 @@ details[open] > summary > span:not(.copy-fragment) { transform: rotate(45deg); }
 .faq-list details p { font-size: 13px; line-height: 1.9; margin: 0; padding: 0 30px 23px 0; }
 
 /* Local form only prepares a WhatsApp message; the visitor sends it. */
-.contact-block { background: var(--soft); border: 1px solid var(--line); border-radius: 14px; padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.contact-block { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
 .contact-copy { padding-top: 19px; }
 .contact-copy .eyebrow { font-size: 10px; }
 .contact-copy h2 { font-size: 40px; }
