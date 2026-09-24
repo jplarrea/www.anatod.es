@@ -97,11 +97,7 @@
     },
     "images": {
       "favicon": "assets/img/favicon.png",
-      "brand": "assets/img/logo_anatod.png",
-      "team": "assets/img/equipo-anatod.jpg",
-      "acutelan": "assets/img/acutelan.webp",
-      "polo": "assets/img/polo-tecnologico.png",
-      "companyEvent": "assets/img/aotec-alicante-2023.jpeg"
+      "brand": "assets/img/logo_anatod.png"
     },
     "messages": {
       "themeLight": "Cambiar a modo claro",
