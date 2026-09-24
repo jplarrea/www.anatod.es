@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - anatod</title>
+  <meta name="description" content="Contacto - anatod · Software de gestión para ISP">
+  <meta property="og:title" content="Contacto - anatod · Software de gestión para ISP">
+  <meta property="og:description" content="Contacto - anatod · Software de gestión para ISP">
+  <?php require 'views/head.min.html'; ?>
+</head>
+<body class="about-page" data-page="about">
+  <?php require 'views/header.min.html'; ?>
+  <main id="contenido">
+    <section class="section section-contact" id="contacto" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="contact-block">
+                <div class="contact-copy">
+                    <div class="eyebrow">CONOZCAMOS TU ISP</div>
+                    <h2 id="contact-title">
+                        <span class="copy-fragment">Veamos cómo encaja</span>
+                        <br>
+                        <span>en tu empresa.</span>
+                    </h2>
+                    <p>Cuéntanos qué servicios ofreces, en qué país trabajas y qué quieres mejorar. Organizamos una presentación centrada en tu operación.</p>
+                    <a class="phone-link" id="contact-phone" hidden><span data-phone-number></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+                    <h3 class="contact-region" id="contact-region"></h3>
+                    <a class="contact-whatsapp" id="contact-whatsapp" hidden target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> <span class="copy-fragment">También puedes escribirnos por WhatsApp</span></a>
+                    </div>
+                    <div class="contact-form-wrap">
+                        <h3>Solicita una presentación</h3>
+                        <p>Conoce Software y a las personas que lo desarrollan.</p>
+                        <form id="contact-form">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="contact-name" class="form-label">
+                                        <span class="copy-fragment">Tu nombre</span> 
+                                        <span aria-hidden="true">*</span></label>
+                                        <input class="form-control" id="contact-name" name="name" autocomplete="name" required maxlength="100" placeholder="Nombre y apellidos">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="contact-company" class="form-label">
+                                            <span class="copy-fragment">Empresa</span> 
+                                            <span aria-hidden="true">*</span>
+                                        </label>
+                                        <input class="form-control" id="contact-company" name="company" autocomplete="organization" required maxlength="120" placeholder="Nombre de tu operador">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="contact-email" class="form-label">
+                                            <span class="copy-fragment">Email profesional</span> 
+                                            <span aria-hidden="true">*</span>
+                                        </label>
+                                        <input class="form-control" type="email" id="contact-email" name="email" autocomplete="email" required maxlength="160" placeholder="tu@empresa.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="contact-country" class="form-label">
+                                            <span class="copy-fragment">País en el que operas</span> 
+                                            <span class="optional">(opcional)</span>
+                                        </label>
+                                        <input class="form-control" id="contact-country" name="country" autocomplete="country-name" maxlength="100" placeholder="Indica tu país">
+                                    </div>
+                                    <div class="col-12"><label for="contact-service" class="form-label">¿Qué servicios ofreces?
+
+                                    </label>
+                                    <select class="form-select" id="contact-service" name="service">
+                                        <option value="">Selecciona una opción</option>
+                                        <option>Internet / Fibra / WISP</option>
+                                        <option>Telefonía móvil o fija</option>
+                                        <option>Televisión</option>
+                                        <option>Varios servicios</option>
+                                        <option>Otros servicios / Suscripciones</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contact-message" class="form-label">
+                                        <span class="copy-fragment">Cuéntanos un poco más</span> 
+                                        <span class="optional">(opcional)</span>
+                                    </label>
+                                    <textarea class="form-control" id="contact-message" name="message" rows="3" maxlength="1500" placeholder="¿Qué te gustaría mejorar en tu gestión?"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="contact-privacy" required>
+                                        <label class="form-check-label" for="contact-privacy">
+                                            <span class="copy-fragment">He leído la</span> 
+                                            <a href="https://www.anatod.com/privacy-policy/" target="_blank" rel="noopener noreferrer">política de privacidad</a>. *
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100" id="prepare-request" type="submit" disabled>
+                                        <span class="copy-fragment">Preparar mi solicitud</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="form-note">Al continuar, podrás abrir WhatsApp para revisar y enviar tu mensaje.</p>
+                            <div class="form-result" id="form-result" role="status" aria-live="polite" hidden>
+                                <p data-form-result-message>Tu solicitud está preparada. Ábrela en WhatsApp para enviárnosla.</p>
+                                <a class="btn btn-primary w-100" id="whatsapp-request" target="_blank" rel="noopener noreferrer">
+                                    <span class="copy-fragment">Abrir solicitud en WhatsApp</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg>
+                                </a>
+                            </div>
+                            <noscript>
+                                <p>Activa JavaScript para ver el contacto correspondiente a este sitio y preparar tu solicitud.</p>
+                            </noscript>
+                        </form>
+                        <p id="site-config-status" role="status" hidden></p>
+                        <button class="btn btn-outline-primary" id="site-config-retry" type="button" hidden>
+                            Volver a intentar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<?php require 'views/footer.min.html'; ?>
+</body>
+</html>
