@@ -230,11 +230,19 @@
       if (fields.message.value.trim()) {
         lines.push('', config.messages.requestMessage + ': ' + fields.message.value.trim());
       }
-      request.href = 'https://wa.me/' + contact.number + '?text=' + encodeURIComponent(lines.join('\n'));
+
+      const whatsappUrl = 'https://wa.me/' + contact.number + '?text=' + encodeURIComponent(lines.join('\n'));
+      const opened = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      if (!opened) {
+        window.location.href = whatsappUrl;
+      }
+
+      request.href = whatsappUrl;
       request.target = '_blank';
       request.rel = 'noopener noreferrer';
       result.querySelector('[data-form-result-message]').textContent = config.texts['form.ready'];
-      result.hidden = false;
+      result.hidden = true;
+      form.reset();
     });
     document.getElementById('prepare-request').disabled = false;
   }
