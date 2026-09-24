@@ -10,28 +10,6 @@
    <?php require 'views/head.min.html'; ?>
 </head>
 <body class="home-page" data-page="home">
-  <a class="skip-link" href="#contenido" data-link="skip" data-copy="common.skip">Saltar al contenido</a>
-  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
-    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
-    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3m2-17a3 3 0 0 1 0 6m4 11v-3a6 6 0 0 0-3-5"/></symbol>
-    <symbol id="i-bill" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Zm3 5h6m-6 4h6"/></symbol>
-    <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></symbol>
-    <symbol id="i-support" viewBox="0 0 24 24"><path d="M4 14v-3a8 8 0 0 1 16 0v3m0 4a4 4 0 0 1-4 4h-4"/><rect x="2" y="11" width="5" height="8" rx="2"/><rect x="17" y="11" width="5" height="8" rx="2"/></symbol>
-    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-11 4a6 6 0 0 1 8 0"/><circle cx="12" cy="20" r=".8"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4m-3 14h2"/></symbol>
-    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="m8 2 4 4 4-4m-8 17h8"/></symbol>
-    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4M3 11V8a2 2 0 0 1 2-2h16M7 22l-4-4 4-4m14-1v3a2 2 0 0 1-2 2H3"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
-    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14a9 9 0 0 1-10-11 9.5 9.5 0 1 0 10 11Z"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
-    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11a9 9 0 0 1-9 9 10 10 0 0 1-4-1l-6 3 2-6a9 9 0 1 1 17-5Z"/><path d="M8 10h8m-8 4h5"/></symbol>
-  </svg>
   <?php require 'views/header.min.html'; ?>
   <main id="contenido">
     <div class="container"><p id="site-config-status" role="status" hidden></p><button class="btn btn-outline-primary" id="site-config-retry" type="button" hidden data-copy="form.retry">Volver a intentar</button></div>
@@ -84,16 +62,6 @@
 
     <section class="home-cta" aria-labelledby="next-title"><div class="container"><div class="cta-band"><div><div class="eyebrow" data-copy="home.cta.elSiguientePaso">EL SIGUIENTE PASO</div><h2 id="next-title" data-copy="home.cta.hablemosDeTuOperador">Hablemos de tu operador.</h2><p data-copy="home.cta.conoceLasFuncionesComparaLosPlanes">Conoce las funciones, consulta la tarifa y cuéntanos qué necesitas.</p></div><div class="cta-actions"><a class="btn btn-white" href="software.html#precios" data-link="pricing"><span class="copy-fragment" data-copy="home.cta.verFuncionesYPrecios">Ver funciones y precios</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="software.html#contacto" data-link="contact"><span class="copy-fragment" data-copy="nav.requestPresentation">Solicitar una presentación</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div></div></div></section>
   </main>
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row gy-4 footer-main">
-        <div class="col-lg-5"><a class="footer-brand" href="/" aria-label="anatod, inicio" data-link="home" data-copy-aria-label="nav.brandLabel"><img src="assets/img/logo_anatod.png" alt="anatod" width="124" height="56" data-image="brand" data-copy-alt="common.brand"></a><p><span class="copy-fragment" data-copy="footer.description">Software de gestión para ISP.</span><br><span class="copy-fragment" data-copy="footer.tagline">Todos tus servicios. Un equipo a tu lado.</span></p><span class="footer-since" data-copy="footer.since">Desarrollamos tecnología propia desde 2015.</span></div>
-        <div class="col-6 col-md-4 col-lg-2"><h2 data-copy="footer.software">Software</h2><a href="software.html#funciones" data-link="features" data-copy="nav.features">Funcionalidades</a><a href="software.html#integraciones" data-link="integrations" data-copy="nav.integrations">Integraciones</a><a href="software.html#tecnologia" data-link="technology" data-copy="footer.technology">Tecnología y API</a><a href="software.html#precios" data-link="pricing" >Precios</a></div>
-        <div class="col-6 col-md-4 col-lg-2"><h2 data-copy="common.brand">anatod</h2><a href="about.html" data-link="company" data-copy="footer.company">Nosotros</a><a href="https://www.anatod.com/events/" target="_blank" rel="noopener noreferrer" data-link="events"><span class="copy-fragment" data-copy="footer.events">Eventos</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://www.anatod.com/blog/" target="_blank" rel="noopener noreferrer" data-link="blog"><span class="copy-fragment" data-copy="footer.news">Novedades</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="software.html#contacto" data-link="contact" data-copy="footer.contact">Contacto</a></div>
-        <div class="col-12 col-md-4 col-lg-3"><h2 data-copy="footer.customer">Ya soy cliente</h2><a href="https://wiki.anatod.com/" target="_blank" rel="noopener noreferrer" data-link="help"><span class="copy-fragment" data-copy="footer.help">Centro de ayuda</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://status.anatod.com/" target="_blank" rel="noopener noreferrer" data-link="status"><span class="copy-fragment" data-copy="footer.status">Estado de los servicios</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a><a href="https://wiki.anatod.com/api/" target="_blank" rel="noopener noreferrer" data-link="api"><span class="copy-fragment" data-copy="common.apiDocs">Documentación de la API</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div>
-      </div>
-      <div class="footer-bottom"><span>© <span id="current-year">2026</span> <span class="copy-fragment" data-copy="footer.copyright">anatod. Todos los derechos reservados.</span></span><div><a href="https://www.anatod.com/privacy-policy/" target="_blank" rel="noopener noreferrer" data-link="privacy" data-copy="footer.privacy">Privacidad</a><a href="https://www.anatod.com/terms-conditions/" target="_blank" rel="noopener noreferrer" data-link="terms" data-copy="footer.terms">Términos y condiciones</a><a href="#inicio" data-link="backToTop" data-copy="footer.backToTop">Volver arriba ↑</a></div></div>
-    </div>
-  </footer>
+<?php require 'views/footer.min.html'; ?>
 </body>
 </html>
