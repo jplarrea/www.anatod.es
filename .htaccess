@@ -3,6 +3,8 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^blog/event/([a-z0-9-]+)/?$ /blog/event/index.php?slug=$1 [L,QSA]
+RewriteRule ^events/?$ /events/index.php [L]
 RewriteRule ^about-us$ /about-us.php [L]
 RewriteRule ^software$ /software.php [L]
 RewriteRule ^contact-us$ /contact-us.php [L]
