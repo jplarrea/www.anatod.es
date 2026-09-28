@@ -6,3 +6,13 @@ RewriteBase /
 RewriteRule ^about-us$ /about-us.php [L]
 RewriteRule ^software$ /software.php [L]
 RewriteRule ^contact-us$ /contact-us.php [L]
+
+RewriteRule ^ispkeeper/fibra-optica/?$ /fibra-optica.php [L]
+RewriteRule ^ispkeeper/wisp/?$ /wisp.php [L]
+RewriteRule ^ispkeeper/satelital/?$ /satelital.php [L]
+RewriteRule ^ispkeeper/internet-prepago/?$ /internet-prepago.php [L]
+RewriteRule ^ispkeeper/telefonia-movil-fija-ip/?$ /telefonia-movil-fija-ip.php [L]
+RewriteRule ^ispkeeper/tv/?$ /tv.php [L]
+RewriteRule ^ispkeeper/sepa/?$ /sepa.php [L]
+RewriteRule ^ispkeeper/api/?$ /api.php [L]
+RewriteRule ^kit-de-marca/?$ /kit-de-marca.php [L]

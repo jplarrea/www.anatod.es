@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Cobros SEPA para operadores · anatod
+  </title>
+  <meta name="description" content="Genera archivos SEPA por lote o por cliente y gestiona devoluciones y varios bancos desde anatod.">
+  <?php require 'views/head.min.html'; ?>
+  <link rel="stylesheet" href="/assets/css/service-detail.min.css">
+</head>
+<body class="service-detail-page">
+  <?php require 'views/header.min.html'; ?>
+  <main id="contenido">
+    <section class="service-detail-hero">
+      <div class="container">
+        <a class="breadcrumb-link" href="/software">
+          <span>anatod</span><span aria-hidden="true">/</span><span>Pagos</span>
+        </a>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <div class="eyebrow">
+              COBROS BANCARIOS
+            </div>
+            <h1>
+              Pagos SEPA,<br><span>integrados a la gestión.</span>
+            </h1>
+            <p class="hero-description">
+              Prepara archivos de cobro para tus bancos, por lote o para un cliente concreto. Organiza la cobranza y el seguimiento de las devoluciones desde el mismo sistema.
+            </p>
+            <a class="btn btn-primary btn-lg" href="/contact-us">
+              Consultar disponibilidad<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+          <div class="col-lg-5">
+            <div class="resource-art sepa-art" role="img" aria-label="Representación de un archivo de cobros SEPA">
+              <svg class="icon" aria-hidden="true"><use href="#i-bill"/></svg><strong>SEPA</strong><span>Archivo de cobro</span><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+        <nav class="page-nav" aria-label="Soluciones de anatod">
+          <a href="/ispkeeper/fibra-optica/">
+            Fibra óptica
+          </a>
+          <a href="/ispkeeper/wisp/">
+            WISP
+          </a>
+          <a href="/ispkeeper/satelital/">
+            Satelital
+          </a>
+          <a href="/ispkeeper/internet-prepago/">
+            Internet prepago
+          </a>
+          <a href="/ispkeeper/telefonia-movil-fija-ip/">
+            Telefonía
+          </a>
+          <a href="/ispkeeper/tv/">
+            TV
+          </a>
+          <a href="/ispkeeper/sepa/" aria-current="page">
+            SEPA
+          </a>
+          <a href="/ispkeeper/api/">
+            API
+          </a>
+          <a href="/kit-de-marca/">
+            Kit de Marca
+          </a>
+        </nav>
+      </div>
+    </section>
+    <section class="section service-detail-content">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">
+            ARCHIVOS PARA EL BANCO
+          </div>
+          <h2>
+            Organiza los cobros<br>de tus clientes.
+          </h2>
+          <p>
+            El sistema genera archivos de cobro SEPA para entregar al banco. Puedes agrupar registros en un lote o preparar un archivo individual.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="service-card">
+              <h3>
+                Lote de pagos
+              </h3>
+              <p>
+                Prepara un único archivo con los registros SEPA para importar en tu banco y procesar el cobro.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="service-card">
+              <h3>
+                Pago individual
+              </h3>
+              <p>
+                Genera un archivo para un cliente y un importe específico.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="service-card">
+              <h3>
+                Más de un banco
+              </h3>
+              <p>
+                Genera archivos separados por banco y distribuye los clientes según las categorías que utiliza tu empresa.
+              </p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="service-card">
+              <h3>
+                Seguimiento de devoluciones
+              </h3>
+              <p>
+                Al recibir una devolución, el sistema puede avisar al cliente por SMS, email o WhatsApp. También puede incluir un enlace de pago y registrar un compromiso de pago.
+              </p>
+            </article>
+          </div>
+        </div>
+        <p class="section-note">
+          La aceptación y el procesamiento de los archivos dependen de las condiciones y herramientas de cada entidad bancaria.
+        </p>
+        <div class="service-detail-next">
+          <a href="/ispkeeper/api/">
+            Conoce la API de anatod<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="btn btn-primary" href="/contact-us">
+            Consulta la integración bancaria
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <?php require 'views/footer.min.html'; ?>
+</body>
+</html>
