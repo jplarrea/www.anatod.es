@@ -22,6 +22,9 @@ if (!is_array($posts)) {
 usort($posts, static function ($a, $b) {
     return strcmp($b['date'] ?? '', $a['date'] ?? '');
 });
+$postUrl = static function ($post) {
+    return '/blog/' . str_replace('-', '/', $post['date']) . '/' . $post['slug'] . '/';
+};
 
 // REQUEST_URI conserva la ruta original aunque Apache haga la reescritura.
 $requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/blog/', PHP_URL_PATH);
@@ -30,7 +33,7 @@ $isListing = $requestPath === '/blog/';
 $post = null;
 if (!$isListing) {
     foreach ($posts as $candidate) {
-        if (rawurldecode($candidate['path'] ?? '') === $requestPath) {
+        if (rawurldecode($postUrl($candidate)) === $requestPath) {
             $post = $candidate;
             break;
         }
@@ -43,7 +46,7 @@ if (!$isListing) {
 $title = $blogUnavailable ? 'Publicaciones no disponibles' : ($isListing ? 'Novedades' : ($post['title'] ?? 'Publicación no encontrada'));
 $description = $blogUnavailable ? 'Las publicaciones no están disponibles en este momento.' : ($isListing ? 'Todas las novedades de anatod.' : ($post['excerpt'] ?? 'No encontramos la publicación solicitada.'));
 $previousPosts = $post ? array_values(array_filter($posts, static function ($candidate) use ($post) {
-    return ($candidate['path'] ?? '') !== $post['path'];
+    return $candidate['slug'] !== $post['slug'];
 })) : [];
 $previousPosts = array_slice($previousPosts, 0, 5);
 
@@ -56,7 +59,7 @@ $pageUrl = static function ($page) {
     return $page === 1 ? '/blog/' : '/blog/?pagina=' . $page;
 };
 $formatDate = static function ($value) {
-    $date = DateTimeImmutable::createFromFormat('!Y-m-d\TH:i:s', $value);
+    $date = DateTimeImmutable::createFromFormat('!Y-m-d', $value);
     if (!$date) {
         return '';
     }
