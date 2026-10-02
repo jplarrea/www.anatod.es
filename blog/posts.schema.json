@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Publicaciones locales de anatod",
+  "description": "Lista de posts. Ordenar por date de más reciente a más antiguo al mostrarlos. No requiere IDs ni una base de datos.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["slug", "path", "title", "date", "date_gmt", "excerpt", "content_html", "image", "categories", "tags"],
+    "properties": {
+      "slug": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Identificador único. Conservar exactamente los slugs importados, incluyendo secuencias %xx. Para nuevos posts usar minúsculas, números y guiones."
+      },
+      "path": {
+        "type": "string",
+        "pattern": "^/blog/[0-9]{4}/[0-9]{2}/[0-9]{2}/[^/]+/$",
+        "description": "Ruta local completa. Conservar las rutas importadas; para nuevos posts usar /blog/AAAA/MM/DD/slug/."
+      },
+      "title": { "type": "string", "minLength": 1, "description": "Título en texto plano, sin etiquetas HTML." },
+      "date": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}$",
+        "description": "Fecha de publicación local tal como la entrega WordPress, sin sufijo de zona horaria. No convertirla usando la zona del navegador."
+      },
+      "date_gmt": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}$",
+        "description": "Mismo instante en UTC; añadir Z al interpretarlo como fecha UTC."
+      },
+      "excerpt": { "type": "string", "description": "Resumen en texto plano para las tarjetas y la introducción del artículo." },
+      "content_html": { "type": "string", "minLength": 1, "description": "Cuerpo completo en HTML. Las imágenes importadas usan rutas locales bajo /assets/img/blog/." },
+      "image": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "alt"],
+        "properties": {
+          "url": { "type": "string", "format": "uri-reference", "pattern": "^(/assets/img/|https?://[^/]+/)", "description": "Ruta de la imagen destacada. Las imágenes importadas están en /assets/img/blog/. Para nuevos posts puedes agregar una imagen al proyecto y usar su ruta local." },
+          "alt": { "type": "string", "description": "Texto alternativo de la imagen." },
+          "width": { "type": "integer", "minimum": 1, "description": "Ancho original en píxeles, opcional para nuevos posts." },
+          "height": { "type": "integer", "minimum": 1, "description": "Alto original en píxeles, opcional para nuevos posts." }
+        }
+      },
+      "categories": { "type": "array", "items": { "$ref": "#/$defs/term" }, "description": "Categorías del post; pueden usarse para filtros y para entradas anteriores." },
+      "tags": { "type": "array", "items": { "$ref": "#/$defs/term" }, "description": "Etiquetas del post; usar [] cuando no hay etiquetas." }
+    }
+  },
+  "$defs": {
+    "term": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug", "name"],
+      "properties": {
+        "slug": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

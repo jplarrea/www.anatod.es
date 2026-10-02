@@ -93,7 +93,7 @@
       "home.meta.title": "anatod · Software de gestión para ISP"
     },
     "links": {
-      "blog": "https://www.anatod.com/blog/"
+      "blog": "/blog/"
     },
     "images": {
       "favicon": "assets/img/favicon.png",
