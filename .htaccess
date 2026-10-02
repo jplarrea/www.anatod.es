@@ -10,6 +10,8 @@ RewriteRule ^events/?$ /events/index.php [L]
 RewriteRule ^about-us$ /about-us.php [L]
 RewriteRule ^software$ /software.php [L]
 RewriteRule ^contact-us$ /contact-us.php [L]
+RewriteRule ^privacy-policy/?$ /privacy-policy.php [L]
+RewriteRule ^terms-conditions/?$ /terms-conditions.php [L]
 
 RewriteRule ^ispkeeper/fibra-optica/?$ /fibra-optica.php [L]
 RewriteRule ^ispkeeper/wisp/?$ /wisp.php [L]
