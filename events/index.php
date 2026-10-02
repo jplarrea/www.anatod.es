@@ -44,7 +44,7 @@ $escapar = static function ($texto) {
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <img class="event-card-image mb-4" src="<?= $escapar($evento['photo'] ?? ''); ?>" alt="<?= $escapar($evento['title'] ?? ''); ?>" loading="lazy">
-              <h2 class="h3"><?= $escapar($evento['title'] ?? ''); ?></h2>
+              <h2 class="h3"><a href="/blog/event/<?= $escapar($evento['slug'] ?? ''); ?>/"><?= $escapar($evento['title'] ?? ''); ?></a></h2>
               <p><?= $escapar($evento['detail'] ?? ''); ?></p>
               <a class="text-link mt-auto" href="/blog/event/<?= $escapar($evento['slug'] ?? ''); ?>/">
                 Ver evento <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
