@@ -48,6 +48,38 @@
   });
 
   function initialise() {
+    function setLinkTarget(anchor) {
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+      let url;
+      try { url = new URL(href, document.baseURI); } catch (error) { return; }
+      const external = /^(https?:)$/.test(url.protocol) &&
+        url.host.replace(/^www\./, '') !== window.location.host.replace(/^www\./, '');
+      const rel = new Set((anchor.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+      if (external) {
+        anchor.setAttribute('target', '_blank');
+        rel.add('noopener');
+        rel.add('noreferrer');
+      } else {
+        anchor.removeAttribute('target');
+        rel.delete('noopener');
+        rel.delete('noreferrer');
+      }
+      if (rel.size) anchor.setAttribute('rel', Array.from(rel).join(' '));
+      else anchor.removeAttribute('rel');
+    }
+    function updateLinks(root) {
+      if (root.matches && root.matches('a[href]')) setLinkTarget(root);
+      if (root.querySelectorAll) root.querySelectorAll('a[href]').forEach(setLinkTarget);
+    }
+    updateLinks(document);
+    new MutationObserver(function (changes) {
+      changes.forEach(function (change) {
+        if (change.type === 'attributes' && change.target.matches('a')) setLinkTarget(change.target);
+        else change.addedNodes.forEach(updateLinks);
+      });
+    }).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['href'] });
+
     const themeToggle = document.getElementById('theme-toggle');
     applyTheme(root.dataset.bsTheme);
     if (themeToggle) {

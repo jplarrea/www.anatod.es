@@ -5,25 +5,25 @@
       
       <div class="col-6 col-md-4 col-lg-2">
         <h2>anatod ®</h2>
-        <a href="https://wiki.anatod.com/" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">Centro de ayuda</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
-        <a href="https://status.anatod.com/" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">Estado de los servicios</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
-        <a href="https://docs.anatod.com/" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">Documentación de la API</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
-        <a href="/kit-de-marca" rel="noopener noreferrer" ><span class="copy-fragment">Kit de Marca</span></a>
+        <a href="https://wiki.anatod.com/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">Centro de ayuda</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+        <a href="https://status.anatod.com/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">Estado de los servicios</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+        <a href="https://docs.anatod.com/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">Documentación de la API</span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+        <a href="/kit-de-marca" ><span class="copy-fragment">Kit de Marca</span></a>
       </div>
 
       <div class="col-6 col-md-4 col-lg-2"><h2>anatod</h2><a href="/about-us">Nosotros</a>
         <a href="/events/" ><span class="copy-fragment">Eventos</span></a>
-        <a href="/blog/"><span class="copy-fragment"><?= function_exists('_l') ? _l('Novedades') : 'Novedades'; ?></span></a>
+        <a href="/blog/"><span class="copy-fragment">Novedades</span></a>
         <a href="/contact-us">Contacto</a>
       </div>
 
       <div class="col-12 col-md-4 col-lg-3">
           <h2>Síguenos</h2>
-          <a href="https://www.facebook.com/anatodsoftware" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">Facebook</span></a>
-          <a href="https://x.com/anatodSoftware" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">X (Twitter)</span></a>
-          <a href="https://www.youtube.com/channel/UC5hoxhPD8SEM9c20fUiIbhQ" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">Youtube</span></a>
-          <a href="https://www.instagram.com/anatodsoftware/" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">Instagram</span></a>
-          <a href="https://www.linkedin.com/company/anatod" target="_blank" rel="noopener noreferrer" ><span class="copy-fragment">LinkedIn</span></a>
+          <a href="https://www.facebook.com/anatodsoftware"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">Facebook</span></a>
+          <a href="https://x.com/anatodSoftware"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">X (Twitter)</span></a>
+          <a href="https://www.youtube.com/channel/UC5hoxhPD8SEM9c20fUiIbhQ"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">Youtube</span></a>
+          <a href="https://www.instagram.com/anatodsoftware/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">Instagram</span></a>
+          <a href="https://www.linkedin.com/company/anatod"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment">LinkedIn</span></a>
       </div>
 
     </div>
@@ -31,14 +31,64 @@
       <div>
         <a href="/privacy-policy/">Privacidad</a>
         <a href="/terms-conditions/">Términos y condiciones</a>
+        <?php if (($domain ?? '') === 'anatod.es'): ?>
+        <a href="/cookies-policy/">Cookies</a>
+        <a href="/legal-notice/">Aviso legal</a>
+        <button class="btn btn-link p-0" type="button" data-cookie-settings>Configurar cookies</button>
+        <?php endif; ?>
         <a href="#inicio">Volver arriba ↑</a></div>
     </div>
     <?php if (($domain ?? '') === 'anatod.com.ar'): ?>
     <div class="text-center pb-4">
-      <a href="http://qr.afip.gob.ar/?qr=FfGC5UWsd4xiDgvp9NCm1w,," target="_F960AFIPInfo" rel="noopener noreferrer">
+      <a href="http://qr.afip.gob.ar/?qr=FfGC5UWsd4xiDgvp9NCm1w,," target="_blank" rel="noopener noreferrer">
         <img class="img-fluid border-0" src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Data Fiscal AFIP" width="100" loading="lazy">
       </a>
     </div>
     <?php endif; ?>
   </div>
 </footer>
+<?php if (($domain ?? '') === 'anatod.es'): ?>
+<style>
+  #cookie-banner { position: fixed; inset: auto 0 0; z-index: 1080; max-height: 75vh; overflow-y: auto; background: var(--surface); color: var(--ink); border-top: 1px solid var(--line); box-shadow: 0 -4px 24px #0002; }
+  #cookie-banner[hidden], #cookie-banner [hidden] { display: none !important; }
+  #cookie-banner a { color: var(--brand); text-decoration: underline; }
+  #cookie-banner p { font-size: 14px; line-height: 1.6; }
+  #cookie-banner .cookie-actions > button { flex: 1 1 180px; }
+  .cookie-embed-placeholder { padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--soft); color: var(--ink); text-align: center; }
+</style>
+<section id="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
+  <div class="container py-4">
+    <h2 id="cookie-title" class="h4" tabindex="-1">Tu privacidad en anatod.es</h2>
+    <p>anatod LLC utiliza almacenamiento necesario para recordar tus preferencias. Si lo autorizas, usamos Google Analytics para medir las visitas y cargamos vídeos y otros contenidos externos. Puedes aceptar, rechazar o elegir cada finalidad. Rechazar no impide navegar por el sitio. <a href="/cookies-policy/">Política de cookies</a> · <a href="/privacy-policy/">Política de privacidad</a></p>
+    <div class="cookie-actions d-flex flex-wrap gap-3">
+      <button id="cookie-reject" class="btn btn-primary" type="button">Rechazar todas</button>
+      <button id="cookie-accept" class="btn btn-primary" type="button">Aceptar todas</button>
+      <button id="cookie-configure" class="btn btn-outline-primary" type="button">Configurar</button>
+    </div>
+    <div id="cookie-options" class="border-top mt-4 pt-3" hidden>
+      <h3 class="h5">Elige qué permites</h3>
+      <p>Necesarias: guardan tu elección de cookies y el modo claro u oscuro que seleccionas.</p>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="cookie-analytics" aria-describedby="cookie-analytics-description">
+        <label class="form-check-label fw-bold" for="cookie-analytics">Analítica</label>
+        <p id="cookie-analytics-description" class="mb-0">Google Analytics permite conocer las visitas y cómo se utiliza el sitio. Está desactivado hasta que lo aceptes.</p>
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="cookie-external" aria-describedby="cookie-external-description">
+        <label class="form-check-label fw-bold" for="cookie-external">Contenidos externos</label>
+        <p id="cookie-external-description" class="mb-0">Permite cargar vídeos de YouTube y publicaciones insertadas de otros sitios. Sus proveedores pueden recibir datos de navegación y utilizar sus propias cookies.</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <button id="cookie-save" class="btn btn-primary" type="button">Guardar preferencias</button>
+        <button id="cookie-cancel" class="btn btn-outline-primary" type="button" hidden>Cancelar</button>
+      </div>
+    </div>
+  </div>
+</section>
+<template id="cookie-embed-template">
+  <div class="cookie-embed-placeholder mb-4">
+    <p>Este contenido externo está desactivado. Puedes permitirlo desde la configuración de cookies.</p>
+    <button class="btn btn-outline-primary" type="button">Configurar contenidos externos</button>
+  </div>
+</template>
+<?php endif; ?>

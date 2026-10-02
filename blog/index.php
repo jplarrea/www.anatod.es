@@ -1,12 +1,6 @@
 <?php
 require_once dirname(__DIR__) . '/config.php';
 
-if (!function_exists('_l')) {
-    function _l($text) {
-        return $text;
-    }
-}
-
 $escape = static function ($text) {
     return htmlspecialchars((string) $text, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 };
@@ -43,6 +37,14 @@ if (!$isListing) {
     }
 }
 
+if ($post && ($domain ?? '') === 'anatod.es') {
+    // Evita que los contenidos externos contacten con terceros antes del permiso.
+    $iframePattern = <<<'REGEX'
+/(<iframe\b(?:"[^"]*"|'[^']*'|[^'">])*?)(?<![-\w])src\s*=/i
+REGEX;
+    $post['content_html'] = preg_replace($iframePattern, '$1 hidden data-consent-src=', $post['content_html']);
+}
+
 $title = $blogUnavailable ? 'Publicaciones no disponibles' : ($isListing ? 'Novedades' : ($post['title'] ?? 'Publicación no encontrada'));
 $description = $blogUnavailable ? 'Las publicaciones no están disponibles en este momento.' : ($isListing ? 'Todas las novedades de anatod.' : ($post['excerpt'] ?? 'No encontramos la publicación solicitada.'));
 $previousPosts = $post ? array_values(array_filter($posts, static function ($candidate) use ($post) {
@@ -64,7 +66,7 @@ $formatDate = static function ($value) {
         return '';
     }
     $months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    return $date->format('j') . ' ' . _l($months[(int) $date->format('n') - 1]) . ', ' . $date->format('Y');
+    return $date->format('j') . ' ' . $months[(int) $date->format('n') - 1] . ', ' . $date->format('Y');
 };
 
 require dirname(__DIR__) . '/views/blog.min.html';

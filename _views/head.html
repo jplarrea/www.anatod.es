@@ -9,6 +9,166 @@
 <script src="/assets/js/site-config.js" defer></script>
 <script src="/assets/js/site.js" defer></script>
 
+<?php if (($domain ?? '') === 'anatod.es'): ?>
+<script data-cfasync="false">
+(function () {
+  'use strict';
+  const key = 'anatod-cookie-consent';
+  const version = 1;
+  const lifetime = 180 * 24 * 60 * 60 * 1000;
+  const measurementId = <?= json_encode($gtag, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+  let analyticsLoaded = false;
+  let banner;
+  let returnFocus;
+
+  function readChoice() {
+    try {
+      const value = JSON.parse(localStorage.getItem(key));
+      if (value && value.version === version && typeof value.analytics === 'boolean' &&
+          typeof value.external === 'boolean' && Number.isFinite(value.time) &&
+          value.time <= Date.now() && Date.now() - value.time < lifetime) return value;
+    } catch (error) {}
+    return null;
+  }
+  let choice = readChoice();
+
+  function clearAnalyticsCookies() {
+    const host = location.hostname;
+    const domains = ['', host, '.' + host, 'anatod.es', '.anatod.es'];
+    const paths = ['/'];
+    let path = '';
+    location.pathname.split('/').filter(Boolean).forEach(function (part) {
+      path += '/' + part;
+      paths.push(path, path + '/');
+    });
+    document.cookie.split(';').forEach(function (cookie) {
+      const name = cookie.split('=')[0].trim();
+      if (!/^(_ga($|_)|_gid$|_gat($|_)|_gac_)/.test(name)) return;
+      domains.forEach(function (domain) {
+        paths.forEach(function (cookiePath) {
+          document.cookie = name + '=; Max-Age=0; path=' + cookiePath +
+            (domain ? '; domain=' + domain : '') + '; SameSite=Lax';
+        });
+      });
+    });
+  }
+
+  function loadAnalytics() {
+    if (analyticsLoaded || !choice || !choice.analytics) return;
+    analyticsLoaded = true;
+    window['ga-disable-' + measurementId] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('consent', 'default', {
+      analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied'
+    });
+    window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, {
+      allow_google_signals: false, allow_ad_personalization_signals: false,
+      cookie_expires: lifetime / 1000, cookie_update: false,
+      cookie_domain: location.hostname, cookie_flags: 'SameSite=Lax;Secure'
+    });
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    document.head.appendChild(script);
+  }
+
+  function updateEmbeds() {
+    const template = document.getElementById('cookie-embed-template');
+    document.querySelectorAll('iframe[data-consent-src]').forEach(function (frame) {
+      if (choice && choice.external) {
+        frame.src = frame.dataset.consentSrc;
+        frame.hidden = false;
+        if (frame.cookiePlaceholder) frame.cookiePlaceholder.remove();
+      } else {
+        frame.removeAttribute('src');
+        frame.hidden = true;
+        if (template && !frame.cookiePlaceholder) {
+          const placeholder = template.content.firstElementChild.cloneNode(true);
+          placeholder.querySelector('button').addEventListener('click', function () { openSettings(true); });
+          frame.before(placeholder);
+          frame.cookiePlaceholder = placeholder;
+        }
+      }
+    });
+  }
+
+  function openSettings(configure) {
+    if (!banner) return;
+    returnFocus = document.activeElement;
+    banner.hidden = false;
+    document.getElementById('cookie-options').hidden = !configure;
+    document.getElementById('cookie-analytics').checked = Boolean(choice && choice.analytics);
+    document.getElementById('cookie-external').checked = Boolean(choice && choice.external);
+    document.getElementById('cookie-cancel').hidden = !choice;
+    document.getElementById('cookie-title').focus();
+  }
+
+  function saveChoice(analytics, external) {
+    const previous = choice;
+    choice = { version: version, time: Date.now(), analytics: analytics, external: external };
+    try { localStorage.setItem(key, JSON.stringify(choice)); } catch (error) {}
+    if (!analytics) {
+      window['ga-disable-' + measurementId] = true;
+      clearAnalyticsCookies();
+    }
+    banner.hidden = true;
+    // Una recarga elimina los servicios ya cargados al retirar un permiso.
+    if (previous && ((previous.analytics && !analytics) || (previous.external && !external))) {
+      location.reload();
+      return;
+    }
+    loadAnalytics();
+    updateEmbeds();
+    if (returnFocus && returnFocus.isConnected && !banner.contains(returnFocus)) returnFocus.focus();
+  }
+
+  function checkExpiry() {
+    if (choice && Date.now() - choice.time >= lifetime) {
+      window['ga-disable-' + measurementId] = true;
+      clearAnalyticsCookies();
+      location.reload();
+    }
+  }
+
+  if (!choice || !choice.analytics) {
+    window['ga-disable-' + measurementId] = true;
+    clearAnalyticsCookies();
+  }
+  loadAnalytics();
+  document.addEventListener('DOMContentLoaded', function () {
+    banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+    banner.hidden = Boolean(choice);
+    document.getElementById('cookie-accept').addEventListener('click', function () { saveChoice(true, true); });
+    document.getElementById('cookie-reject').addEventListener('click', function () { saveChoice(false, false); });
+    document.getElementById('cookie-configure').addEventListener('click', function () { openSettings(true); });
+    document.getElementById('cookie-save').addEventListener('click', function () {
+      saveChoice(document.getElementById('cookie-analytics').checked, document.getElementById('cookie-external').checked);
+    });
+    document.getElementById('cookie-cancel').addEventListener('click', function () {
+      banner.hidden = true;
+      if (returnFocus && returnFocus.isConnected) returnFocus.focus();
+    });
+    document.querySelectorAll('[data-cookie-settings]').forEach(function (button) {
+      button.addEventListener('click', function () { openSettings(true); });
+    });
+    updateEmbeds();
+    window.addEventListener('focus', checkExpiry);
+    window.setInterval(checkExpiry, 60000);
+    window.addEventListener('storage', function (event) {
+      if (event.key === key) {
+        window['ga-disable-' + measurementId] = true;
+        location.reload();
+      }
+    });
+  });
+}());
+</script>
+<?php else: ?>
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= htmlspecialchars($gtag) ?>"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,8 +177,13 @@
 
     gtag('config', '<?= htmlspecialchars($gtag) ?>');
 </script>
+<?php endif; ?>
 
+<?php if (($domain ?? '') === 'anatod.es'): ?>
+<link rel="stylesheet" href="/assets/fonts/manrope.css">
+<?php else: ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<?php endif; ?>

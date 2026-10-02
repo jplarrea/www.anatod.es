@@ -80,6 +80,9 @@
                                     <textarea class="form-control" id="contact-message" name="message" rows="3" maxlength="1500" placeholder="¿Qué te gustaría mejorar en tu gestión?"></textarea>
                                 </div>
                                 <div class="col-12">
+                                    <?php if (($domain ?? '') === 'anatod.es'): ?>
+                                    <p class="small">anatod LLC tratará los datos que envíes para responder tu consulta o preparar una propuesta. La solicitud se abre en WhatsApp y se envía cuando confirmas allí el mensaje. <a href="/privacy-policy/">Consulta la política de privacidad</a>.</p>
+                                    <?php endif; ?>
                                     <button class="btn btn-primary w-100" id="prepare-request" type="submit" disabled>
                                         <span class="copy-fragment">Enviar Whatsapp</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/>
                                         </svg>

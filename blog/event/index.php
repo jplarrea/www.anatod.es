@@ -18,9 +18,6 @@ if (!$evento) {
     http_response_code(404);
 }
 
-$traducir = static function ($texto) {
-    return function_exists('_l') ? _l($texto) : $texto;
-};
 $escapar = static function ($texto) {
     return htmlspecialchars((string) $texto, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 };
@@ -32,8 +29,8 @@ $detalle = $evento['detail'] ?? 'No encontramos el evento solicitado.';
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $escapar($traducir($titulo)); ?> · anatod</title>
-  <meta name="description" content="<?= $escapar($traducir($detalle)); ?>">
+  <title><?= $escapar($titulo); ?> · anatod</title>
+  <meta name="description" content="<?= $escapar($detalle); ?>">
   <?php require dirname(__DIR__, 2) . '/views/head.min.html'; ?>
   <style>
     .event-detail-photo { display: block; width: 100%; max-height: 540px; object-fit: cover; border: 1px solid var(--line); border-radius: 14px; }
@@ -44,28 +41,28 @@ $detalle = $evento['detail'] ?? 'No encontramos el evento solicitado.';
   <main id="contenido">
     <section class="service-detail-hero">
       <div class="container">
-        <nav class="breadcrumb-link" aria-label="<?= $escapar($traducir('Ruta de navegación')); ?>">
-          <a href="/">anatod</a><span aria-hidden="true">/</span><a href="/events/"><?= $escapar($traducir('Eventos')); ?></a><span aria-hidden="true">/</span><span><?= $escapar($traducir($titulo)); ?></span>
+        <nav class="breadcrumb-link" aria-label="Ruta de navegación">
+          <a href="/">anatod</a><span aria-hidden="true">/</span><a href="/events/">Eventos</a><span aria-hidden="true">/</span><span><?= $escapar($titulo); ?></span>
         </nav>
         <?php if ($evento): ?>
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
-            <div class="eyebrow"><?= $escapar($traducir('ENCUENTROS DEL SECTOR')); ?></div>
-            <h1><?= $escapar($traducir($titulo)); ?></h1>
-            <p class="hero-description"><?= $escapar($traducir($detalle)); ?></p>
-            <a class="text-link" href="/events/"><?= $escapar($traducir('Volver a todos los eventos')); ?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <div class="eyebrow">ENCUENTROS DEL SECTOR</div>
+            <h1><?= $escapar($titulo); ?></h1>
+            <p class="hero-description"><?= $escapar($detalle); ?></p>
+            <a class="text-link" href="/events/">Volver a todos los eventos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="col-lg-6">
-            <img class="event-detail-photo" src="<?= $escapar($evento['photo'] ?? ''); ?>" alt="<?= $escapar($traducir($titulo)); ?>" fetchpriority="high">
+            <img class="event-detail-photo" src="<?= $escapar($evento['photo'] ?? ''); ?>" alt="<?= $escapar($titulo); ?>" fetchpriority="high">
           </div>
         </div>
         <?php else: ?>
         <div class="row">
           <div class="col-lg-8">
-            <div class="eyebrow"><?= $escapar($traducir('EVENTOS')); ?></div>
-            <h1><?= $escapar($traducir($titulo)); ?></h1>
-            <p class="hero-description"><?= $escapar($traducir($detalle)); ?></p>
-            <a class="text-link" href="/events/"><?= $escapar($traducir('Volver a todos los eventos')); ?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <div class="eyebrow">EVENTOS</div>
+            <h1><?= $escapar($titulo); ?></h1>
+            <p class="hero-description"><?= $escapar($detalle); ?></p>
+            <a class="text-link" href="/events/">Volver a todos los eventos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
         <?php endif; ?>
