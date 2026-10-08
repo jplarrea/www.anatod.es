@@ -102,7 +102,7 @@
     },
     "images": {
       "favicon": "assets/img/favicon.png",
-      "brand": "assets/img/logo_anatod.png"
+      "brand": "https://d138vzth4rmzi0.cloudfront.net/logo_anatod_min.png"
     },
     "messages": {
       "themeLight": "Cambiar a modo claro",
