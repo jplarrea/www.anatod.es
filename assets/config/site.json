@@ -60,7 +60,7 @@
         "home.meta.title": "anatod Argentina · Software de gestión para ISP",
         "software.meta.title": "Software anatod Argentina · Funciones y precios para ISP",
         "home.hero.eyebrow": "anatod · ARGENTINA",
-        "common.locale": "es_AR"
+        "common.locale": "es_ES"
       },
       "links": {},
       "images": {}
@@ -76,7 +76,12 @@
         "display": "+1 404 496 5122",
         "label": "info@anatod.com"
       },
-      "texts": {},
+      "texts": {
+        "home.meta.title": "anatod · Software de gestión para ISP",
+        "software.meta.title": "Software anatod · Funciones y precios para ISP",
+        "home.hero.eyebrow": "anatod",
+        "common.locale": "es_AR"
+      },
       "links": {},
       "images": {}
     }
