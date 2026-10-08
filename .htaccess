@@ -3,6 +3,9 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+RewriteRule ^robots\.txt$ /robots.php [L]
+
 RewriteRule ^blog/event/([a-z0-9-]+)/?$ /blog/event/index.php?slug=$1 [L,QSA]
 RewriteRule ^blog/[0-9]{4}/[0-9]{2}/[0-9]{2}/[^/]+/?$ /blog/index.php [L]
 RewriteRule ^blog/?$ /blog/index.php [L]
