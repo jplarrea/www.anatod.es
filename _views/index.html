@@ -8,6 +8,15 @@
   <meta property="og:title" content="anatod · Software de gestión para ISP">
   <meta property="og:description" content="Gestiona Internet, TV, telefonía y suscripciones con anatod. Clientes, facturación, red y soporte en un solo lugar, con un equipo propio a tu lado.">
    <?php require 'views/head.min.html'; ?>
+  <style>
+    .home-clients { background: var(--soft); }
+    .client-card { position: relative; height: 100%; padding: 28px 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); text-align: center; }
+    .client-card:has(a):hover, .client-card:focus-within { border-color: var(--brand); }
+    .client-logo { display: flex; align-items: center; justify-content: center; height: 112px; margin-bottom: 22px; padding: 16px; border-radius: 8px; background: #fff; }
+    .client-logo img { display: block; width: auto; max-width: min(100%, 200px); height: auto; max-height: 100%; object-fit: contain; }
+    .client-card h3 { margin-bottom: 8px; font-size: 19px; overflow-wrap: anywhere; }
+    .client-card p { margin: 0; font-size: 13px; overflow-wrap: anywhere; }
+  </style>
 </head>
 <body class="home-page" data-page="home">
   <?php require 'views/header.min.html'; ?>
@@ -45,6 +54,38 @@
         <a class="text-link section-link" href="/software#funciones" ><span class="copy-fragment">Descubre todo lo que puedes gestionar</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </section>
+
+    <?php if (!empty($clients)): ?>
+    <section class="section home-clients" id="clientes" aria-labelledby="clients-title">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow"><?=_l('NOS ACOMPAÑAN');?></div>
+          <h2 id="clients-title"><?=_l('Clientes que confían en nosotros');?></h2>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center">
+          <?php foreach ($clients as $client): ?>
+          <div class="col">
+            <article class="client-card">
+              <div class="client-logo">
+                <img src="<?= $clientEscape($client['logo']); ?>" alt="" loading="lazy" decoding="async">
+              </div>
+              <h3>
+              <?php if (!empty($client['web'])): ?>
+              <a class="stretched-link text-reset text-decoration-none" href="<?= $clientEscape($client['web']); ?>" target="_blank" rel="noopener noreferrer">
+                <?= $clientEscape(_l($client['nombre'])); ?>
+              </a>
+              <?php else: ?>
+              <?= $clientEscape(_l($client['nombre'])); ?>
+              <?php endif; ?>
+              </h3>
+              <p><?= $clientEscape(_l($client['localidad'])); ?> <span aria-hidden="true">·</span> <?= $clientEscape(_l($client['pais'])); ?></p>
+            </article>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+    <?php endif; ?>
 
     <section class="section home-company" id="nosotros" aria-labelledby="company-title">
       <div class="container">
