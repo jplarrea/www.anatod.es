@@ -23,6 +23,12 @@
 
   function applyTheme(theme) {
     root.dataset.bsTheme = theme;
+    const homeImage = document.querySelector('.home-photo img');
+    if (homeImage) {
+      homeImage.src = theme === 'dark'
+        ? '/assets/img/homeSistemaDark.jpg'
+        : '/assets/img/homeSistema.jpg';
+    }
     const toggle = document.getElementById('theme-toggle');
     if (toggle) {
       const isDark = theme === 'dark';
