@@ -603,3 +603,13 @@ details[open] > summary > span:not(.copy-fragment) { transform: rotate(45deg); }
 #site-config-status { font-size: 13px; color: var(--muted); margin-top: 18px; }
 #site-config-retry { margin-top: 10px; }
 .config-notice { padding-block: 20px; }
+
+
+.home-portrait { margin: 0 0 0 10px; position: relative; }
+.home-portrait:before { content: ''; position: absolute; inset: -13px -12px 78px 35px; background: var(--pale); border-radius: 16px; transform: rotate(4deg); }
+.home-photo { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--line); }
+.home-photo img { display: block; width: 100%; height: auto; }
+.home-portrait figcaption { position: relative; display: flex; align-items: center; gap: 13px; padding-top: 21px; }
+.home-mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #fff; background: #1755ed; flex-shrink: 0; }
+.home-portrait figcaption strong { font-size: 13px; display: block; }
+.home-portrait figcaption div > span { font-size: 11px; color: var(--muted); display: block; margin-top: 3px; }
