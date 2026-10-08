@@ -1,5 +1,7 @@
 [
   {"nombre": "SSServicios", "localidad": "Santa Cruz", "pais": "Argentina", "logo": "https://d138vzth4rmzi0.cloudfront.net/logo_ssservicios.png", "web": "https://www.ssservicios.com.ar"},
   {"nombre": "GLnet", "localidad": "Buenos Aires", "pais": "Argentina", "logo": "https://d138vzth4rmzi0.cloudfront.net/logo_glnet.png", "web": "https://www.glnet.com.ar"},
-  {"nombre": "Red Wisp", "localidad": "Jalisco", "pais": "México", "logo": "https://d2tb7j0szbsags.cloudfront.net/logo_redwisp.png", "web": "https://www.redwisp.mx/"}
+  {"nombre": "Red Wisp", "localidad": "Jalisco", "pais": "México", "logo": "https://d2tb7j0szbsags.cloudfront.net/logo_redwisp.png", "web": "https://www.redwisp.mx/"},
+  {"nombre": "Wiber", "localidad": "Mendoza", "pais": "Argentina", "logo": "https://d138vzth4rmzi0.cloudfront.net/logo_wiber.png", "web": "https://www.wiber.com.ar/"},
+  {"nombre": "Solatec", "localidad": "Sonora", "pais": "México", "logo": "https://d138vzth4rmzi0.cloudfront.net/logo_solatec.png", "web": "https://www.solatec.com.mx/"}
 ]
