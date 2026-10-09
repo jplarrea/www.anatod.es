@@ -1,13 +1,6 @@
 <?php
 require_once 'config.php';
 
-// Mantiene los textos traducibles también en esta web independiente.
-if (!function_exists('_l')) {
-    function _l($texto) {
-        return $texto;
-    }
-}
-
 $clientsFile = __DIR__ . '/assets/config/clients.min.json';
 $clientsData = is_readable($clientsFile)
     ? json_decode(file_get_contents($clientsFile), true)

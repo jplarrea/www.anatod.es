@@ -40,7 +40,7 @@
         "home.meta.title": "anatod México · Software de gestión para ISP",
         "software.meta.title": "Software anatod México · Funciones y precios para ISP",
         "home.hero.eyebrow": "anatod · MÉXICO",
-        "common.locale": "es_MX"        
+        "common.locale": "es_MX"
       },
       "links": {},
       "images": {}
@@ -81,6 +81,28 @@
         "software.meta.title": "Software anatod · Funciones y precios para ISP",
         "home.hero.eyebrow": "anatod",
         "common.locale": "es_AR"
+      },
+      "links": {},
+      "images": {}
+    },
+    "anatod.eus": {
+      "market": "ES",
+      "country": "España",
+      "lang": "eu",
+      "locale": "eu-ES",
+      "currency": "EUR",
+      "contact": {
+        "number": "34683227840",
+        "display": "+34 683 22 78 40",
+        "label": "info@anatod.es"
+      },
+      "texts": {
+        "home.meta.title": "anatod España · Software de gestión para ISP",
+        "software.meta.title": "Software anatod España · Funciones y precios para ISP",
+        "home.hero.eyebrow": "anatod · ESPAÑA",
+        "common.locale": "eu_ES",
+        "software.features.facturacionRecurrenteMultiplesMonedasYMedios": "Facturación recurrente, múltiples monedas y medios de pago. Remesas SEPA para tu operación en España.",
+        "software.faq.losMediosDePagoLaFacturacion": "Los medios de pago, la facturación y los proveedores integrados pueden variar. Antes de contratar, revisamos la disponibilidad para tu país y tu operación. En España contamos, entre otras, con SEPA, Redsys e integraciones de telefonía."
       },
       "links": {},
       "images": {}

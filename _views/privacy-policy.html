@@ -1,11 +1,11 @@
-<?php if (($domain ?? '') === 'anatod.es'): ?>
+<?php if (in_array($domain ?? '', ['anatod.es', 'anatod.eus'], true)): ?>
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de privacidad · anatod.es</title>
-  <meta name="description" content="Política de privacidad de anatod.es: información y opciones para los visitantes del sitio.">
+  <title><?=htmlspecialchars(_l('Política de privacidad · anatod.es'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
+  <meta name="description" content="<?=htmlspecialchars(_l('Política de privacidad de anatod.es: información y opciones para los visitantes del sitio.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
   <?php require __DIR__ . '/head.min.html'; ?>
   <style>
     .legal-hero { padding: 40px 0 32px; }
@@ -20,45 +20,45 @@
   <main id="contenido">
     <section class="legal-hero" id="inicio">
       <div class="container">
-        <nav class="breadcrumb-link mb-4" aria-label="Ruta de navegación"><a href="/">anatod</a><span aria-hidden="true">/</span><span>Política de privacidad</span></nav>
-        <h1>Política de privacidad</h1>
+        <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></nav>
+        <h1><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h1>
       </div>
     </section>
     <section class="pb-5"><div class="container">
       <article class="legal-content mx-auto">
-<p>Última actualización: 2 de octubre de 2026.</p>
-<h2>Responsable del tratamiento</h2>
-<p><strong>anatod LLC</strong><br>1209 MOUNTAIN ROAD PL NE (STE N)<br>Albuquerque, NM, 87110, USA<br>Correo: <a href="mailto:info@anatod.com">info@anatod.com</a>.</p>
-<p>Esta política se refiere al sitio público anatod.es y a las consultas recibidas a través de él. El tratamiento de datos realizado al contratar o utilizar nuestros productos se regula además por los documentos y acuerdos aplicables a cada servicio.</p>
-<h2>Datos y finalidades</h2>
+<p><?=htmlspecialchars(_l('Última actualización: 2 de octubre de 2026.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Responsable del tratamiento'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><strong><?=htmlspecialchars(_l('anatod LLC'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong><br><?=htmlspecialchars(_l('1209 MOUNTAIN ROAD PL NE (STE N)'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('Albuquerque, NM, 87110, USA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('Correo:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
+<p><?=htmlspecialchars(_l('Esta política se refiere al sitio público anatod.es y a las consultas recibidas a través de él. El tratamiento de datos realizado al contratar o utilizar nuestros productos se regula además por los documentos y acuerdos aplicables a cada servicio.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Datos y finalidades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
 <ul>
-  <li><strong>Consultas y solicitudes de presentación:</strong> los datos que facilitas, como nombre, empresa, correo, país, servicios de interés y mensaje, se utilizan para atender tu solicitud y preparar una respuesta o propuesta.</li>
-  <li><strong>Preferencias:</strong> el navegador puede recordar tu elección de cookies y el modo claro u oscuro que seleccionas.</li>
-  <li><strong>Analítica:</strong> si la aceptas, Google Analytics recibe datos técnicos y de navegación para medir las visitas y el uso del sitio.</li>
-  <li><strong>Contenidos externos:</strong> si los permites, los proveedores de vídeos y publicaciones insertadas reciben los datos necesarios para cargar sus contenidos.</li>
+  <li><strong><?=htmlspecialchars(_l('Consultas y solicitudes de presentación:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong> <?=htmlspecialchars(_l('los datos que facilitas, como nombre, empresa, correo, país, servicios de interés y mensaje, se utilizan para atender tu solicitud y preparar una respuesta o propuesta.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+  <li><strong><?=htmlspecialchars(_l('Preferencias:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong> <?=htmlspecialchars(_l('el navegador puede recordar tu elección de cookies y el modo claro u oscuro que seleccionas.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+  <li><strong><?=htmlspecialchars(_l('Analítica:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong> <?=htmlspecialchars(_l('si la aceptas, Google Analytics recibe datos técnicos y de navegación para medir las visitas y el uso del sitio.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+  <li><strong><?=htmlspecialchars(_l('Contenidos externos:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong> <?=htmlspecialchars(_l('si los permites, los proveedores de vídeos y publicaciones insertadas reciben los datos necesarios para cargar sus contenidos.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
 </ul>
-<h2>Base jurídica</h2>
-<p>Las solicitudes comerciales o de presentación se atienden para realizar las actuaciones precontractuales que nos pides. Otras consultas se atienden sobre la base del interés legítimo en responder a las comunicaciones que recibimos, teniendo en cuenta tus derechos. La analítica y los contenidos externos opcionales se activan únicamente con tu consentimiento. Puedes retirar ese consentimiento en cualquier momento.</p>
-<h2>Formulario y WhatsApp</h2>
-<p>El formulario prepara un mensaje y abre WhatsApp. El envío de la consulta se produce cuando confirmas el mensaje en ese servicio. WhatsApp trata la información conforme a su <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">política de privacidad</a>. No incluyas en tu consulta contraseñas ni información sensible que no sea necesaria para atenderla.</p>
-<h2>Destinatarios y servicios externos</h2>
-<p>Google trata los datos asociados a Analytics cuando aceptas la analítica. YouTube y los proveedores de publicaciones insertadas reciben las peticiones necesarias para mostrar su contenido cuando lo autorizas. El navegador también se conecta con jsDelivr para cargar Bootstrap y Cloudflare interviene en la entrega y optimización del sitio, tratando datos técnicos de las conexiones. Los enlaces a redes sociales y otros sitios te llevan a servicios sujetos a sus propias políticas.</p>
-<p>Consulta los detalles del almacenamiento y las opciones disponibles en la <a href="/cookies-policy/">política de cookies</a>.</p>
-<h2>Tratamiento fuera del Espacio Económico Europeo</h2>
-<p>El responsable, anatod LLC, tiene su domicilio en Estados Unidos. Las consultas enviadas a la empresa y los datos tratados por proveedores externos pueden ser tratados fuera del Espacio Económico Europeo. Puedes solicitar información sobre los lugares de tratamiento y las garantías aplicables a cada proveedor escribiendo a <a href="mailto:info@anatod.com">info@anatod.com</a>.</p>
-<p>Google publica información sobre sus <a href="https://policies.google.com/privacy/frameworks?hl=es" target="_blank" rel="noopener noreferrer">marcos y garantías de transferencia de datos</a>. Las condiciones aplicables a una transferencia concreta dependen del servicio y del acuerdo correspondiente.</p>
-<h2>Conservación</h2>
-<p>Los datos de consultas se conservarán durante su atención y, cuando corresponda, durante los plazos necesarios para cumplir obligaciones legales o atender responsabilidades. Puedes solicitar información sobre el plazo aplicable a tu consulta. La elección de cookies es válida durante 180 días y las cookies de Analytics se configuran con una duración máxima de 180 días. La preferencia de tema permanece hasta que la cambies o borres el almacenamiento del navegador.</p>
-<h2>Tus derechos</h2>
-<p>Cuando resulte aplicable el Reglamento General de Protección de Datos, puedes solicitar acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición, según las condiciones previstas para cada derecho. También puedes retirar el consentimiento sin afectar a la licitud del tratamiento anterior.</p>
-<p>Para ejercerlos, escribe a <a href="mailto:info@anatod.com">info@anatod.com</a>, indicando tu solicitud. Podemos pedir la información proporcionada que sea necesaria para verificar tu identidad. Puedes presentar una reclamación ante la <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer">Agencia Española de Protección de Datos</a> o ante la autoridad de control competente.</p>
-<h2>Decisiones automatizadas</h2>
-<p>La configuración de Analytics de este sitio no activa las funciones de personalización publicitaria de Google. Las estadísticas de visitas no se utilizan en el sitio para adoptar decisiones automatizadas que produzcan efectos jurídicos sobre ti.</p>
-<h2>Contacto y cambios</h2>
-<p>Para cualquier cuestión de privacidad, contacta en <a href="mailto:info@anatod.com">info@anatod.com</a>. Si cambian las finalidades o los servicios utilizados, se actualizará esta información y se solicitará de nuevo el consentimiento cuando corresponda.</p>
+<h2><?=htmlspecialchars(_l('Base jurídica'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('Las solicitudes comerciales o de presentación se atienden para realizar las actuaciones precontractuales que nos pides. Otras consultas se atienden sobre la base del interés legítimo en responder a las comunicaciones que recibimos, teniendo en cuenta tus derechos. La analítica y los contenidos externos opcionales se activan únicamente con tu consentimiento. Puedes retirar ese consentimiento en cualquier momento.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Formulario y WhatsApp'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('El formulario prepara un mensaje y abre WhatsApp. El envío de la consulta se produce cuando confirmas el mensaje en ese servicio. WhatsApp trata la información conforme a su'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l('. No incluyas en tu consulta contraseñas ni información sensible que no sea necesaria para atenderla.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Destinatarios y servicios externos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('Google trata los datos asociados a Analytics cuando aceptas la analítica. YouTube y los proveedores de publicaciones insertadas reciben las peticiones necesarias para mostrar su contenido cuando lo autorizas. El navegador también se conecta con jsDelivr para cargar Bootstrap y Cloudflare interviene en la entrega y optimización del sitio, tratando datos técnicos de las conexiones. Los enlaces a redes sociales y otros sitios te llevan a servicios sujetos a sus propias políticas.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<p><?=htmlspecialchars(_l('Consulta los detalles del almacenamiento y las opciones disponibles en la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/cookies-policy/"><?=htmlspecialchars(_l('política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
+<h2><?=htmlspecialchars(_l('Tratamiento fuera del Espacio Económico Europeo'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('El responsable, anatod LLC, tiene su domicilio en Estados Unidos. Las consultas enviadas a la empresa y los datos tratados por proveedores externos pueden ser tratados fuera del Espacio Económico Europeo. Puedes solicitar información sobre los lugares de tratamiento y las garantías aplicables a cada proveedor escribiendo a'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
+<p><?=htmlspecialchars(_l('Google publica información sobre sus'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="https://policies.google.com/privacy/frameworks?hl=es" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('marcos y garantías de transferencia de datos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l('. Las condiciones aplicables a una transferencia concreta dependen del servicio y del acuerdo correspondiente.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Conservación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('Los datos de consultas se conservarán durante su atención y, cuando corresponda, durante los plazos necesarios para cumplir obligaciones legales o atender responsabilidades. Puedes solicitar información sobre el plazo aplicable a tu consulta. La elección de cookies es válida durante 180 días y las cookies de Analytics se configuran con una duración máxima de 180 días. La preferencia de tema permanece hasta que la cambies o borres el almacenamiento del navegador.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Tus derechos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('Cuando resulte aplicable el Reglamento General de Protección de Datos, puedes solicitar acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición, según las condiciones previstas para cada derecho. También puedes retirar el consentimiento sin afectar a la licitud del tratamiento anterior.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<p><?=htmlspecialchars(_l('Para ejercerlos, escribe a'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l(', indicando tu solicitud. Podemos pedir la información proporcionada que sea necesaria para verificar tu identidad. Puedes presentar una reclamación ante la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="https://www.aepd.es/" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('Agencia Española de Protección de Datos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('o ante la autoridad de control competente.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Decisiones automatizadas'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('La configuración de Analytics de este sitio no activa las funciones de personalización publicitaria de Google. Las estadísticas de visitas no se utilizan en el sitio para adoptar decisiones automatizadas que produzcan efectos jurídicos sobre ti.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<h2><?=htmlspecialchars(_l('Contacto y cambios'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+<p><?=htmlspecialchars(_l('Para cualquier cuestión de privacidad, contacta en'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l('. Si cambian las finalidades o los servicios utilizados, se actualizará esta información y se solicitará de nuevo el consentimiento cuando corresponda.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 </article>
-      <nav class="d-flex flex-wrap justify-content-center gap-4 mt-5" aria-label="Información legal">
-        <a href="/privacy-policy/">Privacidad</a><a href="/cookies-policy/">Cookies</a><a href="/legal-notice/">Aviso legal</a><a href="/contact-us">Contacto</a>
+      <nav class="d-flex flex-wrap justify-content-center gap-4 mt-5" aria-label="<?=htmlspecialchars(_l('Información legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+        <a href="/privacy-policy/"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/cookies-policy/"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/legal-notice/"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/contact-us"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
       </nav>
     </div></section>
   </main>
@@ -67,14 +67,14 @@
 </html>
 <?php else: ?>
 <!doctype html>
-<html lang="en" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy · anatod</title>
-  <meta name="description" content="Read the anatod privacy policy.">
-  <meta property="og:title" content="Privacy Policy">
-  <meta property="og:description" content="Read the anatod privacy policy.">
+  <title><?=htmlspecialchars(_l('Privacy Policy · anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
+  <meta name="description" content="<?=htmlspecialchars(_l('Read the anatod privacy policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+  <meta property="og:title" content="<?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+  <meta property="og:description" content="<?=htmlspecialchars(_l('Read the anatod privacy policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
   <?php require __DIR__ . '/head.min.html'; ?>
   <style>
     .legal-hero { padding: 40px 0 32px; }
@@ -89,138 +89,138 @@
   <main id="contenido">
     <section class="legal-hero" id="inicio">
       <div class="container">
-        <nav class="breadcrumb-link mb-4" aria-label="Breadcrumb">
-          <a href="/">anatod</a><span aria-hidden="true">/</span><span>Privacy Policy</span>
+        <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Breadcrumb'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+          <a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </nav>
-        <h1>Privacy Policy</h1>
+        <h1><?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h1>
       </div>
     </section>
     <section class="pb-5">
       <div class="container">
-        <article class="legal-content mx-auto" lang="en">
-          <h2>Privacy Policy</h2>
-          <p>Updated at 2023-03-11</p>
+        <article class="legal-content mx-auto" lang="<?=htmlspecialchars($siteLanguage === 'es' ? 'en' : $siteLanguage, ENT_QUOTES, 'UTF-8');?>">
+          <h2><?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('Updated at 2023-03-11'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <p> anatod (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by anatod.</p>
-          <p>This Privacy Policy applies to our website, and its associated subdomains (collectively, our “Service”) alongside our application, anatod. By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service. This Privacy Policy was created with <a href="https://termify.io" target="_blank" rel="noopener noreferrer">Termify</a>.</p>
+          <p> <?=htmlspecialchars(_l('anatod (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by anatod.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('This Privacy Policy applies to our website, and its associated subdomains (collectively, our “Service”) alongside our application, anatod. By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service. This Privacy Policy was created with'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="https://termify.io" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('Termify'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
 
-          <h2>Definitions and key terms</h2>
-          <p>To help explain things as clearly as possible in this Privacy Policy, every time any of these terms are referenced, are strictly defined as:
+          <h2><?=htmlspecialchars(_l('Definitions and key terms'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('To help explain things as clearly as possible in this Privacy Policy, every time any of these terms are referenced, are strictly defined as:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p><ul>
-            <li>Cookie: small amount of data generated by a website and saved by your web browser. It is used to identify your browser, provide analytics, remember information about you such as your language preference or login information.</li>
-            <li>Company: when this policy mentions “Company,” “we,” “us,” or “our,” it refers to anatod LLC, 530-B Harkle Road STE 100, Santa Fe, NM 87505 that is responsible for your information under this Privacy Policy.</li>
-            <li>Country: where anatod or the owners/founders of anatod are based, in this case is Usa</li>
-            <li>Customer: refers to the company, organization or person that signs up to use the anatod Service to manage the relationships with your consumers or service users.</li>
-            <li>Device: any internet connected device such as a phone, tablet, computer or any other device that can be used to visit anatod and use the services.</li>
-            <li>IP address: Every device connected to the Internet is assigned a number known as an Internet protocol (IP) address. These numbers are usually assigned in geographic blocks. An IP address can often be used to identify the location from which a device is connecting to the Internet.</li>
-            <li>Personnel: refers to those individuals who are employed by anatod or are under contract to perform a service on behalf of one of the parties.</li>
-            <li>Personal Data: any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.</li>
-            <li>Service: refers to the service provided by anatod as described in the relative terms (if available) and on this platform.</li>
-            <li>Third-party service: refers to advertisers, contest sponsors, promotional and marketing partners, and others who provide our content or whose products or services we think may interest you.</li>
-            <li>Website: anatod&#x27;s site, which can be accessed via this URL: www.anatod.com</li>
-            <li>You: a person or entity that is registered with anatod to use the Services.</li>
+            <li><?=htmlspecialchars(_l('Cookie: small amount of data generated by a website and saved by your web browser. It is used to identify your browser, provide analytics, remember information about you such as your language preference or login information.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Company: when this policy mentions “Company,” “we,” “us,” or “our,” it refers to anatod LLC, 530-B Harkle Road STE 100, Santa Fe, NM 87505 that is responsible for your information under this Privacy Policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Country: where anatod or the owners/founders of anatod are based, in this case is Usa'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Customer: refers to the company, organization or person that signs up to use the anatod Service to manage the relationships with your consumers or service users.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Device: any internet connected device such as a phone, tablet, computer or any other device that can be used to visit anatod and use the services.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('IP address: Every device connected to the Internet is assigned a number known as an Internet protocol (IP) address. These numbers are usually assigned in geographic blocks. An IP address can often be used to identify the location from which a device is connecting to the Internet.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Personnel: refers to those individuals who are employed by anatod or are under contract to perform a service on behalf of one of the parties.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Personal Data: any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Service: refers to the service provided by anatod as described in the relative terms (if available) and on this platform.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Third-party service: refers to advertisers, contest sponsors, promotional and marketing partners, and others who provide our content or whose products or services we think may interest you.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('Website: anatod\'s site, which can be accessed via this URL: www.anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+            <li><?=htmlspecialchars(_l('You: a person or entity that is registered with anatod to use the Services.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
           </ul>
 
-            <h2>Information automatically collected</h2>
-            <p>There is some information like your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our platform. This information may be used to connect your computer to the Internet. Other information collected automatically could be a login, e-mail address, password, computer and connection information such as browser plug-in types and versions and time zone setting, operating systems and platforms, purchase history, (we sometimes aggregate with similar information from other Users), the full Uniform Resource Locator (URL) clickstream to, through and from our Website that may include date and time; cookie number; parts of the site you viewed or searched for; and the phone number you used to call our Customer Services. We may also use browser data such as cookies, Flash cookies (also known as Flash Local Shared Objects) or similar data on certain parts of our Website for fraud prevention and other purposes. During your visits, we may use software tools such as JavaScript to measure and collect session information including page response times, download errors, length of visits to certain pages, page interaction information (such as scrolling, clicks, and mouse-overs), and methods used to browse away from the page. We may also collect technical information to help us identify your device for fraud prevention and diagnostic purposes.</p>
-            <p>We automatically collect certain information when you visit, use or navigate the platform. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about who and when you use our and other technical information. This information is primarily needed to maintain the security and operation of our platform, and for our internal analytics and reporting purposes.</p>
-          <h2>Personnel</h2>
-          <p>If you are a anatod worker or applicant, we collect information you voluntarily provide to us. We use the information collected for Human Resources purposes in order to administer benefits to workers and screen applicants.</p>
-          <p>You may contact us in order to (1) update or correct your information, (2) change your preferences with respect to communications and other information you receive from us, or (3) receive a record of the information we have relating to you. Such updates, corrections, changes and deletions will have no effect on other information that we maintain, or information that we have provided to third parties in accordance with this Privacy Policy prior to such update, correction, change or deletion.</p>
-          <h2>Sale of Business</h2>
-          <p>We reserve the right to transfer information to a third party in the event of a sale, merger or other transfer of all or substantially all of the assets of anatod or any of its Corporate Affiliates (as defined herein), or that portion of anatod or any of its Corporate Affiliates to which the Service relates, or in the event that we discontinue our business or file a petition or have filed against us a petition in bankruptcy, reorganization or similar proceeding, provided that the third party agrees to adhere to the terms of this Privacy Policy.</p>
+            <h2><?=htmlspecialchars(_l('Information automatically collected'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+            <p><?=htmlspecialchars(_l('There is some information like your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our platform. This information may be used to connect your computer to the Internet. Other information collected automatically could be a login, e-mail address, password, computer and connection information such as browser plug-in types and versions and time zone setting, operating systems and platforms, purchase history, (we sometimes aggregate with similar information from other Users), the full Uniform Resource Locator (URL) clickstream to, through and from our Website that may include date and time; cookie number; parts of the site you viewed or searched for; and the phone number you used to call our Customer Services. We may also use browser data such as cookies, Flash cookies (also known as Flash Local Shared Objects) or similar data on certain parts of our Website for fraud prevention and other purposes. During your visits, we may use software tools such as JavaScript to measure and collect session information including page response times, download errors, length of visits to certain pages, page interaction information (such as scrolling, clicks, and mouse-overs), and methods used to browse away from the page. We may also collect technical information to help us identify your device for fraud prevention and diagnostic purposes.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+            <p><?=htmlspecialchars(_l('We automatically collect certain information when you visit, use or navigate the platform. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about who and when you use our and other technical information. This information is primarily needed to maintain the security and operation of our platform, and for our internal analytics and reporting purposes.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Personnel'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('If you are a anatod worker or applicant, we collect information you voluntarily provide to us. We use the information collected for Human Resources purposes in order to administer benefits to workers and screen applicants.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('You may contact us in order to (1) update or correct your information, (2) change your preferences with respect to communications and other information you receive from us, or (3) receive a record of the information we have relating to you. Such updates, corrections, changes and deletions will have no effect on other information that we maintain, or information that we have provided to third parties in accordance with this Privacy Policy prior to such update, correction, change or deletion.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Sale of Business'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We reserve the right to transfer information to a third party in the event of a sale, merger or other transfer of all or substantially all of the assets of anatod or any of its Corporate Affiliates (as defined herein), or that portion of anatod or any of its Corporate Affiliates to which the Service relates, or in the event that we discontinue our business or file a petition or have filed against us a petition in bankruptcy, reorganization or similar proceeding, provided that the third party agrees to adhere to the terms of this Privacy Policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>Affiliates</h2>
-          <p>We may disclose information (including personal information) about you to our Corporate Affiliates. For purposes of this Privacy Policy, &quot;Corporate Affiliate&quot; means any person or entity which directly or indirectly controls, is controlled by or is under common control with anatod, whether by ownership or otherwise. Any information relating to you that we provide to our Corporate Affiliates will be treated by those Corporate Affiliates in accordance with the terms of this Privacy Policy.</p>
+          <h2><?=htmlspecialchars(_l('Affiliates'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We may disclose information (including personal information) about you to our Corporate Affiliates. For purposes of this Privacy Policy, "Corporate Affiliate" means any person or entity which directly or indirectly controls, is controlled by or is under common control with anatod, whether by ownership or otherwise. Any information relating to you that we provide to our Corporate Affiliates will be treated by those Corporate Affiliates in accordance with the terms of this Privacy Policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>Governing Law</h2>
-          <p>This Privacy Policy is governed by the laws of Usa without regard to its conflict of laws provision. You consent to the exclusive jurisdiction of the courts in connection with any action or dispute arising between the parties under or in connection with this Privacy Policy except for those individuals who may have rights to make claims under Privacy Shield, or the Swiss-US framework.</p>
-          <p>The laws of Usa, excluding its conflicts of law rules, shall govern this Agreement and your use of the website. Your use of the website may also be subject to other local, state, national, or international laws.</p>
-          <p>By using anatod or contacting us directly, you signify your acceptance of this Privacy Policy. If you do not agree to this Privacy Policy, you should not engage with our website, or use our services. Continued use of the website, direct engagement with us, or following the posting of changes to this Privacy Policy that do not significantly affect the use or disclosure of your personal information will mean that you accept those changes.</p>
+          <h2><?=htmlspecialchars(_l('Governing Law'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('This Privacy Policy is governed by the laws of Usa without regard to its conflict of laws provision. You consent to the exclusive jurisdiction of the courts in connection with any action or dispute arising between the parties under or in connection with this Privacy Policy except for those individuals who may have rights to make claims under Privacy Shield, or the Swiss-US framework.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('The laws of Usa, excluding its conflicts of law rules, shall govern this Agreement and your use of the website. Your use of the website may also be subject to other local, state, national, or international laws.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('By using anatod or contacting us directly, you signify your acceptance of this Privacy Policy. If you do not agree to this Privacy Policy, you should not engage with our website, or use our services. Continued use of the website, direct engagement with us, or following the posting of changes to this Privacy Policy that do not significantly affect the use or disclosure of your personal information will mean that you accept those changes.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>Your Consent</h2>
-          <p>We&#x27;ve updated our Privacy Policy to provide you with complete transparency into what is being set when you visit our site and how it&#x27;s being used. By using our website, registering an account, or making a purchase, you hereby consent to our Privacy Policy and agree to its terms.
+          <h2><?=htmlspecialchars(_l('Your Consent'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We\'ve updated our Privacy Policy to provide you with complete transparency into what is being set when you visit our site and how it\'s being used. By using our website, registering an account, or making a purchase, you hereby consent to our Privacy Policy and agree to its terms.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
 
-          <h2>Links to Other Websites</h2>
-          <p>This Privacy Policy applies only to the Services. The Services may contain links to other websites not operated or controlled by anatod. We are not responsible for the content, accuracy or opinions expressed in such websites, and such websites are not investigated, monitored or checked for accuracy or completeness by us. Please remember that when you use a link to go from the Services to another website, our Privacy Policy is no longer in effect. Your browsing and interaction on any other website, including those that have a link on our platform, is subject to that website’s own rules and policies. Such third parties may use their own cookies or other methods to collect information about you.</p>
-          <h2>Cookies</h2>
-          <p>anatod uses &quot;Cookies&quot; to identify the areas of our website that you have visited. A Cookie is a small piece of data stored on your computer or mobile device by your web browser. We use Cookies to enhance the performance and functionality of our website but are non-essential to their use. However, without these cookies, certain functionality like videos may become unavailable or you would be required to enter your login details every time you visit the website as we would not be able to remember that you had logged in previously. Most web browsers can be set to disable the use of Cookies. However, if you disable Cookies, you may not be able to access functionality on our website correctly or at all. We never place Personally Identifiable Information in Cookies.</p>
+          <h2><?=htmlspecialchars(_l('Links to Other Websites'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('This Privacy Policy applies only to the Services. The Services may contain links to other websites not operated or controlled by anatod. We are not responsible for the content, accuracy or opinions expressed in such websites, and such websites are not investigated, monitored or checked for accuracy or completeness by us. Please remember that when you use a link to go from the Services to another website, our Privacy Policy is no longer in effect. Your browsing and interaction on any other website, including those that have a link on our platform, is subject to that website’s own rules and policies. Such third parties may use their own cookies or other methods to collect information about you.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('anatod uses "Cookies" to identify the areas of our website that you have visited. A Cookie is a small piece of data stored on your computer or mobile device by your web browser. We use Cookies to enhance the performance and functionality of our website but are non-essential to their use. However, without these cookies, certain functionality like videos may become unavailable or you would be required to enter your login details every time you visit the website as we would not be able to remember that you had logged in previously. Most web browsers can be set to disable the use of Cookies. However, if you disable Cookies, you may not be able to access functionality on our website correctly or at all. We never place Personally Identifiable Information in Cookies.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>Blocking and disabling cookies and similar technologies</h2>
-          <p>Wherever you&#x27;re located you may also set your browser to block cookies and similar technologies, but this action may block our essential cookies and prevent our website from functioning properly, and you may not be able to fully utilize all of its features and services. You should also be aware that you may also lose some saved information (e.g. saved login details, site preferences) if you block cookies on your browser. Different browsers make different controls available to you. Disabling a cookie or category of cookie does not delete the cookie from your browser, you will need to do this yourself from within your browser, you should visit your browser&#x27;s help menu for more information.</p>
-          <h2>Remarketing Services</h2>
-          <p>We use remarketing services. What Is Remarketing? In digital marketing, remarketing (or retargeting) is the practice of serving ads across the internet to people who have already visited your website. It allows your company to seem like they&#x27;re “following” people around the internet by serving ads on the websites and platforms they use most.</p>
-          <h2>Kids&#x27; Privacy</h2>
-          <p>We do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-          <h2>Changes To Our Privacy Policy</h2>
-          <p>We may change our Service and policies, and we may need to make changes to this Privacy Policy so that they accurately reflect our Service and policies. Unless otherwise required by law, we will notify you (for example, through our Service) before we make changes to this Privacy Policy and give you an opportunity to review them before they go into effect. Then, if you continue to use the Service, you will be bound by the updated Privacy Policy. If you do not want to agree to this or any updated Privacy Policy, you can delete your account.</p>
+          <h2><?=htmlspecialchars(_l('Blocking and disabling cookies and similar technologies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('Wherever you\'re located you may also set your browser to block cookies and similar technologies, but this action may block our essential cookies and prevent our website from functioning properly, and you may not be able to fully utilize all of its features and services. You should also be aware that you may also lose some saved information (e.g. saved login details, site preferences) if you block cookies on your browser. Different browsers make different controls available to you. Disabling a cookie or category of cookie does not delete the cookie from your browser, you will need to do this yourself from within your browser, you should visit your browser\'s help menu for more information.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Remarketing Services'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We use remarketing services. What Is Remarketing? In digital marketing, remarketing (or retargeting) is the practice of serving ads across the internet to people who have already visited your website. It allows your company to seem like they\'re “following” people around the internet by serving ads on the websites and platforms they use most.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Kids\' Privacy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Changes To Our Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We may change our Service and policies, and we may need to make changes to this Privacy Policy so that they accurately reflect our Service and policies. Unless otherwise required by law, we will notify you (for example, through our Service) before we make changes to this Privacy Policy and give you an opportunity to review them before they go into effect. Then, if you continue to use the Service, you will be bound by the updated Privacy Policy. If you do not want to agree to this or any updated Privacy Policy, you can delete your account.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>Third-Party Services</h2>
-          <p>We may display, include or make available third-party content (including data, information, applications and other products services) or provide links to third-party websites or services (&quot;Third- Party Services&quot;).</p>
-          <p>You acknowledge and agree that anatod shall not be responsible for any Third-Party Services, including their accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect thereof. anatod does not assume and shall not have any liability or responsibility to you or any other person or entity for any Third-Party Services.</p>
-          <p>Third-Party Services and links thereto are provided solely as a convenience to you and you access and use them entirely at your own risk and subject to such third parties&#x27; terms and conditions.</p>
-          <h2>Facebook Pixel</h2>
-          <p>Facebook pixel is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website. You can use the pixel to: Make sure your ads are shown to the right people. Facebook pixel may collect information from your device when you use the service. Facebook pixel collects information that is held in accordance with its Privacy Policy</p>
-          <h2>Tracking Technologies</h2>
-          <ul><li>Cookies
+          <h2><?=htmlspecialchars(_l('Third-Party Services'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We may display, include or make available third-party content (including data, information, applications and other products services) or provide links to third-party websites or services ("Third- Party Services").'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('You acknowledge and agree that anatod shall not be responsible for any Third-Party Services, including their accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect thereof. anatod does not assume and shall not have any liability or responsibility to you or any other person or entity for any Third-Party Services.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('Third-Party Services and links thereto are provided solely as a convenience to you and you access and use them entirely at your own risk and subject to such third parties\' terms and conditions.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Facebook Pixel'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('Facebook pixel is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website. You can use the pixel to: Make sure your ads are shown to the right people. Facebook pixel may collect information from your device when you use the service. Facebook pixel collects information that is held in accordance with its Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Tracking Technologies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <ul><li><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
                   <br><br>
-                  <p>We use Cookies to enhance the performance and functionality of our $platform but are non-essential to their use. However, without these cookies, certain functionality like videos may become unavailable or you would be required to enter your login details every time you visit the $platform as we would not be able to remember that you had logged in previously.</p>
+                  <p><?=htmlspecialchars(_l('We use Cookies to enhance the performance and functionality of our $platform but are non-essential to their use. However, without these cookies, certain functionality like videos may become unavailable or you would be required to enter your login details every time you visit the $platform as we would not be able to remember that you had logged in previously.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
                   </li><br>
           </ul>
-          <h2>Information about General Data Protection Regulation (GDPR)</h2>
-          <p>We may be collecting and using information from you if you are from the European Economic Area (EEA), and in this section of our Privacy Policy we are going to explain exactly how and why is this data collected, and how we maintain this data under protection from being replicated or used in the wrong way.</p>
+          <h2><?=htmlspecialchars(_l('Information about General Data Protection Regulation (GDPR)'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We may be collecting and using information from you if you are from the European Economic Area (EEA), and in this section of our Privacy Policy we are going to explain exactly how and why is this data collected, and how we maintain this data under protection from being replicated or used in the wrong way.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>What is GDPR?</h2>
-          <p>GDPR is an EU-wide privacy and data protection law that regulates how EU residents&#x27; data is protected by companies and enhances the control the EU residents have, over their personal data.</p>
-          <p>The GDPR is relevant to any globally operating company and not just the EU-based businesses and EU residents. Our customers’ data is important irrespective of where they are located, which is why we have implemented GDPR controls as our baseline standard for all our operations worldwide.</p>
+          <h2><?=htmlspecialchars(_l('What is GDPR?'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('GDPR is an EU-wide privacy and data protection law that regulates how EU residents\' data is protected by companies and enhances the control the EU residents have, over their personal data.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('The GDPR is relevant to any globally operating company and not just the EU-based businesses and EU residents. Our customers’ data is important irrespective of where they are located, which is why we have implemented GDPR controls as our baseline standard for all our operations worldwide.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>What is personal data?</h2>
-          <p>Any data that relates to an identifiable or identified individual. GDPR covers a broad spectrum of information that could be used on its own, or in combination with other pieces of information, to identify a person. Personal data extends beyond a person’s name or email address. Some examples include financial information, political opinions, genetic data, biometric data, IP addresses, physical address, sexual orientation, and ethnicity.</p>
-          <p>The Data Protection Principles include requirements such as:</p>
+          <h2><?=htmlspecialchars(_l('What is personal data?'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('Any data that relates to an identifiable or identified individual. GDPR covers a broad spectrum of information that could be used on its own, or in combination with other pieces of information, to identify a person. Personal data extends beyond a person’s name or email address. Some examples include financial information, political opinions, genetic data, biometric data, IP addresses, physical address, sexual orientation, and ethnicity.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('The Data Protection Principles include requirements such as:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
           <ul>
-          <li>Personal data collected must be processed in a fair, legal, and transparent way and should only be used in a way that a person would reasonably expect.</li>
-          <li>Personal data should only be collected to fulfil a specific purpose and it should only be used for that purpose. Organizations must specify why they need the personal data when they collect it.</li>
-          <li>Personal data should be held no longer than necessary to fulfil its purpose.</li>
-          <li>People covered by the GDPR have the right to access their own personal data. They can also request a copy of their data, and that their data be updated, deleted, restricted, or moved to another organization.</li>
+          <li><?=htmlspecialchars(_l('Personal data collected must be processed in a fair, legal, and transparent way and should only be used in a way that a person would reasonably expect.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Personal data should only be collected to fulfil a specific purpose and it should only be used for that purpose. Organizations must specify why they need the personal data when they collect it.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Personal data should be held no longer than necessary to fulfil its purpose.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('People covered by the GDPR have the right to access their own personal data. They can also request a copy of their data, and that their data be updated, deleted, restricted, or moved to another organization.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
           </ul>
 
-          <h2>Why is GDPR important?</h2>
-          <p>GDPR adds some new requirements regarding how companies should protect individuals&#x27; personal data that they collect and process. It also raises the stakes for compliance by increasing enforcement and imposing greater fines for breach. Beyond these facts it&#x27;s simply the right thing to do. At anatod we strongly believe that your data privacy is very important and we already have solid security and privacy practices in place that go beyond the requirements of this new regulation.</p>
+          <h2><?=htmlspecialchars(_l('Why is GDPR important?'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('GDPR adds some new requirements regarding how companies should protect individuals\' personal data that they collect and process. It also raises the stakes for compliance by increasing enforcement and imposing greater fines for breach. Beyond these facts it\'s simply the right thing to do. At anatod we strongly believe that your data privacy is very important and we already have solid security and privacy practices in place that go beyond the requirements of this new regulation.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
-          <h2>Individual Data Subject&#x27;s Rights - Data Access, Portability and Deletion</h2>
-          <p>We are committed to helping our customers meet the data subject rights requirements of GDPR. anatod processes or stores all personal data in fully vetted, DPA compliant vendors. We do store all conversation and personal data for up to 6 years unless your account is deleted. In which case, we dispose of all data in accordance with our Terms of Service and Privacy Policy, but we will not hold it longer than 60 days.</p>
-          <p>We are aware that if you are working with EU customers, you need to be able to provide them with the ability to access, update, retrieve and remove personal data. We got you! We&#x27;ve been set up as self service from the start and have always given you access to your data and your customers data. Our customer support team is here for you to answer any questions you might have about working with the API.</p>
-          <h2>California Residents</h2>
-          <p>The California Consumer Privacy Act (CCPA) requires us to disclose categories of Personal Information we collect and how we use it, the categories of sources from whom we collect Personal Information, and the third parties with whom we share it, which we have explained above.</p>
-          <p>We are also required to communicate information about rights California residents have under California law. You may exercise the following rights:</p>
+          <h2><?=htmlspecialchars(_l('Individual Data Subject\'s Rights - Data Access, Portability and Deletion'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('We are committed to helping our customers meet the data subject rights requirements of GDPR. anatod processes or stores all personal data in fully vetted, DPA compliant vendors. We do store all conversation and personal data for up to 6 years unless your account is deleted. In which case, we dispose of all data in accordance with our Terms of Service and Privacy Policy, but we will not hold it longer than 60 days.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('We are aware that if you are working with EU customers, you need to be able to provide them with the ability to access, update, retrieve and remove personal data. We got you! We\'ve been set up as self service from the start and have always given you access to your data and your customers data. Our customer support team is here for you to answer any questions you might have about working with the API.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('California Residents'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('The California Consumer Privacy Act (CCPA) requires us to disclose categories of Personal Information we collect and how we use it, the categories of sources from whom we collect Personal Information, and the third parties with whom we share it, which we have explained above.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('We are also required to communicate information about rights California residents have under California law. You may exercise the following rights:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
           <ul>
-          <li>Right to Know and Access. You may submit a verifiable request for information regarding the: (1) categories of Personal Information we collect, use, or share; (2) purposes for which categories of Personal Information are collected or used by us; (3) categories of sources from which we collect Personal Information; and (4) specific pieces of Personal Information we have collected about you.</li>
-          <li>Right to Equal Service. We will not discriminate against you if you exercise your privacy rights.</li>
-          <li>Right to Delete. You may submit a verifiable request to close your account and we will delete Personal Information about you that we have collected.</li>
-          <li>Request that a business that sells a consumer&#x27;s personal data, not sell the consumer&#x27;s personal data.</li>
+          <li><?=htmlspecialchars(_l('Right to Know and Access. You may submit a verifiable request for information regarding the: (1) categories of Personal Information we collect, use, or share; (2) purposes for which categories of Personal Information are collected or used by us; (3) categories of sources from which we collect Personal Information; and (4) specific pieces of Personal Information we have collected about you.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Right to Equal Service. We will not discriminate against you if you exercise your privacy rights.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Right to Delete. You may submit a verifiable request to close your account and we will delete Personal Information about you that we have collected.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Request that a business that sells a consumer\'s personal data, not sell the consumer\'s personal data.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
           </ul>
-          <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
-          <p>We do not sell the Personal Information of our users.</p>
-          <p>For more information about these rights, please contact us.</p>
-          <h2>California Online Privacy Protection Act (CalOPPA)</h2>
-          <p>CalOPPA requires us to disclose categories of Personal Information we collect and how we use it, the categories of sources from whom we collect Personal Information, and the third parties with whom we share it, which we have explained above.</p>
-          <p>CalOPPA users have the following rights:</p>
+          <p><?=htmlspecialchars(_l('If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('We do not sell the Personal Information of our users.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('For more information about these rights, please contact us.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('California Online Privacy Protection Act (CalOPPA)'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('CalOPPA requires us to disclose categories of Personal Information we collect and how we use it, the categories of sources from whom we collect Personal Information, and the third parties with whom we share it, which we have explained above.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('CalOPPA users have the following rights:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
           <ul>
-          <li>Right to Know and Access. You may submit a verifiable request for information regarding the: (1) categories of Personal Information we collect, use, or share; (2) purposes for which categories of Personal Information are collected or used by us; (3) categories of sources from which we collect Personal Information; and (4) specific pieces of Personal Information we have collected about you.</li>
-          <li>Right to Equal Service. We will not discriminate against you if you exercise your privacy rights.</li>
-          <li>Right to Delete. You may submit a verifiable request to close your account and we will delete Personal Information about you that we have collected.</li>
-          <li>Right to request that a business that sells a consumer&#x27;s personal data, not sell the consumer&#x27;s personal data.</li>
+          <li><?=htmlspecialchars(_l('Right to Know and Access. You may submit a verifiable request for information regarding the: (1) categories of Personal Information we collect, use, or share; (2) purposes for which categories of Personal Information are collected or used by us; (3) categories of sources from which we collect Personal Information; and (4) specific pieces of Personal Information we have collected about you.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Right to Equal Service. We will not discriminate against you if you exercise your privacy rights.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Right to Delete. You may submit a verifiable request to close your account and we will delete Personal Information about you that we have collected.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
+          <li><?=htmlspecialchars(_l('Right to request that a business that sells a consumer\'s personal data, not sell the consumer\'s personal data.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
           </ul>
-          <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
-          <p>We do not sell the Personal Information of our users.</p>
-          <p>For more information about these rights, please contact us.</p>
-          <h2>Contact Us</h2>
-          <p>Don&#x27;t hesitate to contact us if you have any questions.</p>
-          <ul><li>Via Email: info@anatod.com</li><li>Via Phone Number:  +1 (404) 496-5122</li><li>Via this Link:  https://www.anatod.com</li>
+          <p><?=htmlspecialchars(_l('If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('We do not sell the Personal Information of our users.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('For more information about these rights, please contact us.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <h2><?=htmlspecialchars(_l('Contact Us'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
+          <p><?=htmlspecialchars(_l('Don\'t hesitate to contact us if you have any questions.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <ul><li><?=htmlspecialchars(_l('Via Email: info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li><li><?=htmlspecialchars(_l('Via Phone Number:  +1 (404) 496-5122'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li><li><?=htmlspecialchars(_l('Via this Link:  https://www.anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></li>
           </ul>
         </article>
-        <nav class="d-flex flex-wrap justify-content-center gap-4 mt-5" aria-label="Legal information"></nav>
+        <nav class="d-flex flex-wrap justify-content-center gap-4 mt-5" aria-label="<?=htmlspecialchars(_l('Legal information'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"></nav>
       </div>
     </section>
   </main>

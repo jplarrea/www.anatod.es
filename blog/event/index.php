@@ -3,6 +3,15 @@ require_once dirname(__DIR__, 2) . '/config.php';
 
 $eventos = json_decode(file_get_contents(dirname(__DIR__, 2) . '/events/eventos.min.json'), true);
 $eventos = is_array($eventos) ? $eventos : [];
+foreach ($eventos as &$translatedEvent) {
+    foreach (['title', 'detail'] as $field) {
+        if (isset($translatedEvent[$field]) && is_string($translatedEvent[$field])) {
+            $translatedEvent[$field] = _l($translatedEvent[$field]);
+        }
+    }
+}
+unset($translatedEvent);
+
 $slug = isset($_GET['slug']) && is_string($_GET['slug']) ? $_GET['slug'] : '';
 $slug = preg_match('/^[a-z0-9-]+$/', $slug) ? $slug : '';
 $evento = null;
@@ -21,15 +30,15 @@ if (!$evento) {
 $escapar = static function ($texto) {
     return htmlspecialchars((string) $texto, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 };
-$titulo = $evento['title'] ?? 'Evento no encontrado';
-$detalle = $evento['detail'] ?? 'No encontramos el evento solicitado.';
+$titulo = $evento['title'] ?? _l('Evento no encontrado');
+$detalle = $evento['detail'] ?? _l('No encontramos el evento solicitado.');
 ?>
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $escapar($titulo); ?> · anatod</title>
+  <title><?= $escapar($titulo); ?> <?=htmlspecialchars(_l('· anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
   <meta name="description" content="<?= $escapar($detalle); ?>">
   <?php require dirname(__DIR__, 2) . '/views/head.min.html'; ?>
   <style>
@@ -41,16 +50,16 @@ $detalle = $evento['detail'] ?? 'No encontramos el evento solicitado.';
   <main id="contenido">
     <section class="service-detail-hero">
       <div class="container">
-        <nav class="breadcrumb-link" aria-label="Ruta de navegación">
-          <a href="/">anatod</a><span aria-hidden="true">/</span><a href="/events/">Eventos</a><span aria-hidden="true">/</span><span><?= $escapar($titulo); ?></span>
+        <nav class="breadcrumb-link" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+          <a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><a href="/events/"><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?= $escapar($titulo); ?></span>
         </nav>
         <?php if ($evento): ?>
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
-            <div class="eyebrow">ENCUENTROS DEL SECTOR</div>
+            <div class="eyebrow"><?=htmlspecialchars(_l('ENCUENTROS DEL SECTOR'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
             <h1><?= $escapar($titulo); ?></h1>
             <p class="hero-description"><?= $escapar($detalle); ?></p>
-            <a class="text-link" href="/events/">Volver a todos los eventos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="/events/"><?=htmlspecialchars(_l('Volver a todos los eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="col-lg-6">
             <img class="event-detail-photo" src="<?= $escapar($evento['photo'] ?? ''); ?>" alt="<?= $escapar($titulo); ?>" fetchpriority="high">
@@ -59,10 +68,10 @@ $detalle = $evento['detail'] ?? 'No encontramos el evento solicitado.';
         <?php else: ?>
         <div class="row">
           <div class="col-lg-8">
-            <div class="eyebrow">EVENTOS</div>
+            <div class="eyebrow"><?=htmlspecialchars(_l('EVENTOS'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
             <h1><?= $escapar($titulo); ?></h1>
             <p class="hero-description"><?= $escapar($detalle); ?></p>
-            <a class="text-link" href="/events/">Volver a todos los eventos <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="/events/"><?=htmlspecialchars(_l('Volver a todos los eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
         <?php endif; ?>

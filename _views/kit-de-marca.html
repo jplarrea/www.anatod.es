@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    Kit de Marca de anatod · Logos y colores
+    <?=htmlspecialchars(_l('Kit de Marca de anatod · Logos y colores'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
   </title>
-  <meta name="description" content="Descarga el logo oficial de anatod y consulta los colores principales de la marca.">
+  <meta name="description" content="<?=htmlspecialchars(_l('Descarga el logo oficial de anatod y consulta los colores principales de la marca.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
   <?php require 'views/head.min.html'; ?>
   <link rel="stylesheet" href="/assets/css/service-detail.min.css">
 </head>
@@ -16,53 +16,53 @@
     <section class="service-detail-hero">
       <div class="container">
         <a class="breadcrumb-link" href="/">
-          <span>anatod</span><span aria-hidden="true">/</span><span>Recursos</span>
+          <span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Recursos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </a>
         <div class="row g-5 align-items-center">
           <div class="col-lg-7">
             <div class="eyebrow">
-              RECURSOS OFICIALES
+              <?=htmlspecialchars(_l('RECURSOS OFICIALES'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </div>
             <h1>
-              Kit de Marca<br><span>anatod.</span>
+              <?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><span><?=htmlspecialchars(_l('anatod.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
             </h1>
             <p class="hero-description">
-              Descarga el logo oficial y consulta los colores principales de anatod para utilizar los recursos de marca de forma consistente.
+              <?=htmlspecialchars(_l('Descarga el logo oficial y consulta los colores principales de anatod para utilizar los recursos de marca de forma consistente.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </p>
           </div>
           <div class="col-lg-5">
             <div class="brand-logo-preview">
-              <img src="/assets/img/evolucion_logo_anatod.jpg" alt="evolución logo de anatod" width="420" height="192">
+              <img src="/assets/img/evolucion_logo_anatod.jpg" alt="<?=htmlspecialchars(_l('evolución logo de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="420" height="192">
             </div>
           </div>
         </div>
-        <nav class="page-nav" aria-label="Soluciones de anatod">
+        <nav class="page-nav" aria-label="<?=htmlspecialchars(_l('Soluciones de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
           <a href="/ispkeeper/fibra-optica/">
-            Fibra óptica
+            <?=htmlspecialchars(_l('Fibra óptica'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/wisp/">
-            WISP
+            <?=htmlspecialchars(_l('WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/satelital/">
-            Satelital
+            <?=htmlspecialchars(_l('Satelital'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/internet-prepago/">
-            Internet prepago
+            <?=htmlspecialchars(_l('Internet prepago'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/telefonia-movil-fija-ip/">
-            Telefonía
+            <?=htmlspecialchars(_l('Telefonía'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/tv/">
-            TV
+            <?=htmlspecialchars(_l('TV'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/sepa/">
-            SEPA
+            <?=htmlspecialchars(_l('SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/api/">
-            API
+            <?=htmlspecialchars(_l('API'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/kit-de-marca/" aria-current="page">
-            Kit de Marca
+            <?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </nav>
       </div>
@@ -71,44 +71,44 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">
-            IDENTIDAD VISUAL
+            <?=htmlspecialchars(_l('IDENTIDAD VISUAL'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Logo y colores<br>de anatod.
+            <?=htmlspecialchars(_l('Logo y colores'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('de anatod.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            El logo de anatod ® representa una transición fluída entre lo analógico y lo digital, vinculando las letras “A” y “D” mediante un diseño que evoca el símbolo del infinito. Este detalle simboliza la evolución constante y el compromiso con la innovación en cada etapa de transformación.
+            <?=htmlspecialchars(_l('El logo de anatod ® representa una transición fluída entre lo analógico y lo digital, vinculando las letras “A” y “D” mediante un diseño que evoca el símbolo del infinito. Este detalle simboliza la evolución constante y el compromiso con la innovación en cada etapa de transformación.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-6">
             <article class="service-card brand-download-card">
               <h3>
-                Logo oficial
+                <?=htmlspecialchars(_l('Logo oficial'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Descarga la imagen PNG disponible en este proyecto para incluirla en materiales y presentaciones.
+                <?=htmlspecialchars(_l('Descarga la imagen PNG disponible en este proyecto para incluirla en materiales y presentaciones.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
               <a class="text-link" href="/assets/img/logo.png" download>
-                Descargar anatod PNG<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <?=htmlspecialchars(_l('Descargar anatod PNG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
-              <img class="brand-download-preview" src="/assets/img/logo.png" alt="Logo de anatod" width="280" height="128">
+              <img class="brand-download-preview" src="/assets/img/logo.png" alt="<?=htmlspecialchars(_l('Logo de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="280" height="128">
             </article>
           </div>
           <div class="col-lg-6">
             <article class="service-card brand-colors-card">
               <h3>
-                Colores de marca
+                <?=htmlspecialchars(_l('Colores de marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Valores de color publicados en el kit oficial.
+                <?=htmlspecialchars(_l('Valores de color publicados en el kit oficial.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
               <div class="brand-swatches">
                 <div>
-                  <span class="brand-swatch" style="--swatch:#6AFFDB"></span><strong>#6AFFDB</strong><span>Verde agua</span>
+                  <span class="brand-swatch" style="--swatch:#6AFFDB"></span><strong><?=htmlspecialchars(_l('#6AFFDB'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong><span><?=htmlspecialchars(_l('Verde agua'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
                 </div>
                 <div>
-                  <span class="brand-swatch" style="--swatch:#5054FF"></span><strong>#5054FF</strong><span>Azul violeta</span>
+                  <span class="brand-swatch" style="--swatch:#5054FF"></span><strong><?=htmlspecialchars(_l('#5054FF'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong><span><?=htmlspecialchars(_l('Azul violeta'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
                 </div>
               </div>
             </article>
@@ -116,66 +116,66 @@
         </div>
         <div class="section-heading mt-5">
           <div class="eyebrow">
-            RECURSOS DE MARCA
+            <?=htmlspecialchars(_l('RECURSOS DE MARCA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Logos secundarios
+            <?=htmlspecialchars(_l('Logos secundarios'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            Descarga las versiones alternativas del logo de anatod para utilizarlas según el espacio y el fondo.
+            <?=htmlspecialchars(_l('Descarga las versiones alternativas del logo de anatod para utilizarlas según el espacio y el fondo.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4 align-items-stretch">
           <div class="col-md-6 col-lg-4">
             <article class="service-card brand-download-card">
-              <h3>Logo blanco</h3>
-              <p>Versión blanca para fondos oscuros.</p>
+              <h3><?=htmlspecialchars(_l('Logo blanco'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
+              <p><?=htmlspecialchars(_l('Versión blanca para fondos oscuros.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
               <a class="text-link" href="/assets/img/logo_blanco.png" download>
-                Descargar PNG <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <?=htmlspecialchars(_l('Descargar PNG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
               <div class="bg-dark rounded mt-4 p-3 text-center">
-                <img class="brand-download-preview" src="/assets/img/logo_blanco.png" alt="Logo blanco de anatod" width="280" height="126">
+                <img class="brand-download-preview" src="/assets/img/logo_blanco.png" alt="<?=htmlspecialchars(_l('Logo blanco de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="280" height="126">
               </div>
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
             <article class="service-card brand-download-card">
-              <h3>Logo SVG</h3>
-              <p>Versión vectorial escalable del logo.</p>
+              <h3><?=htmlspecialchars(_l('Logo SVG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
+              <p><?=htmlspecialchars(_l('Versión vectorial escalable del logo.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
               <a class="text-link" href="/assets/img/logo_svg.svg" download>
-                Descargar SVG <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <?=htmlspecialchars(_l('Descargar SVG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
-              <img class="brand-download-preview" src="/assets/img/logo_svg.svg" alt="Logo SVG de anatod" width="280" height="128">
+              <img class="brand-download-preview" src="/assets/img/logo_svg.svg" alt="<?=htmlspecialchars(_l('Logo SVG de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="280" height="128">
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
             <article class="service-card brand-download-card">
-              <h3>Isotipo</h3>
-              <p>Símbolo de anatod sin el nombre de la marca.</p>
+              <h3><?=htmlspecialchars(_l('Isotipo'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
+              <p><?=htmlspecialchars(_l('Símbolo de anatod sin el nombre de la marca.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
               <a class="text-link" href="/assets/img/isotipo.png" download>
-                Descargar PNG <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <?=htmlspecialchars(_l('Descargar PNG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
-              <img class="brand-download-preview" src="/assets/img/isotipo.png" alt="Isotipo de anatod" width="180" height="180">
+              <img class="brand-download-preview" src="/assets/img/isotipo.png" alt="<?=htmlspecialchars(_l('Isotipo de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="180" height="180">
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
             <article class="service-card brand-download-card">
-              <h3>Logo horizontal</h3>
-              <p>Composición horizontal para espacios alargados.</p>
+              <h3><?=htmlspecialchars(_l('Logo horizontal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
+              <p><?=htmlspecialchars(_l('Composición horizontal para espacios alargados.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
               <a class="text-link" href="/assets/img/logo_horizontal.png" download>
-                Descargar PNG <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <?=htmlspecialchars(_l('Descargar PNG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
-              <img class="brand-download-preview" src="/assets/img/logo_horizontal.png" alt="Logo horizontal de anatod" width="280" height="58">
+              <img class="brand-download-preview" src="/assets/img/logo_horizontal.png" alt="<?=htmlspecialchars(_l('Logo horizontal de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="280" height="58">
             </article>
           </div>
           <div class="col-md-6 col-lg-4">
             <article class="service-card brand-download-card">
-              <h3>Logo cuadrado</h3>
-              <p>Composición cuadrada para espacios compactos.</p>
+              <h3><?=htmlspecialchars(_l('Logo cuadrado'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
+              <p><?=htmlspecialchars(_l('Composición cuadrada para espacios compactos.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
               <a class="text-link" href="/assets/img/logo_sq.png" download>
-                Descargar PNG <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+                <?=htmlspecialchars(_l('Descargar PNG'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
-              <img class="brand-download-preview" src="/assets/img/logo_sq.png" alt="Logo cuadrado de anatod" width="180" height="180">
+              <img class="brand-download-preview" src="/assets/img/logo_sq.png" alt="<?=htmlspecialchars(_l('Logo cuadrado de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="180" height="180">
             </article>
           </div>
         </div>

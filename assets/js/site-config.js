@@ -66,6 +66,11 @@
     if (!isObject(raw) || raw.version !== 1 || !isObject(raw.defaults) || !isObject(raw.domains)) {
       throw new Error('Formato de configuración no válido.');
     }
+    // Compatibilidad mientras se genera site.min.json con el nuevo dominio.
+    if (!own(raw.domains, 'anatod.eus') && own(raw.domains, 'anatod.es')) {
+      raw = mergeConfig({}, raw);
+      raw.domains['anatod.eus'] = mergeConfig(raw.domains['anatod.es'], { lang: 'eu', locale: 'eu-ES', texts: { 'common.locale': 'eu_ES' } });
+    }
     const fallback = normalizeHostname(raw.defaultDomain);
     if (!own(raw.domains, fallback) || !isObject(raw.domains[fallback])) {
       throw new Error('El dominio predeterminado no está configurado.');
@@ -154,16 +159,39 @@
     }
   }
 
+  function applyLanguage(config, language) {
+    if (!language || !['es', 'eu', 'en'].includes(language.lang) || !isObject(language.texts)) return config;
+    const translate = value => own(language.texts, value) ? language.texts[value] : value;
+    ['texts', 'messages'].forEach(group => {
+      Object.keys(config[group]).forEach(key => {
+        if (key !== 'common.locale') config[group][key] = translate(config[group][key]);
+      });
+    });
+    config.country = translate(config.country);
+    config.contact.message = translate(config.contact.message);
+    config.contact.label = translate(config.contact.label);
+    Object.keys(config.pricing.currencies).forEach(code => {
+      config.pricing.currencies[code] = translate(config.pricing.currencies[code]);
+    });
+    config.lang = language.lang;
+    // Conserva el formato regional en los idiomas originales.
+    if (language.lang !== 'es' || config.domain === 'anatod.eus') {
+      config.locale = language.locale;
+      config.texts['common.locale'] = config.locale.replace(/-/g, '_');
+    }
+    return validateConfig(config);
+  }
+
   async function load(doc, location) {
     const script = doc.querySelector('script[src$="site-config.js"], script[src*="site-config.js?"]');
     const scriptURL = script ? script.src : new URL('assets/js/site-config.js', doc.baseURI).href;
     const configURL = new URL('../config/site.min.json', scriptURL);
     const response = await fetch(configURL, { cache: 'no-store', credentials: 'same-origin' });
     if (!response.ok) throw new Error('No se pudo cargar site.json (' + response.status + ').');
-    const config = resolveConfig(await response.json(), location);
+    const config = applyLanguage(resolveConfig(await response.json(), location), globalThis.anatodI18n);
     applyConfig(config, doc, new URL('../../', configURL));
     return config;
   }
 
-  return { normalizeHostname, mergeConfig, resolveConfig, resolveLink, applyConfig, load };
+  return { normalizeHostname, mergeConfig, resolveConfig, resolveLink, applyConfig, applyLanguage, load };
 });

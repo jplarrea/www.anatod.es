@@ -7,9 +7,15 @@
   let themePreference = null;
   let siteConfig = null;
 
+  // El diccionario lo genera PHP mediante _l(); el JS no traduce por su cuenta.
+  function translated(text) {
+    const texts = window.anatodI18n && window.anatodI18n.texts;
+    return texts && Object.prototype.hasOwnProperty.call(texts, text) ? texts[text] : text;
+  }
+
   function message(key, fallback) {
     return siteConfig && Object.prototype.hasOwnProperty.call(siteConfig.messages, key)
-      ? siteConfig.messages[key] : fallback;
+      ? siteConfig.messages[key] : translated(fallback);
   }
 
   try {
@@ -86,6 +92,12 @@
       });
     }).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['href'] });
 
+    const languageSelect = document.getElementById('language-select');
+    const languageForm = document.getElementById('language-form');
+    if (languageSelect && languageForm) {
+      languageSelect.addEventListener('change', function () { languageForm.requestSubmit(); });
+    }
+
     const themeToggle = document.getElementById('theme-toggle');
     applyTheme(root.dataset.bsTheme);
     if (themeToggle) {
@@ -158,7 +170,7 @@
       } catch (error) {
         document.documentElement.dataset.configStatus = 'error';
         if (configStatus) {
-          configStatus.textContent = 'No pudimos cargar la información de esta web. Vuelve a intentarlo.';
+          configStatus.textContent = translated('No pudimos cargar la información de esta web. Vuelve a intentarlo.');
           configStatus.hidden = false;
         }
         if (configRetry) {

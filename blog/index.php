@@ -13,6 +13,19 @@ if (!is_array($posts)) {
 } else {
     $blogUnavailable = false;
 }
+// Los slugs, fechas, enlaces e imágenes conservan su identidad.
+foreach ($posts as &$translatedPost) {
+    foreach (['title', 'excerpt', 'content_html'] as $field) {
+        if (isset($translatedPost[$field]) && is_string($translatedPost[$field])) {
+            $translatedPost[$field] = _l($translatedPost[$field]);
+        }
+    }
+    if (isset($translatedPost['image']['alt'])) {
+        $translatedPost['image']['alt'] = _l($translatedPost['image']['alt']);
+    }
+}
+unset($translatedPost);
+
 usort($posts, static function ($a, $b) {
     return strcmp($b['date'] ?? '', $a['date'] ?? '');
 });
@@ -37,7 +50,7 @@ if (!$isListing) {
     }
 }
 
-if ($post && ($domain ?? '') === 'anatod.es') {
+if ($post && in_array($domain ?? '', ['anatod.es', 'anatod.eus'], true)) {
     // Evita que los contenidos externos contacten con terceros antes del permiso.
     $iframePattern = <<<'REGEX'
 /(<iframe\b(?:"[^"]*"|'[^']*'|[^'">])*?)(?<![-\w])src\s*=/i
@@ -45,8 +58,8 @@ REGEX;
     $post['content_html'] = preg_replace($iframePattern, '$1 hidden data-consent-src=', $post['content_html']);
 }
 
-$title = $blogUnavailable ? 'Publicaciones no disponibles' : ($isListing ? 'Novedades' : ($post['title'] ?? 'Publicación no encontrada'));
-$description = $blogUnavailable ? 'Las publicaciones no están disponibles en este momento.' : ($isListing ? 'Todas las novedades de anatod.' : ($post['excerpt'] ?? 'No encontramos la publicación solicitada.'));
+$title = $blogUnavailable ? _l('Publicaciones no disponibles') : ($isListing ? _l('Novedades') : ($post['title'] ?? _l('Publicación no encontrada')));
+$description = $blogUnavailable ? _l('Las publicaciones no están disponibles en este momento.') : ($isListing ? _l('Todas las novedades de anatod.') : ($post['excerpt'] ?? _l('No encontramos la publicación solicitada.')));
 $previousPosts = $post ? array_values(array_filter($posts, static function ($candidate) use ($post) {
     return $candidate['slug'] !== $post['slug'];
 })) : [];
@@ -66,7 +79,7 @@ $formatDate = static function ($value) {
         return '';
     }
     $months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    return $date->format('j') . ' ' . $months[(int) $date->format('n') - 1] . ', ' . $date->format('Y');
+    return $date->format('j') . ' ' . _l($months[(int) $date->format('n') - 1]) . ', ' . $date->format('Y');
 };
 
 require dirname(__DIR__) . '/views/blog.min.html';

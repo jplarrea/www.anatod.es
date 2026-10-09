@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    Gestión WISP para proveedores de internet · anatod
+    <?=htmlspecialchars(_l('Gestión WISP para proveedores de internet · anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
   </title>
-  <meta name="description" content="Administra redes WISP, nodos, clientes y consumo desde el software de gestión de anatod.">
+  <meta name="description" content="<?=htmlspecialchars(_l('Administra redes WISP, nodos, clientes y consumo desde el software de gestión de anatod.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
   <?php require 'views/head.min.html'; ?>
   <link rel="stylesheet" href="/assets/css/service-detail.min.css">
 </head>
@@ -16,54 +16,54 @@
     <section class="service-detail-hero">
       <div class="container">
         <a class="breadcrumb-link" href="/software">
-          <span>anatod</span><span aria-hidden="true">/</span><span>Internet</span>
+          <span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Internet'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </a>
         <div class="row g-5 align-items-center">
           <div class="col-lg-7">
             <div class="eyebrow">
-              GESTIÓN PARA OPERADORES WISP
+              <?=htmlspecialchars(_l('GESTIÓN PARA OPERADORES WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </div>
             <h1>
-              Tu red inalámbrica,<br><span>bajo control.</span>
+              <?=htmlspecialchars(_l('Tu red inalámbrica,'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><span><?=htmlspecialchars(_l('bajo control.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
             </h1>
             <p class="hero-description">
-              Automatiza altas, cambios de velocidad y tareas de red. Ubica nodos y clientes en el mapa y consulta el consumo de cada conexión.
+              <?=htmlspecialchars(_l('Automatiza altas, cambios de velocidad y tareas de red. Ubica nodos y clientes en el mapa y consulta el consumo de cada conexión.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </p>
             <a class="btn btn-primary btn-lg" href="/contact-us">
-              Solicitar una presentación<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              <?=htmlspecialchars(_l('Solicitar una presentación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
           <div class="col-lg-5">
-            <img class="service-detail-image" src="/assets/img/wl_consumo.png" alt="Gestión de una red WISP" width="900" height="650">
+            <img class="service-detail-image" src="/assets/img/wl_consumo.png" alt="<?=htmlspecialchars(_l('Gestión de una red WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="900" height="650">
           </div>
         </div>
-        <nav class="page-nav" aria-label="Soluciones y recursos de anatod">
+        <nav class="page-nav" aria-label="<?=htmlspecialchars(_l('Soluciones y recursos de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
           <a href="/ispkeeper/fibra-optica/">
-            Fibra óptica
+            <?=htmlspecialchars(_l('Fibra óptica'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/wisp/" aria-current="page">
-            WISP
+            <?=htmlspecialchars(_l('WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/satelital/">
-            Satelital
+            <?=htmlspecialchars(_l('Satelital'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/internet-prepago/">
-            Internet prepago
+            <?=htmlspecialchars(_l('Internet prepago'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/telefonia-movil-fija-ip/">
-            Telefonía
+            <?=htmlspecialchars(_l('Telefonía'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/tv/">
-            TV
+            <?=htmlspecialchars(_l('TV'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/sepa/">
-            SEPA
+            <?=htmlspecialchars(_l('SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/api/">
-            API
+            <?=htmlspecialchars(_l('API'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/kit-de-marca/">
-            Kit de Marca
+            <?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </nav>
       </div>
@@ -72,53 +72,53 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">
-            MIKROTIK Y EQUIPOS DE RED
+            <?=htmlspecialchars(_l('MIKROTIK Y EQUIPOS DE RED'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Configura clientes<br>en todos tus nodos.
+            <?=htmlspecialchars(_l('Configura clientes'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('en todos tus nodos.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            La integración con el API de MikroTik permite automatizar tareas de red, sin que cada configuración requiera ingresar al router. No es necesario contar con IP pública.
+            <?=htmlspecialchars(_l('La integración con el API de MikroTik permite automatizar tareas de red, sin que cada configuración requiera ingresar al router. No es necesario contar con IP pública.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4">
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                PPPoE
+                <?=htmlspecialchars(_l('PPPoE'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Da de alta y edita Secret y Profile en distintos nodos desde una misma gestión.
+                <?=htmlspecialchars(_l('Da de alta y edita Secret y Profile en distintos nodos desde una misma gestión.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                DHCP
+                <?=htmlspecialchars(_l('DHCP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Configura leases estáticos y velocidades Burst según las opciones de MikroTik.
+                <?=htmlspecialchars(_l('Configura leases estáticos y velocidades Burst según las opciones de MikroTik.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Simple Queue
+                <?=htmlspecialchars(_l('Simple Queue'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Administra colas y parámetros como Address List, velocidad, burst y threshold.
+                <?=htmlspecialchars(_l('Administra colas y parámetros como Address List, velocidad, burst y threshold.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Automatizaciones
+                <?=htmlspecialchars(_l('Automatizaciones'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Consulta información del router y del CPE para adaptar los procesos a tu operación.
+                <?=htmlspecialchars(_l('Consulta información del router y del CPE para adaptar los procesos a tu operación.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
@@ -129,63 +129,63 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">
-            CONTROL DE CONSUMO
+            <?=htmlspecialchars(_l('CONTROL DE CONSUMO'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Información útil para<br>gestionar cada conexión.
+            <?=htmlspecialchars(_l('Información útil para'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('gestionar cada conexión.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            Consulta el tráfico de tus clientes en intervalos cortos y acumulados mensuales. Usa esos datos para aplicar las condiciones de tus planes.
+            <?=htmlspecialchars(_l('Consulta el tráfico de tus clientes en intervalos cortos y acumulados mensuales. Usa esos datos para aplicar las condiciones de tus planes.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4">
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Consumo diario y mensual
+                <?=htmlspecialchars(_l('Consumo diario y mensual'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Visualiza gráficos por conexión y acumulados mensuales por conexión o cliente.
+                <?=htmlspecialchars(_l('Visualiza gráficos por conexión y acumulados mensuales por conexión o cliente.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Límites de descarga
+                <?=htmlspecialchars(_l('Límites de descarga'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Cuando un plan tiene un límite de GB, el sistema puede reducir la velocidad hasta el siguiente período.
+                <?=htmlspecialchars(_l('Cuando un plan tiene un límite de GB, el sistema puede reducir la velocidad hasta el siguiente período.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Velocidad nocturna
+                <?=htmlspecialchars(_l('Velocidad nocturna'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Programa una ampliación temporal de velocidad en horarios de menor tráfico.
+                <?=htmlspecialchars(_l('Programa una ampliación temporal de velocidad en horarios de menor tráfico.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Consumo elevado
+                <?=htmlspecialchars(_l('Consumo elevado'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Identifica conexiones con tráfico alto que pueden requerir una revisión.
+                <?=htmlspecialchars(_l('Identifica conexiones con tráfico alto que pueden requerir una revisión.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
         </div>
         <div class="service-detail-next">
           <a href="/ispkeeper/fibra-optica/">
-            Conoce también la gestión de fibra<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            <?=htmlspecialchars(_l('Conoce también la gestión de fibra'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
           <a class="btn btn-primary" href="/contact-us">
-            Hablemos de tu red
+            <?=htmlspecialchars(_l('Hablemos de tu red'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </div>
       </div>

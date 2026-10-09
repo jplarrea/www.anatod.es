@@ -1,5 +1,7 @@
 <?php
-$domain = strtolower($_SERVER['HTTP_HOST'] ?? '');
+$domain = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+
+$domain = preg_replace('/:[0-9]+$/', '', rtrim($domain, '.'));
 
 // Quita www. si existe
 $domain = preg_replace('/^www\./', '', $domain);
@@ -11,6 +13,7 @@ switch ($domain) {
     case 'anatod.com.ar':
         $gtag = 'G-BT0GCMJDP4';
         break;
+    case 'anatod.eus':
     case 'anatod.es':
         $gtag = "G-M6P5R8GJ5B";
         break;
@@ -18,3 +21,5 @@ switch ($domain) {
         $gtag = 'G-2PLZ9D6G3D';
         break;
 }
+
+require_once __DIR__ . '/languages/bootstrap.php';

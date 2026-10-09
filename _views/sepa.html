@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    Cobros SEPA para operadores · anatod
+    <?=htmlspecialchars(_l('Cobros SEPA para operadores · anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
   </title>
-  <meta name="description" content="Genera archivos SEPA por lote o por cliente y gestiona devoluciones y varios bancos desde anatod.">
+  <meta name="description" content="<?=htmlspecialchars(_l('Genera archivos SEPA por lote o por cliente y gestiona devoluciones y varios bancos desde anatod.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
   <?php require 'views/head.min.html'; ?>
   <link rel="stylesheet" href="/assets/css/service-detail.min.css">
 </head>
@@ -16,56 +16,56 @@
     <section class="service-detail-hero">
       <div class="container">
         <a class="breadcrumb-link" href="/software">
-          <span>anatod</span><span aria-hidden="true">/</span><span>Pagos</span>
+          <span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Pagos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </a>
         <div class="row g-5 align-items-center">
           <div class="col-lg-7">
             <div class="eyebrow">
-              COBROS BANCARIOS
+              <?=htmlspecialchars(_l('COBROS BANCARIOS'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </div>
             <h1>
-              Pagos SEPA,<br><span>integrados a la gestión.</span>
+              <?=htmlspecialchars(_l('Pagos SEPA,'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><span><?=htmlspecialchars(_l('integrados a la gestión.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
             </h1>
             <p class="hero-description">
-              Prepara archivos de cobro para tus bancos, por lote o para un cliente concreto. Organiza la cobranza y el seguimiento de las devoluciones desde el mismo sistema.
+              <?=htmlspecialchars(_l('Prepara archivos de cobro para tus bancos, por lote o para un cliente concreto. Organiza la cobranza y el seguimiento de las devoluciones desde el mismo sistema.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </p>
             <a class="btn btn-primary btn-lg" href="/contact-us">
-              Consultar disponibilidad<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              <?=htmlspecialchars(_l('Consultar disponibilidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
           <div class="col-lg-5">
-            <div class="resource-art sepa-art" role="img" aria-label="Representación de un archivo de cobros SEPA">
-              <svg class="icon" aria-hidden="true"><use href="#i-bill"/></svg><strong>SEPA</strong><span>Archivo de cobro</span><i></i><i></i><i></i>
+            <div class="resource-art sepa-art" role="img" aria-label="<?=htmlspecialchars(_l('Representación de un archivo de cobros SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+              <svg class="icon" aria-hidden="true"><use href="#i-bill"/></svg><strong><?=htmlspecialchars(_l('SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></strong><span><?=htmlspecialchars(_l('Archivo de cobro'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><i></i><i></i><i></i>
             </div>
           </div>
         </div>
-        <nav class="page-nav" aria-label="Soluciones de anatod">
+        <nav class="page-nav" aria-label="<?=htmlspecialchars(_l('Soluciones de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
           <a href="/ispkeeper/fibra-optica/">
-            Fibra óptica
+            <?=htmlspecialchars(_l('Fibra óptica'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/wisp/">
-            WISP
+            <?=htmlspecialchars(_l('WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/satelital/">
-            Satelital
+            <?=htmlspecialchars(_l('Satelital'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/internet-prepago/">
-            Internet prepago
+            <?=htmlspecialchars(_l('Internet prepago'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/telefonia-movil-fija-ip/">
-            Telefonía
+            <?=htmlspecialchars(_l('Telefonía'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/tv/">
-            TV
+            <?=htmlspecialchars(_l('TV'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/sepa/" aria-current="page">
-            SEPA
+            <?=htmlspecialchars(_l('SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/api/">
-            API
+            <?=htmlspecialchars(_l('API'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/kit-de-marca/">
-            Kit de Marca
+            <?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </nav>
       </div>
@@ -74,66 +74,66 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">
-            ARCHIVOS PARA EL BANCO
+            <?=htmlspecialchars(_l('ARCHIVOS PARA EL BANCO'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Organiza los cobros<br>de tus clientes.
+            <?=htmlspecialchars(_l('Organiza los cobros'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('de tus clientes.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            El sistema genera archivos de cobro SEPA para entregar al banco. Puedes agrupar registros en un lote o preparar un archivo individual.
+            <?=htmlspecialchars(_l('El sistema genera archivos de cobro SEPA para entregar al banco. Puedes agrupar registros en un lote o preparar un archivo individual.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4">
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Lote de pagos
+                <?=htmlspecialchars(_l('Lote de pagos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Prepara un único archivo con los registros SEPA para importar en tu banco y procesar el cobro.
+                <?=htmlspecialchars(_l('Prepara un único archivo con los registros SEPA para importar en tu banco y procesar el cobro.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Pago individual
+                <?=htmlspecialchars(_l('Pago individual'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Genera un archivo para un cliente y un importe específico.
+                <?=htmlspecialchars(_l('Genera un archivo para un cliente y un importe específico.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Más de un banco
+                <?=htmlspecialchars(_l('Más de un banco'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Genera archivos separados por banco y distribuye los clientes según las categorías que utiliza tu empresa.
+                <?=htmlspecialchars(_l('Genera archivos separados por banco y distribuye los clientes según las categorías que utiliza tu empresa.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Seguimiento de devoluciones
+                <?=htmlspecialchars(_l('Seguimiento de devoluciones'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Al recibir una devolución, el sistema puede avisar al cliente por SMS, email o WhatsApp. También puede incluir un enlace de pago y registrar un compromiso de pago.
+                <?=htmlspecialchars(_l('Al recibir una devolución, el sistema puede avisar al cliente por SMS, email o WhatsApp. También puede incluir un enlace de pago y registrar un compromiso de pago.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
         </div>
         <p class="section-note">
-          La aceptación y el procesamiento de los archivos dependen de las condiciones y herramientas de cada entidad bancaria.
+          <?=htmlspecialchars(_l('La aceptación y el procesamiento de los archivos dependen de las condiciones y herramientas de cada entidad bancaria.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
         </p>
         <div class="service-detail-next">
           <a href="/ispkeeper/api/">
-            Conoce la API de anatod<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            <?=htmlspecialchars(_l('Conoce la API de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
           <a class="btn btn-primary" href="/contact-us">
-            Consulta la integración bancaria
+            <?=htmlspecialchars(_l('Consulta la integración bancaria'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </div>
       </div>

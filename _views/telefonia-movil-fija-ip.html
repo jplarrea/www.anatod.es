@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="es" data-bs-theme="light">
+<html lang="<?=htmlspecialchars($siteLanguage, ENT_QUOTES, 'UTF-8');?>" data-bs-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    Gestión de telefonía móvil y fija IP · anatod
+    <?=htmlspecialchars(_l('Gestión de telefonía móvil y fija IP · anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
   </title>
-  <meta name="description" content="Gestiona líneas móviles, telefonía IP, consumos, CDR y facturación integrada para operadores.">
+  <meta name="description" content="<?=htmlspecialchars(_l('Gestiona líneas móviles, telefonía IP, consumos, CDR y facturación integrada para operadores.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
   <?php require 'views/head.min.html'; ?>
   <link rel="stylesheet" href="/assets/css/service-detail.min.css">
 </head>
@@ -16,54 +16,54 @@
     <section class="service-detail-hero">
       <div class="container">
         <a class="breadcrumb-link" href="/software">
-          <span>anatod</span><span aria-hidden="true">/</span><span>Telefonía</span>
+          <span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Telefonía'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </a>
         <div class="row g-5 align-items-center">
           <div class="col-lg-7">
             <div class="eyebrow">
-              MÓVIL Y FIJA IP
+              <?=htmlspecialchars(_l('MÓVIL Y FIJA IP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </div>
             <h1>
-              Telefonía y consumos,<br><span>en una sola gestión.</span>
+              <?=htmlspecialchars(_l('Telefonía y consumos,'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><span><?=htmlspecialchars(_l('en una sola gestión.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
             </h1>
             <p class="hero-description">
-              Administra líneas y portabilidades, consulta consumos e integra los detalles de llamadas en la facturación de tus clientes.
+              <?=htmlspecialchars(_l('Administra líneas y portabilidades, consulta consumos e integra los detalles de llamadas en la facturación de tus clientes.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </p>
             <a class="btn btn-primary btn-lg" href="/contact-us">
-              Solicitar una presentación<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+              <?=htmlspecialchars(_l('Solicitar una presentación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
           <div class="col-lg-5">
-            <img class="service-detail-image" src="/assets/img/imowi.png" alt="Servicio de telefonía móvil Imowi" width="768" height="517">
+            <img class="service-detail-image" src="/assets/img/imowi.png" alt="<?=htmlspecialchars(_l('Servicio de telefonía móvil Imowi'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="768" height="517">
           </div>
         </div>
-        <nav class="page-nav" aria-label="Soluciones y recursos de anatod">
+        <nav class="page-nav" aria-label="<?=htmlspecialchars(_l('Soluciones y recursos de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
           <a href="/ispkeeper/fibra-optica/">
-            Fibra óptica
+            <?=htmlspecialchars(_l('Fibra óptica'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/wisp/">
-            WISP
+            <?=htmlspecialchars(_l('WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/satelital/">
-            Satelital
+            <?=htmlspecialchars(_l('Satelital'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/internet-prepago/">
-            Internet prepago
+            <?=htmlspecialchars(_l('Internet prepago'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/telefonia-movil-fija-ip/" aria-current="page">
-            Telefonía
+            <?=htmlspecialchars(_l('Telefonía'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/tv/">
-            TV
+            <?=htmlspecialchars(_l('TV'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/sepa/">
-            SEPA
+            <?=htmlspecialchars(_l('SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/ispkeeper/api/">
-            API
+            <?=htmlspecialchars(_l('API'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
           <a href="/kit-de-marca/">
-            Kit de Marca
+            <?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </nav>
       </div>
@@ -72,53 +72,53 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">
-            CDR Y FACTURACIÓN
+            <?=htmlspecialchars(_l('CDR Y FACTURACIÓN'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Detalle por línea<br>para cada período.
+            <?=htmlspecialchars(_l('Detalle por línea'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('para cada período.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            Consulta llamadas, SMS, internet y excedentes por cliente, con fecha y hora para apoyar la facturación, el control y las auditorías.
+            <?=htmlspecialchars(_l('Consulta llamadas, SMS, internet y excedentes por cliente, con fecha y hora para apoyar la facturación, el control y las auditorías.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4">
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Consumos en la factura
+                <?=htmlspecialchars(_l('Consumos en la factura'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Incluye el detalle de SMS, llamadas, internet y excedentes en la factura mensual.
+                <?=htmlspecialchars(_l('Incluye el detalle de SMS, llamadas, internet y excedentes en la factura mensual.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Facturación de excedentes
+                <?=htmlspecialchars(_l('Facturación de excedentes'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Los consumos con costo se pueden sumar automáticamente a la tarifa contratada.
+                <?=htmlspecialchars(_l('Los consumos con costo se pueden sumar automáticamente a la tarifa contratada.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Historial de CDR
+                <?=htmlspecialchars(_l('Historial de CDR'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Conserva los archivos CDR cargados para consultar el historial de una línea.
+                <?=htmlspecialchars(_l('Conserva los archivos CDR cargados para consultar el historial de una línea.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Importación de archivos
+                <?=htmlspecialchars(_l('Importación de archivos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Importa el CDR del período mediante una integración disponible o carga el archivo descargado de la operadora.
+                <?=htmlspecialchars(_l('Importa el CDR del período mediante una integración disponible o carga el archivo descargado de la operadora.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
@@ -129,43 +129,43 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">
-            INTEGRACIONES DE TELEFONÍA
+            <?=htmlspecialchars(_l('INTEGRACIONES DE TELEFONÍA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </div>
           <h2>
-            Operaciones según<br>cada proveedor.
+            <?=htmlspecialchars(_l('Operaciones según'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><br><?=htmlspecialchars(_l('cada proveedor.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </h2>
           <p>
-            La disponibilidad de las acciones depende de la API y los procesos habilitados por cada operadora. Entre las integraciones contempladas se encuentran Voztelecom, Lemonvil, T-movil, Finetwork, Másmóvil e Imowi.
+            <?=htmlspecialchars(_l('La disponibilidad de las acciones depende de la API y los procesos habilitados por cada operadora. Entre las integraciones contempladas se encuentran Voztelecom, Lemonvil, T-movil, Finetwork, Másmóvil e Imowi.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </p>
         </div>
         <div class="row g-4">
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Altas y contratos
+                <?=htmlspecialchars(_l('Altas y contratos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Solicita nuevas líneas y gestiona firmas de contratos con operadoras que permitan hacerlo por API.
+                <?=htmlspecialchars(_l('Solicita nuevas líneas y gestiona firmas de contratos con operadoras que permitan hacerlo por API.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
           <div class="col-md-6">
             <article class="service-card">
               <h3>
-                Portabilidad y tarifas
+                <?=htmlspecialchars(_l('Portabilidad y tarifas'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </h3>
               <p>
-                Gestiona portabilidades y programa cambios de tarifa cuando la operadora lo ofrece por API.
+                <?=htmlspecialchars(_l('Gestiona portabilidades y programa cambios de tarifa cuando la operadora lo ofrece por API.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
               </p>
             </article>
           </div>
         </div>
         <div class="service-detail-next">
           <a href="/ispkeeper/tv/">
-            Conoce también la gestión de TV<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            <?=htmlspecialchars(_l('Conoce también la gestión de TV'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
           <a class="btn btn-primary" href="/contact-us">
-            Consulta una integración
+            <?=htmlspecialchars(_l('Consulta una integración'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </div>
       </div>
