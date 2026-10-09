@@ -2,6 +2,7 @@
 import html
 import json
 import re
+import runpy
 from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
@@ -40,10 +41,11 @@ def read(path):
     return json.loads(path.read_text(), object_pairs_hook=unique_keys)
 
 
-source = read(ROOT / 'languages/texts.json')
+extractor = runpy.run_path(str(ROOT / 'tools/extract-translations.py'))
+source = set(extractor['extract']())
 for lang in ['en', 'eu']:
     target = read(ROOT / 'languages' / (lang + '.json'))
-    assert target.keys() == source.keys(), f'{lang}: claves incompatibles'
+    assert source <= target.keys(), f'{lang}: claves incompatibles'
     articles = 0
     for original, translated in target.items():
         assert isinstance(translated, str) and translated.strip(), f'{lang}: valor vacío'

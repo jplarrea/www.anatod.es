@@ -1,7 +1,7 @@
 <?php
 $domain = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
 
-$domain = preg_replace('/:[0-9]+$/', '', rtrim($domain, '.'));
+$domain = rtrim(preg_replace('/:[0-9]+$/', '', $domain), '.');
 
 // Quita www. si existe
 $domain = preg_replace('/^www\./', '', $domain);

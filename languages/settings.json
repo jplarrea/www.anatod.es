@@ -1,0 +1,15 @@
+{
+  "languages": {
+    "es": { "name": "Español", "locale": "es-ES", "domain": "anatod.com" },
+    "eu": { "name": "Euskara", "locale": "eu-ES", "domain": "anatod.eus" },
+    "en": { "name": "English", "locale": "en-GB", "domain": "anatod.com" }
+  },
+  "fixedDomains": {
+    "anatod.eus": "eu",
+    "anatod.es": "es",
+    "anatod.com.ar": "es",
+    "anatod.com.mx": "es"
+  },
+  "multilingualDomain": "anatod.com",
+  "defaultLanguage": "es"
+}

@@ -160,7 +160,17 @@
   }
 
   function applyLanguage(config, language) {
-    if (!language || !['es', 'eu', 'en'].includes(language.lang) || !isObject(language.texts)) return config;
+    if (!language || !Array.isArray(language.languages) || !language.languages.includes(language.lang) ||
+        !isObject(language.texts) || typeof language.locale !== 'string') return config;
+    // La interfaz solo aplica el idioma permitido en el dominio actual.
+    // Los cambios entre dominios se redirigen en PHP antes de servir la página.
+    const fixedDomains = language.fixedDomains;
+    if (!isObject(fixedDomains) || typeof language.multilingualDomain !== 'string') return config;
+    if (own(fixedDomains, config.domain)) {
+      if (language.lang !== fixedDomains[config.domain]) return config;
+    } else if (config.domain !== language.multilingualDomain || language.lang === 'eu') {
+      return config;
+    }
     const translate = value => own(language.texts, value) ? language.texts[value] : value;
     ['texts', 'messages'].forEach(group => {
       Object.keys(config[group]).forEach(key => {
