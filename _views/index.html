@@ -67,7 +67,7 @@
           <div class="col">
             <article class="client-card">
               <div class="client-logo">
-                <img src="<?= $clientEscape($client['logo']); ?>" alt="" loading="lazy" decoding="async">
+                <img src="<?= $clientEscape($client['logo']); ?>" width="200" alt="<?= $clientEscape(_l($client['nombre'])); ?>" loading="lazy" decoding="async">
               </div>
               <h3>
               <?php if (!empty($client['web'])): ?>
