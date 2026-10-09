@@ -92,12 +92,6 @@
       });
     }).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['href'] });
 
-    const languageSelect = document.getElementById('language-select');
-    const languageForm = document.getElementById('language-form');
-    if (languageSelect && languageForm) {
-      languageSelect.addEventListener('change', function () { languageForm.requestSubmit(); });
-    }
-
     const themeToggle = document.getElementById('theme-toggle');
     applyTheme(root.dataset.bsTheme);
     if (themeToggle) {
