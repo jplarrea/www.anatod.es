@@ -19,8 +19,23 @@ def php_unquote(value):
     return re.sub(r"\\([\\'])", r'\1', value)
 
 
+def article_references():
+    references = {}
+    for post in json.loads((ROOT / 'blog/posts.json').read_text()):
+        if isinstance(post.get('id'), int):
+            for field in ['title', 'excerpt', 'content_html']:
+                references[f'blog.{post["id"]}.{field}'] = post[field]
+            references[f'blog.{post["id"]}.image_alt'] = post['image']['alt']
+    for event in json.loads((ROOT / 'events/eventos.json').read_text()):
+        if isinstance(event.get('id'), int):
+            for field in ['title', 'detail']:
+                references[f'events.{event["id"]}.{field}'] = event[field]
+    return references
+
+
 def extract():
     texts = set(DYNAMIC_TEXTS)
+    texts.update(article_references())
     settings = json.loads((ROOT / 'languages/settings.json').read_text())
     texts.update(language['name'] for language in settings['languages'].values())
     def add(value):
@@ -45,13 +60,20 @@ def extract():
             add(region.get('contact', {}).get('label'))
         for value in config['pricing']['currencies'].values():
             add(value)
+    for page in json.loads((ROOT / 'assets/config/seo.min.json').read_text()).values():
+        add(page.get('title'))
+        add(page.get('description'))
     for filename in ['blog/posts.json', 'blog/posts.min.json']:
         for post in json.loads((ROOT / filename).read_text()):
+            if filename.endswith('.min.json') and isinstance(post.get('id'), int):
+                continue
             for key in ['title', 'excerpt', 'content_html']:
                 add(post.get(key))
             add(post.get('image', {}).get('alt'))
     for filename in ['events/eventos.json', 'events/eventos.min.json']:
         for event in json.loads((ROOT / filename).read_text()):
+            if filename.endswith('.min.json') and isinstance(event.get('id'), int):
+                continue
             for key in ['title', 'detail']:
                 add(event.get(key))
     for filename in ['assets/config/clients.json', 'assets/config/clients.min.json']:
@@ -66,6 +88,7 @@ def main():
     parser.add_argument('--check', action='store_true', help='Verifica cobertura sin escribir archivos')
     args = parser.parse_args()
     texts = extract()
+    references = article_references()
     errors = []
     settings = json.loads((ROOT / 'languages/settings.json').read_text())
     catalog_languages = [code for code in settings['languages'] if code != 'es']
@@ -81,7 +104,7 @@ def main():
             for source, translation in previous.items():
                 if translation:
                     placeholders = lambda value: sorted(re.findall(r'%(?:[0-9]+\$)?[sd]', value))
-                    if placeholders(source) != placeholders(translation):
+                    if placeholders(references.get(source, source)) != placeholders(translation):
                         errors.append(f'{path.name}: marcadores incompatibles en {source[:80]!r}')
         else:
             values = {text: previous.get(text, '') for text in texts}

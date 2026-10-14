@@ -23,3 +23,5 @@ switch ($domain) {
 }
 
 require_once __DIR__ . '/languages/bootstrap.php';
+
+require_once __DIR__ . '/seo.php';

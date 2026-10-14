@@ -1,20 +1,20 @@
 <footer class="site-footer">
   <div class="container">
     <div class="row gy-4 footer-main">
-      <div class="col-lg-5"><a class="footer-brand" href="/" aria-label="<?=htmlspecialchars(_l('anatod, inicio'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><img src="https://d138vzth4rmzi0.cloudfront.net/logo_anatod_min.png" alt="<?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="124" height="56"></a><p><span class="copy-fragment"><?=htmlspecialchars(_l('Software de gestión para ISP.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><br><span class="copy-fragment"><?=htmlspecialchars(_l('Todos tus servicios. Un equipo a tu lado.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></p><span class="footer-since"><?=htmlspecialchars(_l('Desarrollamos tecnología propia desde 2015.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></div>
+      <div class="col-lg-5"><a class="footer-brand" href="<?=anatodSeoEscape(anatodPageUrl('/'));?>" aria-label="<?=htmlspecialchars(_l('anatod, inicio'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><img src="https://d138vzth4rmzi0.cloudfront.net/logo_anatod_min.png" alt="<?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>" width="124" height="56"></a><p><span class="copy-fragment"><?=htmlspecialchars(_l('Software de gestión para ISP.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><br><span class="copy-fragment"><?=htmlspecialchars(_l('Todos tus servicios. Un equipo a tu lado.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></p><span class="footer-since"><?=htmlspecialchars(_l('Desarrollamos tecnología propia desde 2015.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></div>
       
       <div class="col-6 col-md-4 col-lg-2">
         <h2><?=htmlspecialchars(_l('anatod ®'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
         <a href="https://wiki.anatod.com/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment"><?=htmlspecialchars(_l('Centro de ayuda'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
         <a href="https://status.anatod.com/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment"><?=htmlspecialchars(_l('Estado de los servicios'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
         <a href="https://docs.anatod.com/"  target="_blank" rel="noopener noreferrer"><span class="copy-fragment"><?=htmlspecialchars(_l('Documentación de la API'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
-        <a href="/kit-de-marca" ><span class="copy-fragment"><?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/kit-de-marca'));?>" ><span class="copy-fragment"><?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
       </div>
 
-      <div class="col-6 col-md-4 col-lg-2"><h2><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2><a href="/about-us"><?=htmlspecialchars(_l('Nosotros'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
-        <a href="/events/" ><span class="copy-fragment"><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
-        <a href="/blog/"><span class="copy-fragment"><?=htmlspecialchars(_l('Novedades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
-        <a href="/contact-us"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+      <div class="col-6 col-md-4 col-lg-2"><h2><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2><a href="<?=anatodSeoEscape(anatodPageUrl('/about-us'));?>"><?=htmlspecialchars(_l('Nosotros'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/events/'));?>" ><span class="copy-fragment"><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/blog/'));?>"><span class="copy-fragment"><?=htmlspecialchars(_l('Novedades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/contact-us'));?>"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
       </div>
 
       <div class="col-12 col-md-4 col-lg-3">
@@ -29,11 +29,11 @@
     </div>
     <div class="footer-bottom"><span><?=htmlspecialchars(_l('© 2026 anatod ®. Todos los derechos reservados.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></span>
       <div>
-        <a href="/privacy-policy/"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
-        <a href="/terms-conditions/"><?=htmlspecialchars(_l('Términos y condiciones'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/privacy-policy/'));?>"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/terms-conditions/'));?>"><?=htmlspecialchars(_l('Términos y condiciones'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
         <?php if (in_array($domain ?? '', ['anatod.es', 'anatod.eus'], true)): ?>
-        <a href="/cookies-policy/"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
-        <a href="/legal-notice/"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/cookies-policy/'));?>"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/legal-notice/'));?>"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
         <button class="btn btn-link p-0" type="button" data-cookie-settings><?=htmlspecialchars(_l('Configurar cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></button>
         <?php endif; ?>
         <a href="#inicio"><?=htmlspecialchars(_l('Volver arriba ↑'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a></div>
@@ -59,7 +59,7 @@
 <section id="cookie-banner" role="region" aria-labelledby="cookie-title" hidden>
   <div class="container py-4">
     <h2 id="cookie-title" class="h4" tabindex="-1"><?=htmlspecialchars(_l('Tu privacidad en anatod.es'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
-    <p><?=htmlspecialchars(_l('anatod LLC utiliza almacenamiento necesario para recordar tus preferencias. Si lo autorizas, usamos Google Analytics para medir las visitas y cargamos vídeos y otros contenidos externos. Puedes aceptar, rechazar o elegir cada finalidad. Rechazar no impide navegar por el sitio.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/cookies-policy/"><?=htmlspecialchars(_l('Política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> · <a href="/privacy-policy/"><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a></p>
+    <p><?=htmlspecialchars(_l('anatod LLC utiliza almacenamiento necesario para recordar tus preferencias. Si lo autorizas, usamos Google Analytics para medir las visitas y cargamos vídeos y otros contenidos externos. Puedes aceptar, rechazar o elegir cada finalidad. Rechazar no impide navegar por el sitio.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="<?=anatodSeoEscape(anatodPageUrl('/cookies-policy/'));?>"><?=htmlspecialchars(_l('Política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> · <a href="<?=anatodSeoEscape(anatodPageUrl('/privacy-policy/'));?>"><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a></p>
     <div class="cookie-actions d-flex flex-wrap gap-3">
       <button id="cookie-reject" class="btn btn-primary" type="button"><?=htmlspecialchars(_l('Rechazar todas'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></button>
       <button id="cookie-accept" class="btn btn-primary" type="button"><?=htmlspecialchars(_l('Aceptar todas'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></button>

@@ -43,11 +43,13 @@ def read(path):
 
 extractor = runpy.run_path(str(ROOT / 'tools/extract-translations.py'))
 source = set(extractor['extract']())
+references = extractor['article_references']()
 for lang in ['en', 'eu']:
     target = read(ROOT / 'languages' / (lang + '.json'))
     assert source <= target.keys(), f'{lang}: claves incompatibles'
     articles = 0
     for original, translated in target.items():
+        original = references.get(original, original)
         assert isinstance(translated, str) and translated.strip(), f'{lang}: valor vacío'
         assert not MARKERS.search(translated), f'{lang}: marcador residual'
         assert sorted(PLACEHOLDERS.findall(original)) == sorted(PLACEHOLDERS.findall(translated)), original[:80]

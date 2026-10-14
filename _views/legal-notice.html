@@ -19,7 +19,7 @@
   <main id="contenido">
     <section class="legal-hero" id="inicio">
       <div class="container">
-        <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></nav>
+        <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><a href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></nav>
         <h1><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h1>
       </div>
     </section>
@@ -38,12 +38,12 @@
 <h2><?=htmlspecialchars(_l('Enlaces externos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
 <p><?=htmlspecialchars(_l('El sitio contiene enlaces a servicios y páginas de terceros. Al acceder a ellos, se aplican sus propias condiciones y políticas. Los vídeos y otros contenidos insertados opcionales se cargan conforme a tus preferencias de cookies.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 <h2><?=htmlspecialchars(_l('Privacidad y cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
-<p><?=htmlspecialchars(_l('Consulta la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/privacy-policy/"><?=htmlspecialchars(_l('política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('y la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/cookies-policy/"><?=htmlspecialchars(_l('política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('para conocer el tratamiento de datos, los servicios externos y las opciones disponibles para gestionar tu consentimiento.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+<p><?=htmlspecialchars(_l('Consulta la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="<?=anatodSeoEscape(anatodPageUrl('/privacy-policy/'));?>"><?=htmlspecialchars(_l('política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('y la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="<?=anatodSeoEscape(anatodPageUrl('/cookies-policy/'));?>"><?=htmlspecialchars(_l('política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('para conocer el tratamiento de datos, los servicios externos y las opciones disponibles para gestionar tu consentimiento.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 <h2><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
 <p><?=htmlspecialchars(_l('Puedes comunicar consultas o incidencias a'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
 </article>
       <nav class="d-flex flex-wrap justify-content-center gap-4 mt-5" aria-label="<?=htmlspecialchars(_l('Información legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-        <a href="/privacy-policy/"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/cookies-policy/"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/legal-notice/"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/contact-us"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/privacy-policy/'));?>"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="<?=anatodSeoEscape(anatodPageUrl('/cookies-policy/'));?>"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="<?=anatodSeoEscape(anatodPageUrl('/legal-notice/'));?>"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="<?=anatodSeoEscape(anatodPageUrl('/contact-us'));?>"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
       </nav>
     </div></section>
   </main>

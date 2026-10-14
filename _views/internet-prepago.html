@@ -15,7 +15,7 @@
   <main id="contenido">
     <section class="service-detail-hero">
       <div class="container">
-        <a class="breadcrumb-link" href="/software">
+        <a class="breadcrumb-link" href="<?=anatodSeoEscape(anatodPageUrl('/software'));?>">
           <span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Internet'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </a>
         <div class="row g-5 align-items-center">
@@ -29,7 +29,7 @@
             <p class="hero-description">
               <?=htmlspecialchars(_l('Tus clientes pueden elegir packs de días, pagar y ampliar el servicio. Integra los cobros y la activación con la gestión de conexiones.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
             </p>
-            <a class="btn btn-primary btn-lg" href="/contact-us">
+            <a class="btn btn-primary btn-lg" href="<?=anatodSeoEscape(anatodPageUrl('/contact-us'));?>">
               <?=htmlspecialchars(_l('Solicitar una presentación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </div>
@@ -38,31 +38,31 @@
           </div>
         </div>
         <nav class="page-nav" aria-label="<?=htmlspecialchars(_l('Soluciones y recursos de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-          <a href="/ispkeeper/fibra-optica/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/fibra-optica/'));?>">
             <?=htmlspecialchars(_l('Fibra óptica'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/wisp/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/wisp/'));?>">
             <?=htmlspecialchars(_l('WISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/satelital/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/satelital/'));?>">
             <?=htmlspecialchars(_l('Satelital'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/internet-prepago/" aria-current="page">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/internet-prepago/'));?>" aria-current="page">
             <?=htmlspecialchars(_l('Internet prepago'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/telefonia-movil-fija-ip/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/telefonia-movil-fija-ip/'));?>">
             <?=htmlspecialchars(_l('Telefonía'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/tv/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/tv/'));?>">
             <?=htmlspecialchars(_l('TV'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/sepa/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/sepa/'));?>">
             <?=htmlspecialchars(_l('SEPA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/ispkeeper/api/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/api/'));?>">
             <?=htmlspecialchars(_l('API'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
-          <a href="/kit-de-marca/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/kit-de-marca/'));?>">
             <?=htmlspecialchars(_l('Kit de Marca'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </nav>
@@ -124,10 +124,10 @@
           </div>
         </div>
         <div class="service-detail-next">
-          <a href="/ispkeeper/satelital/">
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/ispkeeper/satelital/'));?>">
             <?=htmlspecialchars(_l('Conoce también la gestión satelital'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
-          <a class="btn btn-primary" href="/contact-us">
+          <a class="btn btn-primary" href="<?=anatodSeoEscape(anatodPageUrl('/contact-us'));?>">
             <?=htmlspecialchars(_l('Hablemos de tu oferta prepaga'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>
           </a>
         </div>

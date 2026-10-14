@@ -20,7 +20,7 @@
   <main id="contenido">
     <section class="legal-hero" id="inicio">
       <div class="container">
-        <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></nav>
+        <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>"><a href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></nav>
         <h1><?=htmlspecialchars(_l('Política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h1>
       </div>
     </section>
@@ -43,7 +43,7 @@
 <p><?=htmlspecialchars(_l('El formulario prepara un mensaje y abre WhatsApp. El envío de la consulta se produce cuando confirmas el mensaje en ese servicio. WhatsApp trata la información conforme a su'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l('. No incluyas en tu consulta contraseñas ni información sensible que no sea necesaria para atenderla.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 <h2><?=htmlspecialchars(_l('Destinatarios y servicios externos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
 <p><?=htmlspecialchars(_l('Google trata los datos asociados a Analytics cuando aceptas la analítica. YouTube y los proveedores de publicaciones insertadas reciben las peticiones necesarias para mostrar su contenido cuando lo autorizas. El navegador también se conecta con jsDelivr para cargar Bootstrap y Cloudflare interviene en la entrega y optimización del sitio, tratando datos técnicos de las conexiones. Los enlaces a redes sociales y otros sitios te llevan a servicios sujetos a sus propias políticas.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
-<p><?=htmlspecialchars(_l('Consulta los detalles del almacenamiento y las opciones disponibles en la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/cookies-policy/"><?=htmlspecialchars(_l('política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
+<p><?=htmlspecialchars(_l('Consulta los detalles del almacenamiento y las opciones disponibles en la'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="<?=anatodSeoEscape(anatodPageUrl('/cookies-policy/'));?>"><?=htmlspecialchars(_l('política de cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
 <h2><?=htmlspecialchars(_l('Tratamiento fuera del Espacio Económico Europeo'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
 <p><?=htmlspecialchars(_l('El responsable, anatod LLC, tiene su domicilio en Estados Unidos. Las consultas enviadas a la empresa y los datos tratados por proveedores externos pueden ser tratados fuera del Espacio Económico Europeo. Puedes solicitar información sobre los lugares de tratamiento y las garantías aplicables a cada proveedor escribiendo a'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
 <p><?=htmlspecialchars(_l('Google publica información sobre sus'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="https://policies.google.com/privacy/frameworks?hl=es" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('marcos y garantías de transferencia de datos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l('. Las condiciones aplicables a una transferencia concreta dependen del servicio y del acuerdo correspondiente.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
@@ -58,7 +58,7 @@
 <p><?=htmlspecialchars(_l('Para cualquier cuestión de privacidad, contacta en'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="mailto:info@anatod.com"><?=htmlspecialchars(_l('info@anatod.com'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><?=htmlspecialchars(_l('. Si cambian las finalidades o los servicios utilizados, se actualizará esta información y se solicitará de nuevo el consentimiento cuando corresponda.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 </article>
       <nav class="d-flex flex-wrap justify-content-center gap-4 mt-5" aria-label="<?=htmlspecialchars(_l('Información legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-        <a href="/privacy-policy/"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/cookies-policy/"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/legal-notice/"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="/contact-us"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+        <a href="<?=anatodSeoEscape(anatodPageUrl('/privacy-policy/'));?>"><?=htmlspecialchars(_l('Privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="<?=anatodSeoEscape(anatodPageUrl('/cookies-policy/'));?>"><?=htmlspecialchars(_l('Cookies'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="<?=anatodSeoEscape(anatodPageUrl('/legal-notice/'));?>"><?=htmlspecialchars(_l('Aviso legal'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><a href="<?=anatodSeoEscape(anatodPageUrl('/contact-us'));?>"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
       </nav>
     </div></section>
   </main>
@@ -73,8 +73,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=htmlspecialchars(_l('Privacy Policy · anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
   <meta name="description" content="<?=htmlspecialchars(_l('Read the anatod privacy policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:title" content="<?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:description" content="<?=htmlspecialchars(_l('Read the anatod privacy policy.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+
   <?php require __DIR__ . '/head.min.html'; ?>
   <style>
     .legal-hero { padding: 40px 0 32px; }
@@ -90,7 +89,7 @@
     <section class="legal-hero" id="inicio">
       <div class="container">
         <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Breadcrumb'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-          <a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </nav>
         <h1><?=htmlspecialchars(_l('Privacy Policy'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h1>
       </div>

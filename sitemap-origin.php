@@ -1,5 +1,5 @@
 <?php
-// Conserva el dominio y la variante con/sin www usados en la petición.
+// El sitemap siempre usa la misma variante canónica HTTPS con www.
 $sitemapHost = strtolower($_SERVER['HTTP_HOST'] ?? '');
 $sitemapHost = preg_replace('/:[0-9]+$/D', '', $sitemapHost);
 
@@ -8,4 +8,4 @@ if (!preg_match('/^(?:www\.)?anatod\.(?:com\.ar|com\.mx|com|es|eus)$/D', $sitema
     return null;
 }
 
-return 'https://' . $sitemapHost;
+return 'https://www.' . preg_replace('/^www\./', '', $sitemapHost);

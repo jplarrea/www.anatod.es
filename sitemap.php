@@ -1,27 +1,13 @@
 <?php
+require_once __DIR__ . '/seo.php';
 $baseUrl = require __DIR__ . '/sitemap-origin.php';
 if ($baseUrl === null) {
     http_response_code(400);
     exit;
 }
 
-$readItems = static function ($path) {
-    if (!is_readable($path)) {
-        return null;
-    }
-    $json = file_get_contents($path);
-    if ($json === false) {
-        return null;
-    }
-    $items = json_decode($json, true);
-    if (!is_array($items) || ($items !== [] && array_keys($items) !== range(0, count($items) - 1))) {
-        return null;
-    }
-    return $items;
-};
-
-$posts = $readItems(__DIR__ . '/blog/posts.min.json');
-$events = $readItems(__DIR__ . '/events/eventos.min.json');
+$posts = anatodContentItems('blog');
+$events = anatodContentItems('events');
 
 header('Content-Type: application/xml; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
@@ -70,7 +56,7 @@ foreach ($posts as $post) {
         continue;
     }
     // Conserva los slugs que ya contienen caracteres codificados como %xx.
-    $paths[] = '/blog/' . str_replace('-', '/', $date) . '/' . $slug . '/';
+    $paths[] = anatodContentPath('blog', $post);
 }
 
 foreach ($events as $event) {
@@ -79,14 +65,26 @@ foreach ($events as $event) {
     }
     $slug = $event['slug'] ?? '';
     if (is_string($slug) && preg_match('/^[a-z0-9-]+$/D', $slug)) {
-        $paths[] = '/blog/event/' . $slug . '/';
+        $paths[] = anatodContentPath('events', $event);
     }
 }
 
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">' . "\n";
+$host = preg_replace('/^www\./', '', parse_url($baseUrl, PHP_URL_HOST));
+$languages = $host === 'anatod.com' ? ['es', 'en'] : ($host === 'anatod.eus' ? ['eu'] : ['es']);
 foreach (array_unique($paths) as $path) {
-    $url = htmlspecialchars($baseUrl . $path, ENT_XML1 | ENT_QUOTES, 'UTF-8');
-    echo '  <url><loc>' . $url . '</loc></url>' . "\n";
+    foreach ($languages as $language) {
+        if (!anatodSeoTranslated($path, $language)) {
+            continue;
+        }
+        $url = htmlspecialchars(anatodSeoUrl($host, $path, $language), ENT_XML1 | ENT_QUOTES, 'UTF-8');
+        echo '  <url><loc>' . $url . '</loc>' . "\n";
+        foreach (anatodSeoAlternates($path) as $locale => $alternate) {
+            echo '    <xhtml:link rel="alternate" hreflang="' . htmlspecialchars($locale, ENT_XML1 | ENT_QUOTES, 'UTF-8') .
+                '" href="' . htmlspecialchars($alternate, ENT_XML1 | ENT_QUOTES, 'UTF-8') . '"/>' . "\n";
+        }
+        echo '  </url>' . "\n";
+    }
 }
 echo '</urlset>' . "\n";

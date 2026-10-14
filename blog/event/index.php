@@ -1,30 +1,18 @@
 <?php
 require_once dirname(__DIR__, 2) . '/config.php';
 
-$eventos = json_decode(file_get_contents(dirname(__DIR__, 2) . '/events/eventos.min.json'), true);
-$eventos = is_array($eventos) ? $eventos : [];
-foreach ($eventos as &$translatedEvent) {
-    foreach (['title', 'detail'] as $field) {
-        if (isset($translatedEvent[$field]) && is_string($translatedEvent[$field])) {
-            $translatedEvent[$field] = _l($translatedEvent[$field]);
-        }
-    }
-}
-unset($translatedEvent);
-
-$slug = isset($_GET['slug']) && is_string($_GET['slug']) ? $_GET['slug'] : '';
-$slug = preg_match('/^[a-z0-9-]+$/', $slug) ? $slug : '';
-$evento = null;
-
-foreach ($eventos as $candidato) {
-    if (($candidato['slug'] ?? '') === $slug) {
-        $evento = $candidato;
-        break;
-    }
-}
-
-if (!$evento) {
+$eventos = anatodContentItems('events');
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+$evento = anatodFindContent('events', $requestPath);
+if ($eventos === null) {
+    http_response_code(503);
+} elseif (!$evento) {
     http_response_code(404);
+} else {
+    anatodRedirectContent('events', $evento, $requestPath);
+    foreach (['title', 'detail'] as $field) {
+        $evento[$field] = _l(anatodContentKey('events', $evento, $field), $evento[$field]);
+    }
 }
 
 $escapar = static function ($texto) {
@@ -51,7 +39,7 @@ $detalle = $evento['detail'] ?? _l('No encontramos el evento solicitado.');
     <section class="service-detail-hero">
       <div class="container">
         <nav class="breadcrumb-link" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-          <a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><a href="/events/"><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?= $escapar($titulo); ?></span>
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><a href="<?=anatodSeoEscape(anatodPageUrl('/events/'));?>"><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?= $escapar($titulo); ?></span>
         </nav>
         <?php if ($evento): ?>
         <div class="row g-5 align-items-center">
@@ -59,7 +47,7 @@ $detalle = $evento['detail'] ?? _l('No encontramos el evento solicitado.');
             <div class="eyebrow"><?=htmlspecialchars(_l('ENCUENTROS DEL SECTOR'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
             <h1><?= $escapar($titulo); ?></h1>
             <p class="hero-description"><?= $escapar($detalle); ?></p>
-            <a class="text-link" href="/events/"><?=htmlspecialchars(_l('Volver a todos los eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="<?=anatodSeoEscape(anatodPageUrl('/events/'));?>"><?=htmlspecialchars(_l('Volver a todos los eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="col-lg-6">
             <img class="event-detail-photo" src="<?= $escapar($evento['photo'] ?? ''); ?>" alt="<?= $escapar($titulo); ?>" fetchpriority="high">
@@ -71,7 +59,7 @@ $detalle = $evento['detail'] ?? _l('No encontramos el evento solicitado.');
             <div class="eyebrow"><?=htmlspecialchars(_l('EVENTOS'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
             <h1><?= $escapar($titulo); ?></h1>
             <p class="hero-description"><?= $escapar($detalle); ?></p>
-            <a class="text-link" href="/events/"><?=htmlspecialchars(_l('Volver a todos los eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="<?=anatodSeoEscape(anatodPageUrl('/events/'));?>"><?=htmlspecialchars(_l('Volver a todos los eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
         <?php endif; ?>

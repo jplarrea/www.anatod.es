@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $escape($title); ?> <?=htmlspecialchars(_l('· anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
   <meta name="description" content="<?= $escape($description); ?>">
-  <meta property="og:type" content="<?= $post ? 'article' : 'website'; ?>">
-  <meta property="og:title" content="<?= $escape($title); ?>">
-  <meta property="og:description" content="<?= $escape($description); ?>">
-  <?php if ($post): ?>
-  <meta property="og:image" content="<?= $escape($post['image']['url']); ?>">
-  <?php endif; ?>
+
   <?php require dirname(__DIR__) . '/views/head.min.html'; ?>
   <style>
     .blog-hero { padding: 40px 0 32px; }
@@ -39,8 +34,8 @@
     <section class="blog-hero">
       <div class="container">
         <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Ruta de navegación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-          <a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span>
-          <a href="/blog/"><?=htmlspecialchars(_l('Novedades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span>
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/blog/'));?>"><?=htmlspecialchars(_l('Novedades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
         </nav>
         <h1><?= $escape($title); ?></h1>
         <?php if ($post): ?>
@@ -74,7 +69,7 @@
               </div>
             </article>
             <?php endforeach; ?>
-            <a class="text-link" href="/blog/"><?=htmlspecialchars(_l('Ver todas las novedades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
+            <a class="text-link" href="<?=anatodSeoEscape(anatodPageUrl('/blog/'));?>"><?=htmlspecialchars(_l('Ver todas las novedades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>
           </aside>
         </div>
       </div>

@@ -8,7 +8,8 @@
     "image": {
       "url": "/assets/img/blog/2026/09/feria_acutelan.jpg",
       "alt": "feria_acutelan_2026"
-    }
+    },
+    "id": 100083
   },
   {
     "slug": "seguimos-integrando-herramientas-para-una-mejor-gestion-de-redes-ahora-junto-a-giufeder",
@@ -19,7 +20,8 @@
     "image": {
       "url": "/assets/img/blog/2026/08/giufeder.jpg",
       "alt": "giufeder"
-    }
+    },
+    "id": 100082
   },
   {
     "slug": "11-anos-de-anatod",
@@ -30,7 +32,8 @@
     "image": {
       "url": "/assets/img/blog/2026/08/anatod_11.jpg",
       "alt": "anatod_11"
-    }
+    },
+    "id": 100081
   },
   {
     "slug": "mas-seguridad-para-tu-isp-ahora-tambien-con-passkeys",
@@ -41,7 +44,8 @@
     "image": {
       "url": "/assets/img/blog/2026/07/anatod_passkey.jpg",
       "alt": "anatod_passkey"
-    }
+    },
+    "id": 100080
   },
   {
     "slug": "nueva-app-de-autogestion-tu-isp-con-tu-propia-identidad",
@@ -52,7 +56,8 @@
     "image": {
       "url": "/assets/img/blog/2026/07/nueva_app.jpg",
       "alt": "nueva app"
-    }
+    },
+    "id": 100079
   },
   {
     "slug": "directv-go-ya-esta-integrado",
@@ -63,7 +68,8 @@
     "image": {
       "url": "/assets/img/blog/2026/07/dgo.jpg",
       "alt": "directv_go"
-    }
+    },
+    "id": 100078
   },
   {
     "slug": "tu-isp-ahora-tambien-puede-ofrecer-telefonia-movil-argentina",
@@ -74,7 +80,8 @@
     "image": {
       "url": "/assets/img/blog/2026/07/imowi_catel.jpg",
       "alt": "imowi_catel"
-    }
+    },
+    "id": 100077
   },
   {
     "slug": "los-datos-son-tuyos-siempre",
@@ -85,7 +92,8 @@
     "image": {
       "url": "/assets/img/blog/2026/07/anatod_datos_propios.jpg",
       "alt": "anatod datos propios"
-    }
+    },
+    "id": 100076
   },
   {
     "slug": "ya-estamos-integrados-oficialmente-con-starlink",
@@ -96,7 +104,8 @@
     "image": {
       "url": "/assets/img/blog/2026/06/integrado_starlink.jpg",
       "alt": "Ya estamos integrados oficialmente con Starlink"
-    }
+    },
+    "id": 100075
   },
   {
     "slug": "incorporamos-los-idiomas-regionales-de-espana-%f0%9f%87%aa%f0%9f%87%b8",
@@ -107,7 +116,8 @@
     "image": {
       "url": "/assets/img/blog/2026/05/anatod_idiomas.jpg",
       "alt": "anatod idiomas"
-    }
+    },
+    "id": 100074
   },
   {
     "slug": "%f0%9f%8e%af-nuevo-combos-de-servicios-mas-ventas-mas-valor-por-cliente",
@@ -118,7 +128,8 @@
     "image": {
       "url": "/assets/img/blog/2026/05/nuevo_combos.jpg",
       "alt": "🎯 Nuevo Combos de Servicios: más ventas, más valor por cliente"
-    }
+    },
+    "id": 100073
   },
   {
     "slug": "nuevo-modulo-de-suscripciones-en-ispkeeper-amplia-tus-ingresos-mas-alla-del-internet",
@@ -129,7 +140,8 @@
     "image": {
       "url": "/assets/img/blog/2026/04/suscripciones.jpg",
       "alt": "Nuevo módulo de Suscripciones en ISPkeeper: amplía tus ingresos más allá del Internet"
-    }
+    },
+    "id": 100072
   },
   {
     "slug": "anatod-participara-en-la-feria-tecnologica-aotec-2026-en-sevilla-%f0%9f%87%aa%f0%9f%87%b8",
@@ -140,7 +152,8 @@
     "image": {
       "url": "/assets/img/blog/2026/03/feria_aotec_2026.png",
       "alt": "anatod ® participará en la Feria Tecnológica AOTEC 2026 en Sevilla 🇪🇸"
-    }
+    },
+    "id": 100071
   },
   {
     "slug": "anatod-en-accion-viajamos-a-las-flores-para-fortalecer-a-impulsar",
@@ -151,7 +164,8 @@
     "image": {
       "url": "/assets/img/blog/2026/02/ba436b32-b622-41fb-91a8-124ca8eea837.jpg",
       "alt": "impulsar"
-    }
+    },
+    "id": 100070
   },
   {
     "slug": "whatsapp-oficial-integrado-gratis-en-anatod-gracias-a-nuestra-alianza-con-teleprom",
@@ -162,7 +176,8 @@
     "image": {
       "url": "/assets/img/blog/2026/02/teleprom_whatsapp.jpg",
       "alt": "teleprom_whatsapp"
-    }
+    },
+    "id": 100069
   },
   {
     "slug": "ahora-los-clientes-anatod-pueden-tener-un-bot-de-whatsapp-gratis",
@@ -173,7 +188,8 @@
     "image": {
       "url": "/assets/img/blog/2026/02/freshchat_whatsapp.jpg",
       "alt": "freshchat_whatsapp"
-    }
+    },
+    "id": 100068
   },
   {
     "slug": "anatod-consolida-su-presencia-en-africa-nuevo-cliente-en-senegal-%f0%9f%87%b8%f0%9f%87%b3",
@@ -184,7 +200,8 @@
     "image": {
       "url": "/assets/img/blog/2026/01/senegal.jpg",
       "alt": "senegal"
-    }
+    },
+    "id": 100067
   },
   {
     "slug": "%f0%9f%9a%80-anatod-en-n-play-2026-cordoba-argentina",
@@ -195,7 +212,8 @@
     "image": {
       "url": "/assets/img/blog/2026/01/nplay_2026.jpg",
       "alt": "nplay 2026"
-    }
+    },
+    "id": 100066
   },
   {
     "slug": "2026-no-empieza-con-promesas-empieza-con-decisiones",
@@ -206,7 +224,8 @@
     "image": {
       "url": "/assets/img/blog/2025/12/2026.jpg",
       "alt": "2026"
-    }
+    },
+    "id": 100065
   },
   {
     "slug": "%f0%9f%9a%80-importante-actualizamos-la-url-de-nuestro-api-fecha-limite-31-01-2026",
@@ -217,7 +236,8 @@
     "image": {
       "url": "/assets/img/blog/2025/12/api_warning.jpg",
       "alt": "api warning"
-    }
+    },
+    "id": 100064
   },
   {
     "slug": "bienvenue-en-cote-divoire-bienvenue-en-afrique",
@@ -228,7 +248,8 @@
     "image": {
       "url": "/assets/img/blog/2025/11/quantis_ci.jpg",
       "alt": "quantis_ci"
-    }
+    },
+    "id": 100063
   },
   {
     "slug": "%f0%9f%8e%89-basta-de-bugs-el-juego-por-los-10-anos-de-anatod",
@@ -239,7 +260,8 @@
     "image": {
       "url": "/assets/img/blog/2025/11/Captura-de-pantalla-2025-11-05-a-las-10.08.50.webp",
       "alt": "basta de bugs"
-    }
+    },
+    "id": 100062
   },
   {
     "slug": "anatod-estara-presente-en-la-feria-de-acutelan-acutel-en-granada",
@@ -250,7 +272,8 @@
     "image": {
       "url": "/assets/img/blog/2025/09/feria_acutelan_acutel_2025.webp",
       "alt": "Feria Acutelan 2025"
-    }
+    },
+    "id": 100061
   },
   {
     "slug": "move-internet-satelital-a-bordo-en-alianza-con-ssservicios",
@@ -261,7 +284,8 @@
     "image": {
       "url": "/assets/img/blog/2025/09/anatod_ssservicios.webp",
       "alt": "anatod ssservicios"
-    }
+    },
+    "id": 100060
   },
   {
     "slug": "%f0%9f%8e%89-anatod-cumple-10-anos",
@@ -272,7 +296,8 @@
     "image": {
       "url": "/assets/img/blog/2025/07/anatod_10.webp",
       "alt": "anatod 10 años"
-    }
+    },
+    "id": 100059
   },
   {
     "slug": "anatod-en-aotec-2025-tecnologia-y-compromiso-con-el-sector-en-madrid",
@@ -283,7 +308,8 @@
     "image": {
       "url": "/assets/img/blog/2024/11/aotec_2025.webp",
       "alt": "aotec 2025"
-    }
+    },
+    "id": 100058
   },
   {
     "slug": "%f0%9f%8e%89-nos-vemos-en-aotec-2025-%f0%9f%9a%80",
@@ -294,7 +320,8 @@
     "image": {
       "url": "/assets/img/blog/2025/01/feria_aotec_2025.png",
       "alt": "🎉 ¡ Nos vemos en AOTEC 2025! 🚀"
-    }
+    },
+    "id": 100057
   },
   {
     "slug": "%f0%9f%9a%80-estamos-buscando-un-a-nuevo-a-integrante-para-el-equipo-de-anatod",
@@ -305,7 +332,8 @@
     "image": {
       "url": "/assets/img/blog/2025/05/contratacion.webp",
       "alt": "estamos contratando"
-    }
+    },
+    "id": 100056
   },
   {
     "slug": "ya-esta-disponible-la-app-de-autogestion-de-clientes-de-ispkeeper",
@@ -316,7 +344,8 @@
     "image": {
       "url": "/assets/img/blog/2025/05/ios-android.webp",
       "alt": "android - ios"
-    }
+    },
+    "id": 100055
   },
   {
     "slug": "%f0%9f%9a%80-lanzamos-la-primera-beta-de-nuestra-app-de-autogestion-de-clientes-%f0%9f%93%b1%e2%9c%a8",
@@ -327,7 +356,8 @@
     "image": {
       "url": "/assets/img/blog/2025/04/login_app_clientes.webp",
       "alt": "login_app_clientes"
-    }
+    },
+    "id": 100054
   },
   {
     "slug": "bienvenida-serenae-eurona-el-lider-del-internet-satelital-en-espana-se-une-a-nuestra-comunidad",
@@ -338,7 +368,8 @@
     "image": {
       "url": "/assets/img/blog/2025/04/serenae_eurona.webp",
       "alt": "serenae eurona"
-    }
+    },
+    "id": 100053
   },
   {
     "slug": "integramos-google-recaptcha-enterprise-para-mayor-seguridad",
@@ -349,7 +380,8 @@
     "image": {
       "url": "/assets/img/blog/2025/03/recaptcha.webp",
       "alt": "google recaptcha enterprise"
-    }
+    },
+    "id": 100052
   },
   {
     "slug": "%f0%9f%93%a2-atencion-clientes-de-argentina-%f0%9f%87%a6%f0%9f%87%b7-regimen-de-transparencia-fiscal",
@@ -360,7 +392,8 @@
     "image": {
       "url": "/assets/img/blog/2025/03/regimen_transparencia_fiscal.webp",
       "alt": "📢 ¡Atención clientes de Argentina! 🇦🇷 – Régimen de Transparencia Fiscal"
-    }
+    },
+    "id": 100051
   },
   {
     "slug": "bahia-blanca-tras-el-temporal-del-7-de-marzo",
@@ -371,7 +404,8 @@
     "image": {
       "url": "/assets/img/blog/2024/12/logo_sq_fondo_blanco.png",
       "alt": "Bahía Blanca tras el temporal del 7 de marzo."
-    }
+    },
+    "id": 100050
   },
   {
     "slug": "mejora-tu-seguridad-con-el-control-de-acceso-por-rango-de-ip-en-anatod",
@@ -382,7 +416,8 @@
     "image": {
       "url": "/assets/img/blog/2025/02/bloqueo_ip.png",
       "alt": "bloqueo por ip"
-    }
+    },
+    "id": 100049
   },
   {
     "slug": "anatod-se-integra-con-holded-para-la-facturacion-electronica-en-espana",
@@ -393,7 +428,8 @@
     "image": {
       "url": "/assets/img/blog/2025/02/holded.png",
       "alt": "anatod ® se integra con Holded para la facturación electrónica en España"
-    }
+    },
+    "id": 100048
   },
   {
     "slug": "anatod-en-numeros-anuario-2024",
@@ -404,7 +440,8 @@
     "image": {
       "url": "/assets/img/blog/2025/02/anuario_2024_anatod.webp",
       "alt": "anuario 2024 anatod"
-    }
+    },
+    "id": 100047
   },
   {
     "slug": "integracion-con-hispasat-gestion-avanzada-mediante-api-con-un-gigante-de-la-conectividad-satelital-%f0%9f%8c%8d%f0%9f%9a%80",
@@ -415,7 +452,8 @@
     "image": {
       "url": "/assets/img/blog/2025/01/hispasat.webp",
       "alt": "hispasat"
-    }
+    },
+    "id": 100046
   },
   {
     "slug": "anatod-estara-presente-en-la-feria-aotec-en-madrid-espana",
@@ -426,7 +464,8 @@
     "image": {
       "url": "/assets/img/blog/2025/01/feria_aotec_2025.png",
       "alt": "¡ anatod estará presente en la Feria Aotec en Madrid, España!"
-    }
+    },
+    "id": 100045
   },
   {
     "slug": "presentamos-nuestro-nuevo-logo",
@@ -437,18 +476,20 @@
     "image": {
       "url": "/assets/img/blog/2023/01/logo.png",
       "alt": "¡ Presentamos nuestro nuevo logo!"
-    }
+    },
+    "id": 100044
   },
   {
     "slug": "estuvimos-presentes-en-la-feria-acutel-2024-en-granada",
     "title": "Estuvimos presentes en la Feria Acutel 2024 en Granada",
     "date": "2024-11-21",
     "excerpt": "Este año marcó nuestra tercera participación consecutiva.",
-    "content_html": "\n<p class=\"wp-block-paragraph\">Durante los días <strong>20 y 21 de noviembre</strong>, tuvimos el placer de conectar con clientes, colegas y amigos del sector de telecomunicaciones. Presentamos nuestras soluciones, <strong>ISPkeeper </strong>y<strong> Disastik</strong>, y compartimos nuestra visión de innovación y compromiso con el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Venimos desde Argentina con un objetivo claro: <strong>ser un aliado estratégico para los operadores locales españoles</strong>, y este evento es una gran oportunidad para fortalecer ese vínculo.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Queremos agradecer a todos los que se acercaron a conocernos, intercambiaron ideas con nosotros y nos hicieron sentir parte de esta gran comunidad. ¡Volvemos a casa inspirados y con nuevas ideas para seguir creciendo juntos!</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>¡Nos vemos el próximo año en Acutel!</strong></p>\n\n\n\n<figure class=\"wp-block-embed\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"wp-embedded-content\" data-secret=\"a4aeXUd7PU\"><a href=\"/blog/event/acutel-2024-granada-espana/\">Acutel 2024 &#8211; Granada, España</a></blockquote><iframe loading=\"lazy\" class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; visibility: hidden;\" title=\"&#8220;Acutel 2024 &#8211; Granada, España&#8221; &#8212; anatod - Soluciones para Telecomunicaciones\" src=\"https://www.anatod.com/event/acutel-2024-granada-espana/embed/#?secret=XQEFkx9zIn#?secret=a4aeXUd7PU\" data-secret=\"a4aeXUd7PU\" width=\"600\" height=\"338\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>\n</div></figure>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+    "content_html": "\n<p class=\"wp-block-paragraph\">Durante los días <strong>20 y 21 de noviembre</strong>, tuvimos el placer de conectar con clientes, colegas y amigos del sector de telecomunicaciones. Presentamos nuestras soluciones, <strong>ISPkeeper </strong>y<strong> Disastik</strong>, y compartimos nuestra visión de innovación y compromiso con el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Venimos desde Argentina con un objetivo claro: <strong>ser un aliado estratégico para los operadores locales españoles</strong>, y este evento es una gran oportunidad para fortalecer ese vínculo.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Queremos agradecer a todos los que se acercaron a conocernos, intercambiaron ideas con nosotros y nos hicieron sentir parte de esta gran comunidad. ¡Volvemos a casa inspirados y con nuevas ideas para seguir creciendo juntos!</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>¡Nos vemos el próximo año en Acutel!</strong></p>\n\n\n\n<figure class=\"wp-block-embed\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"wp-embedded-content\" data-secret=\"a4aeXUd7PU\"><a href=\"/evento/200003_acutel-2024-granada-espana/\">Acutel 2024 &#8211; Granada, España</a></blockquote><iframe loading=\"lazy\" class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; visibility: hidden;\" title=\"&#8220;Acutel 2024 &#8211; Granada, España&#8221; &#8212; anatod - Soluciones para Telecomunicaciones\" src=\"https://www.anatod.com/event/acutel-2024-granada-espana/embed/#?secret=XQEFkx9zIn#?secret=a4aeXUd7PU\" data-secret=\"a4aeXUd7PU\" width=\"600\" height=\"338\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>\n</div></figure>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
     "image": {
       "url": "/assets/img/blog/2024/11/foto_acutel_2024.jpg",
       "alt": "acutel 2024"
-    }
+    },
+    "id": 100043
   },
   {
     "slug": "nos-vemos-en-la-feria-de-acutel-granada",
@@ -459,7 +500,8 @@
     "image": {
       "url": "/assets/img/blog/2024/02/feria_acutel_granada_2024.jpg",
       "alt": "Feria Acutel Granada 2024"
-    }
+    },
+    "id": 100042
   },
   {
     "slug": "migracion-exitosa-de-nuevas-tecnologias",
@@ -470,7 +512,8 @@
     "image": {
       "url": "/assets/img/blog/2024/10/image.webp",
       "alt": "¡ Migración exitosa de nuevas tecnologías !"
-    }
+    },
+    "id": 100041
   },
   {
     "slug": "anunciamos-la-futura-app-de-autogestion-de-clientes-de-ispkeeper-para-android-y-ios",
@@ -481,7 +524,8 @@
     "image": {
       "url": "/assets/img/blog/2024/09/playstore_appstore.jpg",
       "alt": "¡ Anunciamos la futura app de autogestión de clientes de ISPkeeper para Android y iOS !"
-    }
+    },
+    "id": 100040
   },
   {
     "slug": "ispkeeper-ahora-realiza-un-cuarto-backup-diario-en-google-cloud",
@@ -492,7 +536,8 @@
     "image": {
       "url": "/assets/img/blog/2024/08/google_cloud.jpg",
       "alt": "Google Cloud"
-    }
+    },
+    "id": 100039
   },
   {
     "slug": "celebramos-9-anos-de-exitos-en-anatod",
@@ -503,7 +548,8 @@
     "image": {
       "url": "/assets/img/blog/2024/08/9_years_123rf.jpg",
       "alt": "9 years - 123rf.com"
-    }
+    },
+    "id": 100038
   },
   {
     "slug": "importante-cambios-freshchat-smartplug",
@@ -514,7 +560,8 @@
     "image": {
       "url": "/assets/img/blog/2024/07/freshchat_logo.png",
       "alt": "freshchat_logo"
-    }
+    },
+    "id": 100037
   },
   {
     "slug": "nuevo-facturas-multimensuales-anuales",
@@ -525,7 +572,8 @@
     "image": {
       "url": "/assets/img/blog/2024/07/factura_multimensual.jpeg",
       "alt": "factura muntimensual"
-    }
+    },
+    "id": 100036
   },
   {
     "slug": "presentamos-disastik-nuevo-producto-para-la-gestion-de-mikrotik",
@@ -536,7 +584,8 @@
     "image": {
       "url": "/assets/img/blog/2024/07/disastik_promo_ES.jpg",
       "alt": "disastik"
-    }
+    },
+    "id": 100035
   },
   {
     "slug": "importante-cambios-en-teleprom-fecha-limite-1-8-2024",
@@ -547,7 +596,8 @@
     "image": {
       "url": "/assets/img/blog/2024/07/teleprom.jpg",
       "alt": "teleprom"
-    }
+    },
+    "id": 100034
   },
   {
     "slug": "integracion-de-firma-electronica-kyc-y-kyb-con-tecalis",
@@ -558,7 +608,8 @@
     "image": {
       "url": "/assets/img/blog/2024/07/tecalis.jpg",
       "alt": "Tecalis"
-    }
+    },
+    "id": 100033
   },
   {
     "slug": "descubre-anatod-eus-ahora-100-en-euskera",
@@ -569,7 +620,8 @@
     "image": {
       "url": "/assets/img/blog/2024/06/bandera_pais_vasco.jpg",
       "alt": "¡Descubre anatod.eus, ahora 100% en Euskera!"
-    }
+    },
+    "id": 100032
   },
   {
     "slug": "ispkeeper-migra-a-php-8-3",
@@ -580,18 +632,20 @@
     "image": {
       "url": "/assets/img/blog/2024/05/php_8_3.jpeg",
       "alt": "¡ ISPkeeper Migra a PHP 8.3 !"
-    }
+    },
+    "id": 100031
   },
   {
     "slug": "augur-bilbao",
     "title": "Augur Bilbao",
     "date": "2024-05-14",
     "excerpt": "Conectividad Rural en Foco: Nuestra Experiencia en AOTEC 2024",
-    "content_html": "\n<p class=\"wp-block-paragraph\">En AOTEC 2024, en Bilbao, España, vivimos una experiencia enriquecedora. El evento, centrado en mejorar la conectividad en áreas rurales, nos ofreció una plataforma única para conectar con líderes del sector y explorar soluciones innovadoras. Nos vamos inspirados y comprometidos a seguir impulsando la inclusión digital en todas las comunidades.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<figure class=\"wp-block-embed is-type-wp-embed is-provider-anatod-soluciones-para-telecomunicaciones wp-block-embed-anatod-soluciones-para-telecomunicaciones\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"wp-embedded-content\" data-secret=\"f9fJOsPCGd\"><a href=\"/blog/event/aotec-2024-bilbao-espana/\">Aotec 2024 &#8211; Bilbao &#8211; España</a></blockquote><iframe loading=\"lazy\" class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" title=\"&#8220;Aotec 2024 &#8211; Bilbao &#8211; España&#8221; &#8212; anatod - Soluciones para Telecomunicaciones\" src=\"https://www.anatod.com/event/aotec-2024-bilbao-espana/embed/#?secret=ktnyWqY66p#?secret=f9fJOsPCGd\" data-secret=\"f9fJOsPCGd\" width=\"600\" height=\"338\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>\n</div></figure>\n",
+    "content_html": "\n<p class=\"wp-block-paragraph\">En AOTEC 2024, en Bilbao, España, vivimos una experiencia enriquecedora. El evento, centrado en mejorar la conectividad en áreas rurales, nos ofreció una plataforma única para conectar con líderes del sector y explorar soluciones innovadoras. Nos vamos inspirados y comprometidos a seguir impulsando la inclusión digital en todas las comunidades.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<figure class=\"wp-block-embed is-type-wp-embed is-provider-anatod-soluciones-para-telecomunicaciones wp-block-embed-anatod-soluciones-para-telecomunicaciones\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"wp-embedded-content\" data-secret=\"f9fJOsPCGd\"><a href=\"/evento/200006_aotec-2024-bilbao-espana/\">Aotec 2024 &#8211; Bilbao &#8211; España</a></blockquote><iframe loading=\"lazy\" class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" title=\"&#8220;Aotec 2024 &#8211; Bilbao &#8211; España&#8221; &#8212; anatod - Soluciones para Telecomunicaciones\" src=\"https://www.anatod.com/event/aotec-2024-bilbao-espana/embed/#?secret=ktnyWqY66p#?secret=f9fJOsPCGd\" data-secret=\"f9fJOsPCGd\" width=\"600\" height=\"338\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>\n</div></figure>\n",
     "image": {
       "url": "/assets/img/blog/2024/05/WhatsApp-Image-2024-05-14-at-13.24.11.jpeg",
       "alt": "aotec 2024 bilbao"
-    }
+    },
+    "id": 100030
   },
   {
     "slug": "14-dias-para-aotec",
@@ -602,7 +656,8 @@
     "image": {
       "url": "/assets/img/blog/2024/04/PostRRSSFeriaAotec2024.jpg",
       "alt": "aotec 2024 bilbao"
-    }
+    },
+    "id": 100029
   },
   {
     "slug": "conoces-nuestro-changelog",
@@ -613,7 +668,8 @@
     "image": {
       "url": "/assets/img/blog/2024/04/changelog.png",
       "alt": "changelog"
-    }
+    },
+    "id": 100028
   },
   {
     "slug": "importante-15-dias-para-la-baja-de-api-legacy",
@@ -624,7 +680,8 @@
     "image": {
       "url": "/assets/img/blog/2024/01/aviso-importante.jpg",
       "alt": "IMPORTANTE – 15 días para la baja de API Legacy."
-    }
+    },
+    "id": 100027
   },
   {
     "slug": "ispkeeper-ahora-es-compatible-con-la-autenticacion-de-dos-factores-2fa",
@@ -635,7 +692,8 @@
     "image": {
       "url": "/assets/img/blog/2024/03/2fa.png",
       "alt": "2fa"
-    }
+    },
+    "id": 100026
   },
   {
     "slug": "nuestro-software-ahora-brilla-en-la-oscuridad-activamos-el-modo-oscuro",
@@ -646,7 +704,8 @@
     "image": {
       "url": "/assets/img/blog/2024/02/modo_oscuro.png",
       "alt": "modo oscuro"
-    }
+    },
+    "id": 100025
   },
   {
     "slug": "feria-acutel-2024-granada-espana",
@@ -657,7 +716,8 @@
     "image": {
       "url": "/assets/img/blog/2024/02/feria_acutel_granada_2024.jpg",
       "alt": "Feria Acutel Granada 2024"
-    }
+    },
+    "id": 100024
   },
   {
     "slug": "importante-se-acerca-la-fecha-de-baja-del-api-legacy",
@@ -668,7 +728,8 @@
     "image": {
       "url": "/assets/img/blog/2024/01/aviso-importante.jpg",
       "alt": "IMPORTANTE – Se acerca la fecha de baja del API legacy"
-    }
+    },
+    "id": 100023
   },
   {
     "slug": "descubre-el-futuro-de-la-tecnologia-con-anatod-en-la-feria-aotec-2024-en-bilbao",
@@ -679,7 +740,8 @@
     "image": {
       "url": "/assets/img/blog/2024/01/feria_aotec_2024_bilbao.png",
       "alt": "¡Descubre el futuro de la tecnología con anatod en la Feria AOTEC 2024 en Bilbao!"
-    }
+    },
+    "id": 100022
   },
   {
     "slug": "nueva-funcionalidad-ahora-ofrecemos-internet-prepagos-en-nuestro-software-de-gestion",
@@ -690,7 +752,8 @@
     "image": {
       "url": "/assets/img/blog/2024/01/Internet-Prepago.webp",
       "alt": "Nueva Funcionalidad: Ahora Ofrecemos Internet Prepagos en Nuestro Software de Gestión"
-    }
+    },
+    "id": 100021
   },
   {
     "slug": "ahora-disponible-internet-satelital-con-orbith",
@@ -701,18 +764,20 @@
     "image": {
       "url": "/assets/img/blog/2023/12/image.png",
       "alt": "Internet Satelital Orbith"
-    }
+    },
+    "id": 100020
   },
   {
     "slug": "acutel-en-granada-espana-compromiso-reforzado-en-el-mercado-espanol",
     "title": "ACUTEL en Granada, España: Compromiso Reforzado en el Mercado Español",
     "date": "2023-11-24",
     "excerpt": "Fortaleciendo Nuestro Compromiso en el Mercado Español: Reflexiones sobre Nuestra Participación en el Evento de ACUTEL en Granada",
-    "content_html": "\n<p class=\"wp-block-paragraph\">Nos complace compartir con ustedes la emocionante experiencia que vivimos recientemente en el evento de ACUTEL 2023 en la encantadora ciudad de Granada, España. Este evento no solo fue una oportunidad para sumergirnos en las últimas tendencias de las telecomunicaciones, sino también una afirmación significativa de nuestro compromiso continuo con el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">La atmósfera del evento fue electrizante, y cada interacción reforzó nuestra convicción de que estamos en el camino correcto. Participar en ACUTEL no fue solo una decisión estratégica, sino un paso crucial para establecer nuestra presencia de manera sólida y sostenible en el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Una de las joyas de esta experiencia fue la posibilidad de conectar con clientes, colegas y expertos del sector. Establecer y fortalecer relaciones es esencial en cualquier mercado, y ACUTEL nos brindó la plataforma perfecta para construir lazos más estrechos con ustedes, nuestros valiosos clientes. Fue un placer compartir ideas, expectativas y visiones de futuro, y nos sentimos inspirados por el entusiasmo que compartimos.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Las presentaciones y paneles de discusión no solo nos ofrecieron una visión clara de las tendencias actuales, sino que también reforzaron nuestra convicción de que estamos en el lugar adecuado en el momento adecuado. Estamos comprometidos no solo en seguir el ritmo de la evolución tecnológica, sino también en liderarla.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Además, las interacciones con otras empresas y líderes del sector nos permitieron explorar posibles colaboraciones estratégicas y sinergias que beneficiarán directamente a nuestra comunidad de clientes. La diversidad de soluciones innovadoras presentadas en las exhibiciones nos dejó entusiasmados con las oportunidades de mejora continua que podemos ofrecer.</p>\n\n\n\n<p class=\"wp-block-paragraph\">En resumen, ACUTEL no solo fue un evento, sino una experiencia transformadora que refuerza nuestro compromiso con ustedes, nuestros clientes. A medida que avanzamos, llevamos con nosotros las lecciones aprendidas, las conexiones valiosas establecidas y la seguridad de que estamos en la vanguardia de las telecomunicaciones en el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Agradecemos su continuo apoyo y confianza. Juntos, estamos construyendo un futuro sólido y emocionante.</p>\n\n\n\n<figure class=\"wp-block-embed is-type-wp-embed is-provider-anatod-soluciones-para-telecomunicaciones wp-block-embed-anatod-soluciones-para-telecomunicaciones\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"wp-embedded-content\" data-secret=\"gv6HiszdpW\"><a href=\"/blog/event/acutel-2023-granada-espana/\">Acutel 2023 &#8211; Granada, España</a></blockquote><iframe loading=\"lazy\" class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" title=\"&#8220;Acutel 2023 &#8211; Granada, España&#8221; &#8212; anatod - Soluciones para Telecomunicaciones\" src=\"https://www.anatod.com/event/acutel-2023-granada-espana/embed/#?secret=8XORBBzvnl#?secret=gv6HiszdpW\" data-secret=\"gv6HiszdpW\" width=\"600\" height=\"338\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>\n</div></figure>\n",
+    "content_html": "\n<p class=\"wp-block-paragraph\">Nos complace compartir con ustedes la emocionante experiencia que vivimos recientemente en el evento de ACUTEL 2023 en la encantadora ciudad de Granada, España. Este evento no solo fue una oportunidad para sumergirnos en las últimas tendencias de las telecomunicaciones, sino también una afirmación significativa de nuestro compromiso continuo con el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">La atmósfera del evento fue electrizante, y cada interacción reforzó nuestra convicción de que estamos en el camino correcto. Participar en ACUTEL no fue solo una decisión estratégica, sino un paso crucial para establecer nuestra presencia de manera sólida y sostenible en el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Una de las joyas de esta experiencia fue la posibilidad de conectar con clientes, colegas y expertos del sector. Establecer y fortalecer relaciones es esencial en cualquier mercado, y ACUTEL nos brindó la plataforma perfecta para construir lazos más estrechos con ustedes, nuestros valiosos clientes. Fue un placer compartir ideas, expectativas y visiones de futuro, y nos sentimos inspirados por el entusiasmo que compartimos.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Las presentaciones y paneles de discusión no solo nos ofrecieron una visión clara de las tendencias actuales, sino que también reforzaron nuestra convicción de que estamos en el lugar adecuado en el momento adecuado. Estamos comprometidos no solo en seguir el ritmo de la evolución tecnológica, sino también en liderarla.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Además, las interacciones con otras empresas y líderes del sector nos permitieron explorar posibles colaboraciones estratégicas y sinergias que beneficiarán directamente a nuestra comunidad de clientes. La diversidad de soluciones innovadoras presentadas en las exhibiciones nos dejó entusiasmados con las oportunidades de mejora continua que podemos ofrecer.</p>\n\n\n\n<p class=\"wp-block-paragraph\">En resumen, ACUTEL no solo fue un evento, sino una experiencia transformadora que refuerza nuestro compromiso con ustedes, nuestros clientes. A medida que avanzamos, llevamos con nosotros las lecciones aprendidas, las conexiones valiosas establecidas y la seguridad de que estamos en la vanguardia de las telecomunicaciones en el mercado español.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Agradecemos su continuo apoyo y confianza. Juntos, estamos construyendo un futuro sólido y emocionante.</p>\n\n\n\n<figure class=\"wp-block-embed is-type-wp-embed is-provider-anatod-soluciones-para-telecomunicaciones wp-block-embed-anatod-soluciones-para-telecomunicaciones\"><div class=\"wp-block-embed__wrapper\">\n<blockquote class=\"wp-embedded-content\" data-secret=\"gv6HiszdpW\"><a href=\"/evento/200002_acutel-2023-granada-espana/\">Acutel 2023 &#8211; Granada, España</a></blockquote><iframe loading=\"lazy\" class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" title=\"&#8220;Acutel 2023 &#8211; Granada, España&#8221; &#8212; anatod - Soluciones para Telecomunicaciones\" src=\"https://www.anatod.com/event/acutel-2023-granada-espana/embed/#?secret=8XORBBzvnl#?secret=gv6HiszdpW\" data-secret=\"gv6HiszdpW\" width=\"600\" height=\"338\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe>\n</div></figure>\n",
     "image": {
       "url": "/assets/img/blog/2023/11/acutel_stand_2023.jpg",
       "alt": "acutel stand 2023"
-    }
+    },
+    "id": 100019
   },
   {
     "slug": "integracion-pagoralia-oxxo-para-mexico",
@@ -723,7 +788,8 @@
     "image": {
       "url": "/assets/img/blog/2023/11/pagoralia.png",
       "alt": "pagoralia"
-    }
+    },
+    "id": 100018
   },
   {
     "slug": "unificacion-numero-de-telefono-de-soporte-y-coordinacion",
@@ -734,7 +800,8 @@
     "image": {
       "url": "/assets/img/blog/2023/11/9c185e_450b7d4d2f1e40aca5537cad98dd9e56mv2.png",
       "alt": "Unificación número de teléfono de soporte y coordinación"
-    }
+    },
+    "id": 100017
   },
   {
     "slug": "unete-a-nosotros-en-acutel-2023",
@@ -745,7 +812,8 @@
     "image": {
       "url": "/assets/img/blog/2023/10/feria_acutel_2023.jpeg",
       "alt": "¡Únete a nosotros en Acutel 2023!"
-    }
+    },
+    "id": 100016
   },
   {
     "slug": "conoce-al-jefe-en-persona-un-podcast-exclusivo-con-nuestro-ceo",
@@ -756,7 +824,8 @@
     "image": {
       "url": "/assets/img/blog/2023/09/no_va_a_funcionar.jpeg",
       "alt": "no va a funcionar"
-    }
+    },
+    "id": 100015
   },
   {
     "slug": "api-ya-disponible",
@@ -767,7 +836,8 @@
     "image": {
       "url": "/assets/img/blog/2023/09/api_img.webp",
       "alt": "API"
-    }
+    },
+    "id": 100014
   },
   {
     "slug": "nuevo-imagen-para-ispkeeper",
@@ -778,7 +848,8 @@
     "image": {
       "url": "/assets/img/blog/2022/07/ISPKeeper-Logo-Oficial.png",
       "alt": "Nuevo imagen para ISPkeeper"
-    }
+    },
+    "id": 100013
   },
   {
     "slug": "buscamos-programador-a",
@@ -789,7 +860,8 @@
     "image": {
       "url": "/assets/img/blog/2023/08/web-developer-illustration-2005x2048-fal2biag.png",
       "alt": "Buscamos Programador/a"
-    }
+    },
+    "id": 100012
   },
   {
     "slug": "celebremos-juntos-8-anos-de-exito-y-crecimiento-en-anatod",
@@ -800,7 +872,8 @@
     "image": {
       "url": "/assets/img/blog/2023/07/anatod_8_anivsario.png",
       "alt": "anatod 8 aniversario"
-    }
+    },
+    "id": 100011
   },
   {
     "slug": "sumate-a-anatod-buscamos-project-manager",
@@ -811,7 +884,8 @@
     "image": {
       "url": "/assets/img/blog/2023/07/hiring_anatod.jpeg",
       "alt": "Sumate a anatod – Buscamos Project Manager"
-    }
+    },
+    "id": 100010
   },
   {
     "slug": "siro-cappi-evento-en-cordoba-agosto-2023",
@@ -822,7 +896,8 @@
     "image": {
       "url": "/assets/img/blog/2023/06/siro_cappi_evento_cordoba.jpg",
       "alt": "evento siro cappi cordoba 2023"
-    }
+    },
+    "id": 100009
   },
   {
     "slug": "encregtel-rosario-argentina-28-29-de-junio",
@@ -833,7 +908,8 @@
     "image": {
       "url": "/assets/img/blog/2023/04/encregtel_2023_anatod.jpg",
       "alt": "EncRegTel , Rosario (Argentina) 28-29 de Junio"
-    }
+    },
+    "id": 100008
   },
   {
     "slug": "abierto-el-registro-para-aotec-2023",
@@ -844,7 +920,8 @@
     "image": {
       "url": "/assets/img/blog/2023/04/feria_aotec_2023-768x209-1.jpg",
       "alt": "Abierto el registro para Aotec 2023!"
-    }
+    },
+    "id": 100007
   },
   {
     "slug": "actualizacion-del-sistema-ispkeeper",
@@ -855,7 +932,8 @@
     "image": {
       "url": "/assets/img/blog/2023/03/aviso_2.png",
       "alt": "Actualización del Sistema ISPkeeper"
-    }
+    },
+    "id": 100006
   },
   {
     "slug": "roadmap-2023",
@@ -866,7 +944,8 @@
     "image": {
       "url": "/assets/img/blog/2023/03/roadmap.jpg",
       "alt": "roadmap anatod 2023"
-    }
+    },
+    "id": 100005
   },
   {
     "slug": "nuevo-acelerador-de-tiempos-de-programacion-asap",
@@ -877,7 +956,8 @@
     "image": {
       "url": "/assets/img/blog/2023/03/asap.png",
       "alt": "Nuevo! Acelerador de tiempos de programación (ASAP)"
-    }
+    },
+    "id": 100004
   },
   {
     "slug": "informacion-sobre-la-personalizacion-del-sistema",
@@ -888,7 +968,8 @@
     "image": {
       "url": "/assets/img/blog/2023/02/codigo-.webp",
       "alt": "Información sobre la personalización del sistema."
-    }
+    },
+    "id": 100003
   },
   {
     "slug": "feria-aotec-2023-alicante-espana",
@@ -899,17 +980,19 @@
     "image": {
       "url": "/assets/img/blog/2023/02/feria_aotec_alicante_SQ.png",
       "alt": "feria aotec alicante 2023"
-    }
+    },
+    "id": 100002
   },
   {
     "slug": "somo-socios-de-acutel",
     "title": "Somos socios de Acutel!",
     "date": "2023-01-31",
     "excerpt": "Acutel es el nombre de la Asociación de Operadores de Telecomunicaciones Locales de españa.",
-    "content_html": "\n<p class=\"wp-block-paragraph\">Nos complace anunciar que a partir de Febrero del 2023 anatod será Proveedor Asociado de ACUTEL en España.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\">Acutel es el nombre de la Asociación de Operadores de Telecomunicaciones Locales. La entidad que se constituyó en 1992 como asociación andaluza,&nbsp; daba en junio de 2021 su salto a organización nacional, tras la modificación de sus estatutos. Es la asociación de referencia del sector de la telecomunicación local por su larga trayectoria en la defensa de los intereses de este colectivo empresarial.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\">Hemos participado de la <a href=\"/blog/event/acutel-2022-granada-espana/\" data-type=\"URL\" data-id=\"https://www.anatod.com/event/acutel-2022-granada-espana/\">Feria de Acutel en Noviembre 2022</a> y ya tenemos reservado el stand para la feria del 2023!</p>\n",
+    "content_html": "\n<p class=\"wp-block-paragraph\">Nos complace anunciar que a partir de Febrero del 2023 anatod será Proveedor Asociado de ACUTEL en España.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\">Acutel es el nombre de la Asociación de Operadores de Telecomunicaciones Locales. La entidad que se constituyó en 1992 como asociación andaluza,&nbsp; daba en junio de 2021 su salto a organización nacional, tras la modificación de sus estatutos. Es la asociación de referencia del sector de la telecomunicación local por su larga trayectoria en la defensa de los intereses de este colectivo empresarial.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"wp-block-paragraph\">Hemos participado de la <a href=\"/evento/200001_acutel-2022-granada-espana/\" data-type=\"URL\" data-id=\"https://www.anatod.com/event/acutel-2022-granada-espana/\">Feria de Acutel en Noviembre 2022</a> y ya tenemos reservado el stand para la feria del 2023!</p>\n",
     "image": {
       "url": "/assets/img/blog/2023/01/Publicacion-de-Instagram-1080x1080-px-1.jpeg",
       "alt": "Proveedor Asociado de Acutel"
-    }
+    },
+    "id": 100001
   }
 ]

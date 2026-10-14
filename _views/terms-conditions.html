@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=htmlspecialchars(_l('Terms & Conditions · anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
   <meta name="description" content="<?=htmlspecialchars(_l('Read the anatod terms and conditions.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:title" content="<?=htmlspecialchars(_l('Terms & Conditions'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:description" content="<?=htmlspecialchars(_l('Read the anatod terms and conditions.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+
   <?php require __DIR__ . '/head.min.html'; ?>
   <style>
     .legal-hero { padding: 40px 0 32px; }
@@ -22,7 +21,7 @@
     <section class="legal-hero" id="inicio">
       <div class="container">
         <nav class="breadcrumb-link mb-4" aria-label="<?=htmlspecialchars(_l('Breadcrumb'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-          <a href="/"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Terms & Conditions'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
+          <a href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Terms & Conditions'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
         </nav>
         <h1><?=htmlspecialchars(_l('Terms & Conditions'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h1>
       </div>
@@ -148,7 +147,7 @@
           <p><?=htmlspecialchars(_l('This section applies to any dispute EXCEPT IT DOESN’T INCLUDE A DISPUTE RELATING TO CLAIMS FOR INJUNCTIVE OR EQUITABLE RELIEF REGARDING THE ENFORCEMENT OR VALIDITY OF YOUR OR anatod\'s INTELLECTUAL PROPERTY RIGHTS. The term “dispute” means any dispute, action, or other controversy between you and anatod concerning the Services or this agreement, whether in contract, warranty, tort, statute, regulation, ordinance, or any other legal or equitable basis. “Dispute” will be given the broadest possible meaning allowable under law.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
           <h2><?=htmlspecialchars(_l('Notice of Dispute'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
-          <p><?=htmlspecialchars(_l('In the event of a dispute, you or anatod must give the other a Notice of Dispute, which is a written statement that sets forth the name, address, and contact information of the party giving it, the facts giving rise to the dispute, and the relief requested. You must send any Notice of Dispute via email to:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/cdn-cgi/l/email-protection"><?=htmlspecialchars(_l('[email protected]'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('anatod will send any Notice of Dispute to you by mail to your address if we have it, or otherwise to your email address. You and anatod will attempt to resolve any dispute through informal negotiation within sixty (60) days from the date the Notice of Dispute is sent. After sixty (60) days, you or anatod may commence arbitration.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+          <p><?=htmlspecialchars(_l('In the event of a dispute, you or anatod must give the other a Notice of Dispute, which is a written statement that sets forth the name, address, and contact information of the party giving it, the facts giving rise to the dispute, and the relief requested. You must send any Notice of Dispute via email to:'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="<?=anatodSeoEscape(anatodPageUrl('/cdn-cgi/l/email-protection'));?>"><?=htmlspecialchars(_l('[email protected]'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a> <?=htmlspecialchars(_l('anatod will send any Notice of Dispute to you by mail to your address if we have it, or otherwise to your email address. You and anatod will attempt to resolve any dispute through informal negotiation within sixty (60) days from the date the Notice of Dispute is sent. After sixty (60) days, you or anatod may commence arbitration.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
 
           <h2><?=htmlspecialchars(_l('Binding Arbitration'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
           <p><?=htmlspecialchars(_l('If you and anatod don’t resolve any dispute by informal negotiation, any other effort to resolve the dispute will be conducted exclusively by binding arbitration as described in this section. You are giving up the right to litigate (or participate in as a party or class member) all disputes in court before a judge or jury. The dispute shall be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association. Either party may seek any interim or preliminary injunctive relief from any court of competent jurisdiction, as necessary to protect the party’s rights or property pending the completion of arbitration. Any and all legal, accounting, and other costs, fees, and expenses incurred by the prevailing party shall be borne by the non-prevailing party.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>

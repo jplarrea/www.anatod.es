@@ -4,29 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=htmlspecialchars(_l('Contacto - anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
-  <meta name="description" content="<?=htmlspecialchars(_l('Contacto - anatod · Software de gestión para ISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:title" content="<?=htmlspecialchars(_l('Contacto - anatod · Software de gestión para ISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:description" content="<?=htmlspecialchars(_l('Contacto - anatod · Software de gestión para ISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+  <meta name="description" content="<?=htmlspecialchars(_l('Solicita una presentación del software de gestión para ISP de anatod. Cuéntanos qué necesita tu operador y consulta con nuestro equipo.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+
   <?php require 'views/head.min.html'; ?>
+  <style>
+    .contact-copy h1 { font-size: clamp(30px, 3vw, 40px); margin-bottom: 22px; }
+    .contact-copy h1 span:not(.copy-fragment) { color: var(--brand); }
+  </style>
 </head>
 <body class="about-page" data-page="about">
   <?php require 'views/header.min.html'; ?>
   <main id="contenido">
-    <section class="about-hero" id="inicio" aria-labelledby="about-title">
+    <section class="about-hero" id="inicio" aria-labelledby="contact-title">
       <div class="container">
-        <a class="breadcrumb-link" href="/"><span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span class="copy-fragment"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+        <a class="breadcrumb-link" href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span class="copy-fragment"><?=htmlspecialchars(_l('Contacto'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
             <div class="contact-block">
                 <div class="contact-copy">
                     <div class="eyebrow"><?=htmlspecialchars(_l('CONOZCAMOS TU ISP'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
-                    <h2 id="contact-title">
-                        <span class="copy-fragment"><?=htmlspecialchars(_l('Veamos cómo encaja'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
+                    <h1 id="contact-title">
+                        <span class="copy-fragment"><?=htmlspecialchars(_l('Conoce nuestro software'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
                         <br>
-                        <span><?=htmlspecialchars(_l('en tu empresa.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
-                    </h2>
+                        <span><?=htmlspecialchars(_l('de gestión para ISP.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span>
+                    </h1>
                     <p><?=htmlspecialchars(_l('Cuéntanos qué servicios ofreces, en qué país trabajas y qué quieres mejorar. Organizamos una presentación centrada en tu operación.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
-                    <a class="phone-link" id="contact-phone" hidden><span data-phone-number></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
-                    <h3 class="contact-region" id="contact-region"></h3>
-                    <a class="contact-whatsapp" id="contact-whatsapp" hidden target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> <span class="copy-fragment"><?=htmlspecialchars(_l('También puedes escribirnos por WhatsApp'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+                    <a class="phone-link" id="contact-phone" href="<?=anatodSeoEscape('tel:+' . anatodRegionalConfig()['contact']['number']);?>"><span data-phone-number><?=anatodSeoEscape(_l(anatodRegionalConfig()['contact']['display']));?></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+                    <h3 class="contact-region" id="contact-region"><?=anatodSeoEscape(_l(anatodRegionalConfig()['contact']['label']));?></h3>
+                    <a class="contact-whatsapp" id="contact-whatsapp" href="<?=anatodSeoEscape('https://wa.me/' . anatodRegionalConfig()['contact']['number'] . '?text=' . rawurlencode(_l(anatodRegionalConfig()['contact']['message'])));?>" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> <span class="copy-fragment"><?=htmlspecialchars(_l('También puedes escribirnos por WhatsApp'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
                     </div>
                     <div class="contact-form-wrap">
                         <h3><?=htmlspecialchars(_l('Solicita una presentación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
@@ -81,7 +84,7 @@
                                 </div>
                                 <div class="col-12">
                                     <?php if (in_array($domain ?? '', ['anatod.es', 'anatod.eus'], true)): ?>
-                                    <p class="small"><?=htmlspecialchars(_l('anatod LLC tratará los datos que envíes para responder tu consulta o preparar una propuesta. La solicitud se abre en WhatsApp y se envía cuando confirmas allí el mensaje.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="/privacy-policy/"><?=htmlspecialchars(_l('Consulta la política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
+                                    <p class="small"><?=htmlspecialchars(_l('anatod LLC tratará los datos que envíes para responder tu consulta o preparar una propuesta. La solicitud se abre en WhatsApp y se envía cuando confirmas allí el mensaje.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <a href="<?=anatodSeoEscape(anatodPageUrl('/privacy-policy/'));?>"><?=htmlspecialchars(_l('Consulta la política de privacidad'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></a>.</p>
                                     <?php endif; ?>
                                     <button class="btn btn-primary w-100" id="prepare-request" type="submit" disabled>
                                         <span class="copy-fragment"><?=htmlspecialchars(_l('Enviar Whatsapp'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/>

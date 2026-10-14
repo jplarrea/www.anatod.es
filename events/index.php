@@ -1,15 +1,16 @@
 <?php
 require_once dirname(__DIR__) . '/config.php';
 
-$eventos = json_decode(file_get_contents(__DIR__ . '/eventos.min.json'), true);
+$eventos = anatodContentItems('events');
 if (!is_array($eventos)) {
+    http_response_code(503);
     $eventos = [];
 }
 
 foreach ($eventos as &$translatedEvent) {
     foreach (['title', 'detail'] as $field) {
         if (isset($translatedEvent[$field]) && is_string($translatedEvent[$field])) {
-            $translatedEvent[$field] = _l($translatedEvent[$field]);
+            $translatedEvent[$field] = _l(anatodContentKey('events', $translatedEvent, $field), $translatedEvent[$field]);
         }
     }
 }
@@ -36,7 +37,7 @@ $escapar = static function ($texto) {
   <main id="contenido">
     <section class="service-detail-hero">
       <div class="container">
-        <a class="breadcrumb-link" href="/"><span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+        <a class="breadcrumb-link" href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span><?=htmlspecialchars(_l('Eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
         <div class="row g-5 align-items-center">
           <div class="col-lg-8">
             <div class="eyebrow"><?=htmlspecialchars(_l('ENCUENTROS DEL SECTOR'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
@@ -53,9 +54,9 @@ $escapar = static function ($texto) {
           <div class="col-md-6 col-lg-4">
             <article class="service-card h-100">
               <img class="event-card-image mb-4" src="<?= $escapar($evento['photo'] ?? ''); ?>" alt="<?= $escapar($evento['title'] ?? ''); ?>" loading="lazy">
-              <h2 class="h3"><a href="/blog/event/<?= $escapar($evento['slug'] ?? ''); ?>/"><?= $escapar($evento['title'] ?? ''); ?></a></h2>
+              <h2 class="h3"><a href="<?= $escapar(anatodPageUrl(anatodContentPath('events', $evento))); ?>"><?= $escapar($evento['title'] ?? ''); ?></a></h2>
               <p><?= $escapar($evento['detail'] ?? ''); ?></p>
-              <a class="text-link mt-auto" href="/blog/event/<?= $escapar($evento['slug'] ?? ''); ?>/">
+              <a class="text-link mt-auto" href="<?= $escapar(anatodPageUrl(anatodContentPath('events', $evento))); ?>">
                 <?=htmlspecialchars(_l('Ver evento'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
               </a>
             </article>

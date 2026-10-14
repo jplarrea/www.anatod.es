@@ -65,7 +65,9 @@
       if (!href) return;
       let url;
       try { url = new URL(href, document.baseURI); } catch (error) { return; }
-      const external = /^(https?:)$/.test(url.protocol) &&
+      const languageLink = anchor.hasAttribute('hreflang') &&
+        /^(?:www\.)?anatod\.(?:com\.ar|com\.mx|com|es|eus)$/.test(url.hostname);
+      const external = !languageLink && /^(https?:)$/.test(url.protocol) &&
         url.host.replace(/^www\./, '') !== window.location.host.replace(/^www\./, '');
       const rel = new Set((anchor.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
       if (external) {

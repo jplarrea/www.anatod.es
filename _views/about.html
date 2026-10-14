@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?=htmlspecialchars(_l('Sobre nosotros · La historia y el equipo de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></title>
   <meta name="description" content="<?=htmlspecialchars(_l('Conoce la empresa detrás de anatod: nuestra historia desde 2015, el equipo, el desarrollo propio y nuestra relación con el sector de las telecomunicaciones.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:title" content="<?=htmlspecialchars(_l('Sobre nosotros · La historia y el equipo de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
-  <meta property="og:description" content="<?=htmlspecialchars(_l('Conoce la empresa detrás de anatod: nuestra historia desde 2015, el equipo, el desarrollo propio y nuestra relación con el sector de las telecomunicaciones.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?>">
+
   <?php require 'views/head.min.html'; ?>
 </head>
 <body class="about-page" data-page="about">
@@ -14,7 +13,7 @@
   <main id="contenido">
     <section class="about-hero" id="inicio" aria-labelledby="about-title">
       <div class="container">
-        <a class="breadcrumb-link" href="/"><span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span class="copy-fragment"><?=htmlspecialchars(_l('Sobre nosotros'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+        <a class="breadcrumb-link" href="<?=anatodSeoEscape(anatodPageUrl('/'));?>"><span><?=htmlspecialchars(_l('anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><span aria-hidden="true">/</span><span class="copy-fragment"><?=htmlspecialchars(_l('Sobre nosotros'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
         <div class="row g-5 align-items-center">
           <div class="col-lg-5">
             <div class="eyebrow"><span class="little-line"></span><span class="copy-fragment"><?=htmlspecialchars(_l('SOMOS anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></div>
@@ -58,7 +57,7 @@
           <li><span class="timeline-year">2023</span><h3><?=htmlspecialchars(_l('Nos encontramos en Alicante'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3><p><?=htmlspecialchars(_l('Llevamos anatod a AOTEC. Las ferias son una oportunidad para conversar, conocer proyectos y seguir aprendiendo del sector.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p></li>
           <li><span class="timeline-year">2026</span><h3><?=htmlspecialchars(_l('Once años, y seguimos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3><p><?=htmlspecialchars(_l('Celebramos 11 años de anatod. Seguimos haciendo evolucionar la plataforma, las integraciones, la infraestructura y la seguridad.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p></li>
         </ol>
-        <a class="text-link" href="/blog/2026/08/01/11-anos-de-anatod/" ><span class="copy-fragment"><?=htmlspecialchars(_l('Lee la historia de nuestro 11.º aniversario'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+        <a class="text-link" href="<?=anatodSeoEscape(anatodPageUrl('/blog/2026/08/01/11-anos-de-anatod/'));?>" ><span class="copy-fragment"><?=htmlspecialchars(_l('Lee la historia de nuestro 11.º aniversario'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
       </div>
     </section>
 
@@ -91,7 +90,7 @@
             <div class="eyebrow"><?=htmlspecialchars(_l('TAMBIÉN NOS ENCONTRAMOS FUERA DE LA PANTALLA'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div>
             <h2 id="sector-title"><?=htmlspecialchars(_l('Formamos parte del sector que acompañamos.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2>
             <p><?=htmlspecialchars(_l('Participamos en ferias y encuentros de telecomunicaciones en España y Argentina. Son espacios para escuchar a los operadores, intercambiar experiencias y mantener el contacto con quienes hacen crecer la conectividad.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
-            <a class="text-link" href="/events/" ><span class="copy-fragment"><?=htmlspecialchars(_l('Nuestros encuentros y eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="<?=anatodSeoEscape(anatodPageUrl('/events/'));?>" ><span class="copy-fragment"><?=htmlspecialchars(_l('Nuestros encuentros y eventos'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
         <div class="about-associations">
@@ -102,7 +101,7 @@
       </div>
     </section>
 
-    <section class="home-cta about-cta" aria-labelledby="about-contact-title"><div class="container"><div class="cta-band"><div><div class="eyebrow"><?=htmlspecialchars(_l('AHORA NOS GUSTARÍA CONOCERTE'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div><h2 id="about-contact-title"><?=htmlspecialchars(_l('Tu próximo paso empieza con una conversación.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2><p><?=htmlspecialchars(_l('Cuéntanos cómo es tu empresa. Te presentamos anatod y a las personas que van a acompañarte.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p></div><div class="cta-actions"><a class="btn btn-white" href="/contact-us" ><span class="copy-fragment"><?=htmlspecialchars(_l('Habla con nuestro equipo'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="/software" ><span class="copy-fragment"><?=htmlspecialchars(_l('Conoce Software de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div></div></div></section>
+    <section class="home-cta about-cta" aria-labelledby="about-contact-title"><div class="container"><div class="cta-band"><div><div class="eyebrow"><?=htmlspecialchars(_l('AHORA NOS GUSTARÍA CONOCERTE'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></div><h2 id="about-contact-title"><?=htmlspecialchars(_l('Tu próximo paso empieza con una conversación.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h2><p><?=htmlspecialchars(_l('Cuéntanos cómo es tu empresa. Te presentamos anatod y a las personas que van a acompañarte.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p></div><div class="cta-actions"><a class="btn btn-white" href="<?=anatodSeoEscape(anatodPageUrl('/contact-us'));?>" ><span class="copy-fragment"><?=htmlspecialchars(_l('Habla con nuestro equipo'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="<?=anatodSeoEscape(anatodPageUrl('/software'));?>" ><span class="copy-fragment"><?=htmlspecialchars(_l('Conoce Software de anatod'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span><svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a></div></div></div></section>
   </main>
 <?php require 'views/footer.min.html'; ?>
 </body>
