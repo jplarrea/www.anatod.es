@@ -30,6 +30,30 @@
                     <a class="phone-link" id="contact-phone" href="<?=anatodSeoEscape('tel:+' . anatodRegionalConfig()['contact']['number']);?>"><span data-phone-number><?=anatodSeoEscape(_l(anatodRegionalConfig()['contact']['display']));?></span> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
                     <h3 class="contact-region" id="contact-region"><?=anatodSeoEscape(_l(anatodRegionalConfig()['contact']['label']));?></h3>
                     <a class="contact-whatsapp" id="contact-whatsapp" href="<?=anatodSeoEscape('https://wa.me/' . anatodRegionalConfig()['contact']['number'] . '?text=' . rawurlencode(_l(anatodRegionalConfig()['contact']['message'])));?>" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg> <span class="copy-fragment"><?=htmlspecialchars(_l('También puedes escribirnos por WhatsApp'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></span></a>
+                    <?php if (($domain ?? '') === 'anatod.com'): ?>
+                    <?php $contactDomains = json_decode(file_get_contents(dirname(__DIR__) . '/assets/config/site.min.json'), true)['domains'] ?? []; ?>
+                    <div class="row g-3 mt-4">
+                        <?php foreach (['anatod.com.ar', 'anatod.com.mx', 'anatod.es'] as $contactDomain): ?>
+                        <?php $regionalContact = $contactDomains[$contactDomain] ?? null; ?>
+                        <?php if (!isset($regionalContact['country'], $regionalContact['contact']['number'], $regionalContact['contact']['display'])) continue; ?>
+                        <div class="col-12">
+                            <div class="border-top pt-3">
+                                <h2 class="h6 mb-2"><?=anatodSeoEscape(_l($regionalContact['country']));?></h2>
+                                <a class="d-inline-flex align-items-center gap-2" href="<?=anatodSeoEscape('tel:+' . $regionalContact['contact']['number']);?>">
+                                    <span><?=anatodSeoEscape(_l($regionalContact['contact']['display']));?></span>
+                                    <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg>
+                                </a>
+                                <div class="mt-2">
+                                    <a class="contact-whatsapp" href="<?=anatodSeoEscape('https://wa.me/' . $regionalContact['contact']['number'] . '?text=' . rawurlencode(_l(anatodRegionalConfig()['contact']['message'])));?>" target="_blank" rel="noopener noreferrer">
+                                        <svg class="icon" aria-hidden="true"><use href="#i-message"/></svg>
+                                        <span><?=anatodSeoEscape(_l('También puedes escribirnos por WhatsApp'));?></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php endif; ?>
                     </div>
                     <div class="contact-form-wrap">
                         <h3><?=htmlspecialchars(_l('Solicita una presentación'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
