@@ -1,5 +1,17 @@
 [
   {
+    "slug": "detras-de-anatod-estamos-nosotros",
+    "title": "Detrás de anatod, estamos nosotros",
+    "date": "2026-10-15",
+    "excerpt": "Hoy queremos presentarnos de una manera distinta: con una foto y con las personas que hacemos anatod todos los días.",
+    "content_html": "<p>Hoy queremos presentarnos de una manera distinta: con una foto y con las personas que hacemos anatod todos los días.</p>\n\n<p>Habitualmente hablamos de herramientas, funcionalidades y novedades. Pero esta vez queremos ponerles cara a quienes estamos del otro lado y compartir un poco de lo que nos une como equipo.</p>\n\n<p>En anatod, cada persona aporta su mirada, sus ideas y su forma de resolver las cosas. Parte de nuestro trabajo es justamente eso: escucharnos, aprender entre nosotros y encontrar juntos cómo seguir mejorando.</p>\n\n<p>Sabemos que detrás de cada consulta también hay una persona. Alguien que necesita resolver un problema, organizar su trabajo o encontrar una respuesta. Por eso, además de lo que hacemos, nos importa cómo acompañamos a quienes confían en nosotros.</p>\n\n<p>Y como no todo son pantallas y reuniones, nos juntamos para esta foto. Una oportunidad para mostrar al equipo y acercarnos un poco más a quienes nos conocen a través de un mensaje, una llamada o una conversación de soporte.</p>\n\n<p><strong>Estos somos nosotros. El equipo detrás de anatod.</strong></p>\n\n<p>Gracias a nuestros clientes, colaboradores y a quienes nos acompañan por ser parte de este camino. Nos alegra que hoy puedan conocernos un poco más.</p>",
+    "image": {
+      "url": "/assets/img/blog/2026/10/equipo-anatod.jpg",
+      "alt": "El equipo detrás de anatod"
+    },
+    "id": 100084
+  },
+  {
     "slug": "nos-vemos-en-acutelan-2026",
     "title": "Nos vemos en ACUTELAN 2026",
     "date": "2026-09-07",
