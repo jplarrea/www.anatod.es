@@ -163,6 +163,27 @@
           </div>
         </div>
 
+        <aside class="border rounded-3 p-4 mt-4" aria-labelledby="demo-title">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <h3 id="demo-title"><?=htmlspecialchars(_l('Prueba ISPkeeper'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
+              <p class="mb-0"><?=htmlspecialchars(_l('Conoce el sistema a tu ritmo. Accede a la demo con estas credenciales.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <dl class="mb-0">
+                <dt><?=htmlspecialchars(_l('Usuario'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></dt>
+                <dd class="font-monospace user-select-all"><?=htmlspecialchars(_l('123testing'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></dd>
+                <dt><?=htmlspecialchars(_l('Contraseña'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></dt>
+                <dd class="font-monospace user-select-all mb-0"><?=htmlspecialchars(_l('12345678'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></dd>
+              </dl>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <a class="btn btn-primary w-100" href="https://testing.ispkeeper.com" target="_blank" rel="noopener noreferrer"><?=htmlspecialchars(_l('Acceder a la demo'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?> <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></a>
+              <p class="small mt-2 mb-0"><?=htmlspecialchars(_l('Se abre en una nueva pestaña.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
+            </div>
+          </div>
+        </aside>
+
         <div class="unit-reference">
           <h3><?=htmlspecialchars(_l('Cómo se cuentan las unidades'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></h3>
           <p><?=htmlspecialchars(_l('Cada servicio gestionado suma según esta referencia.'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');?></p>
