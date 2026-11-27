@@ -1714,5 +1714,9 @@
   "Usuario": "Username",
   "Contraseña": "Password",
   "Acceder a la demo": "Open the demo",
-  "Se abre en una nueva pestaña.": "Opens in a new tab."
+  "Se abre en una nueva pestaña.": "Opens in a new tab.",
+  "blog.100085.title": "We’re extending our support hours!",
+  "blog.100085.excerpt": "At anatod ®, we’re extending our support hours from Monday to Thursday to be there for you for longer. Our usual Friday hours remain unchanged.",
+  "blog.100085.content_html": "<p>At <strong>anatod ®</strong>, we want to be closer to you and support you for more hours each day. That’s why <strong>we’re extending our support hours from Monday to Thursday</strong>.</p>\n\n<h2>More hours to support you</h2>\n\n<p>These are our support hours from <strong>Monday to Thursday</strong>:</p>\n\n<ul>\n<li><strong>Argentina:</strong> from 05:00 to 17:00.</li>\n<li><strong>Mainland Spain:</strong> from 09:00 to 21:00.</li>\n<li><strong>Mexico City and central Mexico:</strong> from 02:00 to 14:00.</li>\n</ul>\n\n<p><strong>Our usual Friday hours remain unchanged.</strong></p>\n\n<p>More time to answer your questions and provide the assistance you need in your daily work.</p>\n\n<p><strong>Thank you for trusting Anatod ®!</strong></p>",
+  "blog.100085.image_alt": "The anatod ® team, closer to you to offer support"
 }

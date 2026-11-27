@@ -1714,5 +1714,9 @@
   "Usuario": "Erabiltzailea",
   "Contraseña": "Pasahitza",
   "Acceder a la demo": "Sartu demoan",
-  "Se abre en una nueva pestaña.": "Beste fitxa batean irekiko da."
+  "Se abre en una nueva pestaña.": "Beste fitxa batean irekiko da.",
+  "blog.100085.title": "Gure laguntza-zerbitzuaren ordutegia zabaldu dugu!",
+  "blog.100085.excerpt": "anatod-en, astelehenetik ostegunera laguntza-zerbitzuaren ordutegia zabaldu dugu, ordu gehiagoz zure ondoan egoteko. Ostiraletan ohiko ordutegia mantenduko dugu.",
+  "blog.100085.content_html": "<p><strong>anatod ®</strong>, zugandik gertuago egon nahi dugu eta ordu gehiagoz lagundu nahi dizugu. Horregatik, <strong>astelehenetik ostegunera laguntza-zerbitzuaren ordutegia zabaldu dugu</strong>.</p>\n\n<h2>Ordu gehiago zure ondoan</h2>\n\n<p>Hauek dira gure arreta-ordutegiak <strong>astelehenetik ostegunera</strong>:</p>\n\n<ul>\n<li><strong>Argentina:</strong> 05:00etatik 17:00etara.</li>\n<li><strong>Espainiako penintsula:</strong> 09:00etatik 21:00etara.</li>\n<li><strong>Mexiko Hiria eta Mexikoko erdialdea:</strong> 02:00etatik 14:00etara.</li>\n</ul>\n\n<p><strong>Ostiraletan ohiko ordutegia mantenduko dugu.</strong></p>\n\n<p>Denbora gehiago zure zalantzak argitzeko eta eguneroko lanean behar duzun laguntza eskaintzeko.</p>\n\n<p><strong>Eskerrik asko Anatod ®-ekin konfiantza izateagatik!</strong></p>",
+  "blog.100085.image_alt": "anatod ® taldea, zugandik gertuago laguntzeko"
 }

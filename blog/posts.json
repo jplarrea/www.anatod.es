@@ -1,5 +1,17 @@
 [
   {
+    "slug": "ampliamos-nuestro-horario-de-soporte",
+    "title": "¡Ampliamos nuestro horario de soporte!",
+    "date": "2026-11-27",
+    "excerpt": "En anatod ® ampliamos nuestra atención de soporte de lunes a jueves para acompañarte durante más horas. Los viernes mantenemos nuestro horario habitual.",
+    "content_html": "<p>En <strong>Anatod ®</strong> queremos estar más cerca y acompañarte durante más horas. Por eso, <strong>ampliamos nuestro horario de soporte de lunes a jueves</strong>.</p>\n\n<h2>Más horas para acompañarte</h2>\n\n<p>Estos son nuestros horarios de atención de <strong>lunes a jueves</strong>:</p>\n\n<ul>\n<li><strong>Argentina:</strong> de 05:00 a 17:00.</li>\n<li><strong>España peninsular:</strong> de 09:00 a 21:00.</li>\n<li><strong>Ciudad de México y la zona centro de México:</strong> de 02:00 a 14:00.</li>\n</ul>\n\n<p><strong>Los viernes mantenemos nuestro horario habitual.</strong></p>\n\n<p>Más tiempo para resolver tus consultas y brindarte la asistencia que necesitas en tu trabajo diario.</p>\n\n<p><strong>¡Gracias por confiar en Anatod ®!</strong></p>",
+    "image": {
+      "url": "/assets/img/blog/2026/11/soporte_horario.jpg",
+      "alt": "El equipo de Anatod ®, más cerca para acompañarte"
+    },
+    "id": 100085
+  },
+  {
     "slug": "detras-de-anatod-estamos-nosotros",
     "title": "Detrás de anatod, estamos nosotros",
     "date": "2026-10-15",
